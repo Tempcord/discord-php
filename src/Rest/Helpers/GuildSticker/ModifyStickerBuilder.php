@@ -1,0 +1,55 @@
+<?php
+
+declare(strict_types=1);
+
+namespace CyberWolf\Discord\Rest\Helpers\GuildSticker;
+
+use CyberWolf\Discord\Rest\Helpers\GetNew;
+
+class ModifyStickerBuilder
+{
+    use GetNew;
+
+    private array $data = [];
+
+    public function setName(string $name): self
+    {
+        $this->data['name'] = $name;
+
+        return $this;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->data['name'] ?? null;
+    }
+
+    public function setDescription(string $description): self
+    {
+        $this->data['description'] = $description;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->data['description'] ?? null;
+    }
+
+    public function setTags(string $tags): self
+    {
+        $this->data['tags'] = $tags;
+
+        return $this;
+    }
+
+    public function getTags(): ?string
+    {
+        return $this->data['tags'] ?? null;
+    }
+
+    public function get(): array
+    {
+        return $this->data;
+    }
+}

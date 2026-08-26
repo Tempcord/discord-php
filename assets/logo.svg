@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Discord PHP">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6B78FF"/>
+      <stop offset="1" stop-color="#4B54D6"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="116" fill="url(#bg)"/>
+  <g fill="#FFFFFF">
+    <!-- Clyde-style face -->
+    <path d="M330 150
+             C302 142 210 142 182 150
+             C132 164 108 208 108 272
+             C108 316 132 352 168 366
+             C176 352 183 338 188 326
+             C176 321 165 314 156 306
+             C196 330 316 330 356 306
+             C347 314 336 321 324 326
+             C329 338 336 352 344 366
+             C380 352 404 316 404 272
+             C404 208 380 164 330 150 Z"/>
+  </g>
+  <!-- eyes (cut to badge color) -->
+  <g fill="#5560E6">
+    <ellipse cx="200" cy="258" rx="24" ry="34"/>
+    <ellipse cx="312" cy="258" rx="24" ry="34"/>
+  </g>
+</svg>

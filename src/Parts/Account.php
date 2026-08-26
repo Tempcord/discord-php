@@ -1,0 +1,11 @@
+<?php
+
+declare(strict_types=1);
+
+namespace CyberWolf\Discord\Parts;
+
+class Account
+{
+    public string $id;
+    public string $name;
+}

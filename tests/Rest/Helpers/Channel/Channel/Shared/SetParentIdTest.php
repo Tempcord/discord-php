@@ -1,0 +1,23 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Tests\CyberWolf\Discord\Rest\Helpers\Channel\Channel\Shared;
+
+use CyberWolf\Discord\Rest\Helpers\Channel\Channel\Shared\SetParentId;
+use PHPUnit\Framework\TestCase;
+
+class SetParentIdTest extends TestCase
+{
+    public function testSetParentId(): void
+    {
+        $class = new class () extends DummyTraitTester {
+            use SetParentId;
+        };
+
+        $class->setParentId('::parent id::');
+
+        $this->assertEquals(['parent_id' => '::parent id::'], $class->get());
+        $this->assertEquals('::parent id::', $class->getParentId());
+    }
+}

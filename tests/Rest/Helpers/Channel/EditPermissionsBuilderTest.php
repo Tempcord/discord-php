@@ -1,0 +1,76 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Tests\CyberWolf\Discord\Rest\Helpers\Channel;
+
+use PHPUnit\Framework\TestCase;
+use CyberWolf\Discord\Bitwise\Bitwise;
+use CyberWolf\Discord\Rest\Helpers\Channel\EditPermissionsBuilder;
+
+class EditPermissionsBuilderTest extends TestCase
+{
+    public function testOverwriteIdIsNullWhenNoneSet(): void
+    {
+        $this->assertNull(EditPermissionsBuilder::new()->getOverwriteId());
+    }
+
+    public function testSetMemberId(): void
+    {
+        $builder = EditPermissionsBuilder::new()
+            ->setMemberId('::member id::');
+
+        $this->assertEquals('::member id::', $builder->getOverwriteId());
+        $this->assertEquals(1, $builder->get()['type']);
+    }
+
+    public function testSetRoleId(): void
+    {
+        $builder = EditPermissionsBuilder::new()
+            ->setRoleId('::role id::');
+
+        $this->assertEquals('::role id::', $builder->getOverwriteId());
+        $this->assertEquals(0, $builder->get()['type']);
+    }
+
+    public function testSetAllow(): void
+    {
+        $builder = EditPermissionsBuilder::new();
+
+        $this->assertNull($builder->getAllow());
+
+        $bitwise = Bitwise::from(
+            1 << 1,
+            1 << 2,
+            1 << 3
+        );
+
+        $builder->setAllow($bitwise);
+
+        $this->assertEquals($bitwise->get(), $builder->getAllow()->get());
+        $this->assertSame('14', $builder->get()['allow']);
+    }
+
+    public function testSetDeny(): void
+    {
+        $builder = EditPermissionsBuilder::new();
+
+        $this->assertNull($builder->getDeny());
+
+        $bitwise = Bitwise::from(
+            1 << 1,
+            1 << 2,
+            1 << 3
+        );
+
+        $builder->setDeny($bitwise);
+
+        $this->assertEquals($bitwise->get(), $builder->getDeny()->get());
+
+        /*
+         * A decimal bit field, as Discord reads it; the binary representation
+         * would be read back as a different set of permissions.
+         */
+        $this->assertSame('14', $builder->get()['deny']);
+    }
+}
