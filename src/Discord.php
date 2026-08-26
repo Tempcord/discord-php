@@ -38,7 +38,7 @@ class Discord
         ?LoopInterface $loop = null,
         ?DataMapper $dataMapper = null,
     ) {
-        $this->logger->info('Fenrir initialized. Discriminators > usernames');
+        $this->logger->info('Discord PHP initialized.');
 
         $this->loop = $loop ?? Loop::get();
 
@@ -88,13 +88,13 @@ class Discord
     public static function getDebugInfo(): array
     {
         try {
-            $version = InstalledVersions::getVersion('exan/fenrir');
+            $version = InstalledVersions::getVersion('cyberwolf-studio/discord-php');
         } catch (\OutOfBoundsException) {
             $version = 'Unknown';
         }
 
         return [
-            'fenrir_version' => $version,
+            'discord_php_version' => $version,
             'php_version' => PHP_VERSION,
             'bits' => 8 * PHP_INT_SIZE,
             'uname' => php_uname(),

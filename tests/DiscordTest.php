@@ -40,7 +40,7 @@ class DiscordTest extends MockeryTestCase
         $debugInfo = Discord::getDebugInfo();
 
         $requirements = [
-            'fenrir_version',
+            'discord_php_version',
             'php_version',
             'bits',
             'uname',
