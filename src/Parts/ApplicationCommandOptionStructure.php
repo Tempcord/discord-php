@@ -1,0 +1,47 @@
+<?php
+
+declare(strict_types=1);
+
+namespace CyberWolf\Discord\Parts;
+
+use CyberWolf\Discord\Enums\ApplicationCommandOptionType;
+use CyberWolf\Discord\Enums\ChannelType;
+use CyberWolf\Discord\Mapping\ArrayMapping;
+
+class ApplicationCommandOptionStructure
+{
+    public ApplicationCommandOptionType $type;
+    public string $name;
+    /**
+     * Array of string => string
+     * @var string[]
+     */
+    public ?array $name_localizations;
+    public string $description;
+    /**
+     * Array of string => string
+     * @var string[]
+     */
+    public ?array $description_localizations;
+    public ?bool $required;
+    /**
+     * @var ApplicationCommandOptionChoice[]
+     */
+    #[ArrayMapping(ApplicationCommandOptionChoice::class)]
+    public ?array $choices;
+    /**
+     * @var ApplicationCommandOptionStructure[]
+     */
+    #[ArrayMapping(ApplicationCommandOptionStructure::class)]
+    public ?array $options;
+    /**
+     * @var ChannelType[]
+     */
+    #[ArrayMapping(ChannelType::class)]
+    public ?array $channel_types;
+    public int|float|null $min_value;
+    public int|float|null $max_value;
+    public ?int $min_length;
+    public ?int $max_length;
+    public ?bool $autocomplete;
+}

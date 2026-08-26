@@ -1,0 +1,23 @@
+<?php
+
+declare(strict_types=1);
+
+namespace CyberWolf\Discord\Parts;
+
+use CyberWolf\Discord\Mapping\ArrayMapping;
+
+class Emoji
+{
+    public ?string $id;
+    public ?string $name;
+    /**
+     * @var Role[]
+     */
+    #[ArrayMapping(Role::class)]
+    public ?array $roles;
+    public ?User $user;
+    public ?bool $require_colons;
+    public ?bool $managed;
+    public ?bool $animated;
+    public ?bool $available;
+}

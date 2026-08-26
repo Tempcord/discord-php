@@ -1,0 +1,1039 @@
+<?php
+
+declare(strict_types=1);
+
+namespace CyberWolf\Discord\Rest;
+
+use Discord\Http\Endpoint;
+use CyberWolf\Discord\Enums\MfaLevel;
+use CyberWolf\Discord\Parts\ActiveGuildThreads;
+use CyberWolf\Discord\Parts\Channel;
+use CyberWolf\Discord\Parts\Guild as PartsGuild;
+use CyberWolf\Discord\Parts\GuildBan;
+use CyberWolf\Discord\Parts\GuildMember;
+use CyberWolf\Discord\Parts\GuildPreview;
+use CyberWolf\Discord\Parts\Integration;
+use CyberWolf\Discord\Parts\Invite;
+use CyberWolf\Discord\Parts\PruneCount;
+use CyberWolf\Discord\Parts\Role;
+use CyberWolf\Discord\Parts\VoiceRegion;
+use CyberWolf\Discord\Parts\VoiceState;
+use CyberWolf\Discord\Parts\WelcomeScreen;
+use CyberWolf\Discord\Parts\Widget;
+use CyberWolf\Discord\Parts\WidgetSettings;
+use CyberWolf\Discord\Rest\Helpers\Guild\ModifyChannelPositionsBuilder;
+use CyberWolf\Discord\Parts\BulkBanResult;
+use CyberWolf\Discord\Parts\GuildOnboarding;
+use CyberWolf\Discord\Rest\Helpers\Guild\ModifyGuildOnboardingBuilder;
+use CyberWolf\Discord\Rest\Helpers\Guild\ModifyWelcomeScreenBuilder;
+use React\Promise\PromiseInterface;
+
+/**
+ * @see https://discord.com/developers/docs/resources/guild
+ */
+class Guild extends HttpResource
+{
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#create-guild
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\Guild>
+     *
+     * @todo Convert to builder
+     */
+    public function create(array $params): PromiseInterface
+    {
+        return $this->mapPromise(
+            $this->http->post(
+                Endpoint::GUILDS,
+                $params
+            ),
+            PartsGuild::class,
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#get-guild
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\Guild>
+     */
+    public function get(string $guildId, bool $withCounts = false): PromiseInterface
+    {
+        $endpoint = Endpoint::bind(
+            Endpoint::GUILD,
+            $guildId
+        );
+
+        if ($withCounts) {
+            $endpoint->addQuery('with_counts', true);
+        }
+
+        return $this->mapPromise(
+            $this->http->get(
+                $endpoint,
+            ),
+            PartsGuild::class
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#get-guild-preview
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildPreview>
+     */
+    public function getPreview(string $guildId): PromiseInterface
+    {
+        return $this->mapPromise(
+            $this->http->get(
+                Endpoint::bind(
+                    Endpoint::GUILD_PREVIEW,
+                    $guildId
+                )
+            ),
+            GuildPreview::class
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#modify-guild
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\Guild>
+     *
+     * @todo Convert to builder
+     */
+    public function modify(string $guildId, array $params, ?string $reason = null): PromiseInterface
+    {
+        return $this->mapPromise(
+            $this->http->patch(
+                Endpoint::bind(
+                    Endpoint::GUILD,
+                    $guildId
+                ),
+                $params,
+                $this->getAuditLogReasonHeader($reason)
+            ),
+            PartsGuild::class
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#delete-guild
+     *
+     * @return PromiseInterface<void>
+     */
+    public function delete(string $guildId): PromiseInterface
+    {
+        return $this->http->delete(
+            Endpoint::bind(
+                Endpoint::GUILD,
+                $guildId
+            )
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#get-guild-channels
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\Channel[]>
+     */
+    public function getChannels(string $guildId): PromiseInterface
+    {
+        return $this->mapArrayPromise(
+            $this->http->get(
+                Endpoint::bind(
+                    Endpoint::GUILD_CHANNELS,
+                    $guildId
+                )
+            ),
+            Channel::class
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#create-guild-channel
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\Channel>
+     *
+     * @todo Convert to builder
+     */
+    public function createChannel(string $guildId, array $params, ?string $reason = null): PromiseInterface
+    {
+        return $this->mapArrayPromise(
+            $this->http->post(
+                Endpoint::bind(
+                    Endpoint::GUILD_CHANNELS,
+                    $guildId
+                ),
+                $params,
+                $this->getAuditLogReasonHeader($reason)
+            ),
+            Channel::class
+        );
+    }
+
+    /**
+     * @param ModifyChannelPositionsBuilder[] $modifyChannelPositionsBuilders
+     *
+     * @return PromiseInterface<void>
+     */
+    public function modifyChannelPositions(
+        string $guildId,
+        array $modifyChannelPositionsBuilders
+    ): PromiseInterface {
+        return $this->http->patch(
+            Endpoint::bind(
+                Endpoint::GUILD_CHANNELS,
+                $guildId,
+            ),
+            array_map(fn (ModifyChannelPositionsBuilder $builder) => $builder->get(), $modifyChannelPositionsBuilders)
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#list-active-guild-threads
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\ActiveGuildThreads>
+     */
+    public function listActiveThreads(string $guildId): PromiseInterface
+    {
+        return $this->mapPromise(
+            $this->http->get(
+                Endpoint::bind(
+                    Endpoint::GUILD_THREADS_ACTIVE,
+                    $guildId,
+                )
+            ),
+            ActiveGuildThreads::class,
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#get-guild-member
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildMember>
+     */
+    public function getMember(string $guildId, string $memberId): PromiseInterface
+    {
+        return $this->mapPromise(
+            $this->http->get(
+                Endpoint::bind(
+                    Endpoint::GUILD_MEMBER,
+                    $guildId,
+                    $memberId
+                ),
+            ),
+            GuildMember::class
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#list-guild-members
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildMember[]>
+     *
+     * @todo Convert to builder
+     */
+    public function listMembers(string $guildId, array $queryParams): PromiseInterface
+    {
+        $endpoint = Endpoint::bind(
+            Endpoint::GUILD_MEMBERS_SEARCH,
+            $guildId,
+        );
+
+        foreach ($queryParams as $key => $value) {
+            $endpoint->addQuery($key, $value);
+        }
+
+        return $this->mapArrayPromise(
+            $this->http->get($endpoint),
+            GuildMember::class
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#search-guild-members
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildMember[]>
+     */
+    public function searchMembers(string $guildId, array $queryParams): PromiseInterface
+    {
+        $endpoint = Endpoint::bind(
+            Endpoint::GUILD_MEMBERS_SEARCH,
+            $guildId,
+        );
+
+        foreach ($queryParams as $key => $value) {
+            $endpoint->addQuery($key, $value);
+        }
+
+        return $this->mapArrayPromise(
+            $this->http->get($endpoint),
+            GuildMember::class
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#add-guild-member
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildMember>
+     */
+    public function addMember(string $guildId, string $userId, array $params): PromiseInterface
+    {
+        return $this->mapPromise(
+            $this->http->put(
+                Endpoint::bind(
+                    Endpoint::GUILD_MEMBER,
+                    $guildId,
+                    $userId,
+                ),
+                $params,
+            ),
+            GuildMember::class,
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#modify-guild-member
+     *
+     * @return PromiseInterface<void>
+     */
+    public function modifyMember(
+        string $guildId,
+        string $userId,
+        array $params,
+        ?string $reason = null
+    ): PromiseInterface {
+        return $this->http->patch(
+            Endpoint::bind(
+                Endpoint::GUILD_MEMBER,
+                $guildId,
+                $userId,
+            ),
+            $params,
+            $this->getAuditLogReasonHeader($reason),
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#modify-current-member
+     *
+     * @return PromiseInterface<void>
+     */
+    public function modifyCurrentMember(
+        string $guildId,
+        array $params,
+        ?string $reason = null
+    ): PromiseInterface {
+        return $this->http->patch(
+            Endpoint::bind(
+                Endpoint::GUILD_MEMBER_SELF,
+                $guildId,
+            ),
+            $params,
+            $this->getAuditLogReasonHeader($reason),
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#add-guild-member-role
+     *
+     * @return PromiseInterface<void>
+     */
+    public function addMemberRole(
+        string $guildId,
+        string $userId,
+        string $roleId,
+        ?string $reason = null
+    ): PromiseInterface {
+        return $this->http->put(
+            Endpoint::bind(
+                Endpoint::GUILD_MEMBER_ROLE,
+                $guildId,
+                $userId,
+                $roleId,
+            ),
+            headers: $this->getAuditLogReasonHeader($reason),
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#remove-guild-member-role
+     *
+     * @return PromiseInterface<void>
+     */
+    public function removeMemberRole(
+        string $guildId,
+        string $userId,
+        string $roleId,
+        ?string $reason = null
+    ): PromiseInterface {
+        return $this->http->delete(
+            Endpoint::bind(
+                Endpoint::GUILD_MEMBER_ROLE,
+                $guildId,
+                $userId,
+                $roleId,
+            ),
+            headers: $this->getAuditLogReasonHeader($reason),
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#remove-guild-member
+     *
+     * @return PromiseInterface<void>
+     */
+    public function removeGuildMember(string $guildId, string $userId, ?string $reason = null): PromiseInterface
+    {
+        return $this->http->delete(
+            Endpoint::bind(
+                Endpoint::GUILD_MEMBER,
+                $guildId,
+                $userId,
+            ),
+            headers: $this->getAuditLogReasonHeader($reason),
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#get-guild-bans
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildBan[]>
+     */
+    public function getBans(string $guildId): PromiseInterface
+    {
+        return $this->mapArrayPromise(
+            $this->http->get(
+                Endpoint::bind(
+                    Endpoint::GUILD_BANS,
+                    $guildId,
+                )
+            ),
+            GuildBan::class
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#get-guild-ban
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildBan[]>
+     */
+    public function getBan(string $guildId, string $userId): PromiseInterface
+    {
+        return $this->mapPromise(
+            $this->http->get(
+                Endpoint::bind(
+                    Endpoint::GUILD_BAN,
+                    $guildId,
+                    $userId
+                )
+            ),
+            GuildBan::class
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#create-guild-ban
+     *
+     * @return PromiseInterface<void>
+     */
+    public function createBan(
+        string $guildId,
+        string $userId,
+        array $params,
+        ?string $reason = null
+    ): PromiseInterface {
+        return $this->http->put(
+            Endpoint::bind(
+                Endpoint::GUILD_BAN,
+                $guildId,
+                $userId,
+            ),
+            $params,
+            $this->getAuditLogReasonHeader($reason)
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#remove-guild-ban
+     *
+     * @return PromiseInterface<void>
+     */
+    public function removeBan(string $guildId, string $userId, ?string $reason = null): PromiseInterface
+    {
+        return $this->http->delete(
+            Endpoint::bind(
+                Endpoint::GUILD_BAN,
+                $guildId,
+                $userId,
+            ),
+            headers: $this->getAuditLogReasonHeader($reason)
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#get-guild-roles
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\Role[]>
+     */
+    public function getRoles(string $guildId): PromiseInterface
+    {
+        return $this->mapArrayPromise(
+            $this->http->get(
+                Endpoint::bind(
+                    Endpoint::GUILD_ROLES,
+                    $guildId
+                )
+            ),
+            Role::class,
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#get-guild-role
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\Role>
+     */
+    public function getRole(string $guildId, string $roleId): PromiseInterface
+    {
+        return $this->mapPromise(
+            $this->http->get(
+                Endpoint::bind(
+                    Endpoint::GUILD_ROLE,
+                    $guildId,
+                    $roleId
+                ),
+            ),
+            Role::class,
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#create-guild-role
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\Role>
+     */
+    public function createRole(string $guildId, array $params, ?string $reason = null): PromiseInterface
+    {
+        return $this->mapPromise(
+            $this->http->post(
+                Endpoint::bind(
+                    Endpoint::GUILD_ROLES,
+                    $guildId
+                ),
+                $params,
+                $this->getAuditLogReasonHeader($reason),
+            ),
+            Role::class,
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#modify-guild-role-positions
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\Role[]>
+     */
+    public function modifyRolePositions(
+        string $guildId,
+        array $params,
+        ?string $reason = null
+    ): PromiseInterface {
+        return $this->mapArrayPromise(
+            $this->http->patch(
+                Endpoint::bind(
+                    Endpoint::GUILD_ROLES,
+                    $guildId,
+                ),
+                $params,
+                $this->getAuditLogReasonHeader($reason),
+            ),
+            Role::class,
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#modify-guild-role
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\Role>
+     */
+    public function modifyRole(
+        string $guildId,
+        string $roleId,
+        array $params,
+        ?string $reason = null
+    ): PromiseInterface {
+        return $this->mapPromise(
+            $this->http->patch(
+                Endpoint::bind(
+                    Endpoint::GUILD_ROLE,
+                    $guildId,
+                    $roleId
+                ),
+                $params,
+                $this->getAuditLogReasonHeader($reason),
+            ),
+            Role::class,
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#modify-guild-mfa-level
+     *
+     * @return PromiseInterface<void>
+     */
+    public function modifyMfaLevel(
+        string $guildId,
+        MfaLevel $mfaLevel,
+        ?string $reason = null
+    ): PromiseInterface {
+        return $this->http->post(
+            Endpoint::bind(
+                Endpoint::GUILD_MFA,
+                $guildId,
+            ),
+            ['level' => $mfaLevel->value],
+            $this->getAuditLogReasonHeader($reason),
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#delete-guild-role
+     *
+     * @return PromiseInterface<void>
+     */
+    public function deleteRole(string $guildId, string $roleId, ?string $reason = null): PromiseInterface
+    {
+        return $this->http->delete(
+            Endpoint::bind(
+                Endpoint::GUILD_ROLE,
+                $guildId,
+                $roleId,
+            ),
+            headers: $this->getAuditLogReasonHeader($reason),
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#get-guild-prune-count
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\PruneCount>
+     */
+    public function getPruneCount(string $guildId, array $queryParams): PromiseInterface
+    {
+        $endpoint = Endpoint::bind(
+            Endpoint::GUILD_PRUNE,
+            $guildId,
+        );
+
+        foreach ($queryParams as $key => $value) {
+            $endpoint->addQuery($key, $value);
+        }
+
+        return $this->mapPromise(
+            $this->http->get(
+                $endpoint,
+            ),
+            PruneCount::class,
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#begin-guild-prune
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\PruneCount>
+     */
+    public function beginPrune(string $guildId, array $params, ?string $reason = null): PromiseInterface
+    {
+        return $this->mapPromise(
+            $this->http->post(
+                Endpoint::bind(
+                    Endpoint::GUILD_PRUNE,
+                    $guildId,
+                ),
+                $params,
+                headers: $this->getAuditLogReasonHeader($reason)
+            ),
+            PruneCount::class,
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#get-guild-voice-regions
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\VoiceRegion>
+     */
+    public function getVoiceRegions(string $guildId): PromiseInterface
+    {
+        return $this->mapArrayPromise(
+            $this->http->get(
+                Endpoint::bind(
+                    Endpoint::GUILD_REGIONS,
+                    $guildId,
+                ),
+            ),
+            VoiceRegion::class
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/voice#get-current-user-voice-state
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\VoiceState>
+     */
+    public function getCurrentUserVoiceState(string $guildId): PromiseInterface
+    {
+        return $this->mapPromise(
+            $this->http->get(
+                Endpoint::bind(
+                    '/guilds/:guild/voice-states/@me',
+                    $guildId,
+                ),
+            ),
+            VoiceState::class
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/voice#get-user-voice-state
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\VoiceState>
+     */
+    public function getUserVoiceState(string $guildId, string $userId): PromiseInterface
+    {
+        return $this->mapPromise(
+            $this->http->get(
+                Endpoint::bind(
+                    '/guilds/:guild/voice-states/:user',
+                    $guildId,
+                    $userId,
+                ),
+            ),
+            VoiceState::class
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#get-guild-invites
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\Invite>
+     */
+    public function getInvites(string $guildId): PromiseInterface
+    {
+        return $this->mapArrayPromise(
+            $this->http->get(
+                Endpoint::bind(
+                    Endpoint::GUILD_REGIONS,
+                    $guildId,
+                ),
+            ),
+            Invite::class
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#get-guild-integrations
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\Integration>
+     */
+    public function getIntegrations(string $guildId): PromiseInterface
+    {
+        return $this->mapArrayPromise(
+            $this->http->get(
+                Endpoint::bind(
+                    Endpoint::GUILD_INTEGRATIONS,
+                    $guildId,
+                ),
+            ),
+            Integration::class
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#delete-guild-integration
+     *
+     * @return PromiseInterface<void>
+     */
+    public function deleteIntegration(
+        string $guildId,
+        string $integrationId,
+        ?string $reason = null
+    ): PromiseInterface {
+        return $this->http->delete(
+            Endpoint::bind(
+                Endpoint::GUILD_INTEGRATION,
+                $guildId,
+                $integrationId,
+            ),
+            headers: $this->getAuditLogReasonHeader($reason),
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#get-guild-widget-settings
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\WidgetSettings>
+     */
+    public function getWidgetSettings(string $guildId): PromiseInterface
+    {
+        return $this->mapPromise(
+            $this->http->get(
+                Endpoint::bind(
+                    Endpoint::GUILD_WIDGET_SETTINGS,
+                    $guildId,
+                ),
+            ),
+            WidgetSettings::class,
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#modify-guild-widget
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\WidgetSettings>
+     */
+    public function modifyWidget(string $guildId, array $params, ?string $reason = null): PromiseInterface
+    {
+        return $this->mapPromise(
+            $this->http->patch(
+                Endpoint::bind(
+                    Endpoint::GUILD_WIDGET_SETTINGS,
+                    $guildId,
+                ),
+                $params,
+                $this->getAuditLogReasonHeader($reason),
+            ),
+            WidgetSettings::class,
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#get-guild-widget
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\Widget>
+     */
+    public function getWidget(string $guildId): PromiseInterface
+    {
+        return $this->mapPromise(
+            $this->http->get(
+                Endpoint::bind(
+                    Endpoint::GUILD_WIDGET,
+                    $guildId,
+                )
+            ),
+            Widget::class,
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#get-guild-vanity-url
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\Invite>
+     */
+    public function getVanityUrl(string $guildId): PromiseInterface
+    {
+        return $this->mapPromise(
+            $this->http->get(
+                Endpoint::bind(
+                    Endpoint::GUILD_VANITY_URL,
+                    $guildId,
+                )
+            ),
+            Invite::class,
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#get-guild-widget-image
+     *
+     * @return string The url of the guild widget image
+     */
+    public function getWidgetImage(string $guildId, array $queryParams): string
+    {
+        $endpoint = Endpoint::bind(
+            Endpoint::GUILD_WIDGET_IMAGE,
+            $guildId,
+        );
+
+        foreach ($queryParams as $key => $value) {
+            $endpoint->addQuery($key, $value);
+        }
+
+        return (string) $endpoint;
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#get-guild-welcome-screen
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\WelcomeScreen>
+     */
+    public function getWelcomeScreen(string $guildId): PromiseInterface
+    {
+        return $this->mapPromise(
+            $this->http->get(
+                Endpoint::bind(
+                    Endpoint::GUILD_WELCOME_SCREEN,
+                    $guildId,
+                ),
+            ),
+            WelcomeScreen::class,
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#modify-current-user-voice-state
+     *
+     * @return PromiseInterface<void>
+     */
+    public function modifyCurrentUserVoiceState(string $guildId, array $params): PromiseInterface
+    {
+        return $this->http->patch(
+            Endpoint::bind(
+                Endpoint::GUILD_USER_CURRENT_VOICE_STATE,
+                $guildId,
+            ),
+            $params,
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#modify-user-voice-state
+     *
+     * @return PromiseInterface<void>
+     */
+    public function modifyUserVoiceState(string $guildId, string $userId, array $params): PromiseInterface
+    {
+        return $this->http->patch(
+            Endpoint::bind(
+                Endpoint::GUILD_USER_CURRENT_VOICE_STATE,
+                $guildId,
+                $userId
+            ),
+            $params,
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#modify-guild-welcome-screen
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\WelcomeScreen>
+     */
+    public function modifyWelcomeScreen(
+        string $guildId,
+        ModifyWelcomeScreenBuilder $welcomeScreenBuilder,
+        ?string $reason = null
+    ): PromiseInterface {
+        return $this->mapPromise(
+            $this->http->patch(
+                Endpoint::bind(
+                    Endpoint::GUILD_WELCOME_SCREEN,
+                    $guildId,
+                ),
+                $welcomeScreenBuilder->get(),
+                $this->getAuditLogReasonHeader($reason)
+            ),
+            WelcomeScreen::class,
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/guild#get-guild-onboarding
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildOnboarding>
+     */
+    public function getOnboarding(string $guildId): PromiseInterface
+    {
+        return $this->mapPromise(
+            $this->http->get(
+                Endpoint::bind(
+                    Endpoint::GUILD_ONBOARDING,
+                    $guildId,
+                ),
+            ),
+            GuildOnboarding::class,
+        );
+    }
+
+    /**
+     * Replaces the guild's onboarding flow wholesale; prompts left out of the
+     * request are removed.
+     *
+     * Discord requires an id on every prompt and option, including ones being
+     * created, and accepts a placeholder for those.
+     *
+     * @see https://discord.com/developers/docs/resources/guild#modify-guild-onboarding
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildOnboarding>
+     */
+    public function modifyOnboarding(
+        string $guildId,
+        ModifyGuildOnboardingBuilder $onboardingBuilder,
+        ?string $reason = null
+    ): PromiseInterface {
+        return $this->mapPromise(
+            $this->http->put(
+                Endpoint::bind(
+                    Endpoint::GUILD_ONBOARDING,
+                    $guildId,
+                ),
+                $onboardingBuilder->get(),
+                $this->getAuditLogReasonHeader($reason)
+            ),
+            GuildOnboarding::class,
+        );
+    }
+
+    /**
+     * Bans up to 200 users in one request. Discord reports which of them it
+     * could not ban rather than failing the whole call, and only rejects the
+     * request outright when none of them could be banned.
+     *
+     * @see https://discord.com/developers/docs/resources/guild#bulk-guild-ban
+     *
+     * @param string[] $userIds
+     * @param ?int $deleteMessageSeconds How much of their recent message
+     *  history to delete, up to 7 days
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\BulkBanResult>
+     */
+    public function bulkBan(
+        string $guildId,
+        array $userIds,
+        ?int $deleteMessageSeconds = null,
+        ?string $reason = null
+    ): PromiseInterface {
+        $params = ['user_ids' => array_values($userIds)];
+
+        if (!is_null($deleteMessageSeconds)) {
+            $params['delete_message_seconds'] = $deleteMessageSeconds;
+        }
+
+        return $this->mapPromise(
+            $this->http->post(
+                Endpoint::bind(
+                    Endpoint::GUILD_BAN_BULK,
+                    $guildId,
+                ),
+                $params,
+                $this->getAuditLogReasonHeader($reason)
+            ),
+            BulkBanResult::class,
+        );
+    }
+
+    /**
+     * How many members hold each role, keyed by role id.
+     *
+     * The response is a plain map rather than a documented object, so it is
+     * returned as given.
+     *
+     * @return PromiseInterface<array<string, int>>
+     */
+    public function getRoleMemberCounts(string $guildId): PromiseInterface
+    {
+        return $this->http->get(
+            Endpoint::bind(
+                Endpoint::GUILD_ROLES_MEMBER_COUNTS,
+                $guildId,
+            ),
+        );
+    }
+}

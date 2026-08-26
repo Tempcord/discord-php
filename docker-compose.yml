@@ -1,0 +1,31 @@
+services:
+    php8.1:
+        build: ./.dev/docker/php/8.1
+        volumes:
+            - .:/app:z
+        working_dir: /app
+        command: sh
+    php8.2:
+        build: ./.dev/docker/php/8.2
+        volumes:
+            - .:/app:z
+        working_dir: /app
+        command: sh
+    php8.3:
+        build: ./.dev/docker/php/8.3
+        volumes:
+            - .:/app:z
+        working_dir: /app
+        command: sh
+    php8.4:
+        build: ./.dev/docker/php/8.4
+        volumes:
+            - .:/app:z
+        working_dir: /app
+        command: sh
+    php8.5:
+        build: ./.dev/docker/php/8.5
+        volumes:
+            - .:/app:z
+        working_dir: /app
+        command: sh

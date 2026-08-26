@@ -1,0 +1,80 @@
+{
+    "name": "cyberwolf-studio/discord-php",
+    "description": "Discord API & Gateway wrapper for PHP. A rebranded, maintained fork of Ragnarok/Fenrir.",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/CyberWolf-Studio/discord-php",
+    "keywords": [
+        "discord",
+        "discord-api",
+        "discord-bot",
+        "gateway",
+        "reactphp",
+        "async",
+        "php"
+    ],
+    "authors": [
+        {
+            "name": "CyberWolf.Studio",
+            "email": "hello@cyberwolf.studio",
+            "homepage": "https://cyberwolf.studio",
+            "role": "Maintainer"
+        },
+        {
+            "name": "Ragnarök",
+            "homepage": "https://github.com/dc-Ragnarok/Fenrir",
+            "role": "Original author (Fenrir)"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/CyberWolf-Studio/discord-php/issues",
+        "source": "https://github.com/CyberWolf-Studio/discord-php"
+    },
+    "autoload": {
+        "psr-4": {
+            "CyberWolf\\Discord\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\CyberWolf\\Discord\\": "tests/",
+            "Fakes\\CyberWolf\\Discord\\": "fakes/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.5",
+        "react/event-loop": "^1.3.0",
+        "evenement/evenement": "^3.0.0",
+        "nesbot/carbon": "^3.0",
+        "discord-php/http": "^v10.3.0",
+        "ralouphie/mimey": "^1.0",
+        "react/async": "^4.0.0",
+        "exan/eventer": "^1.0.3",
+        "exan/reactphp-retrier": "^2.0",
+        "react/promise": "^3",
+        "ratchet/pawl": "^0.4.3"
+    },
+    "require-dev": {
+        "monolog/monolog": "^3.2",
+        "phpunit/phpunit": "^9.5 || ^10.0",
+        "symfony/var-dumper": "^6.2 || ^7.0 || ^8.0",
+        "mockery/mockery": "^1.6",
+        "friendsofphp/php-cs-fixer": "^3.20"
+    },
+    "scripts": {
+        "cs": "php-cs-fixer fix --using-cache=no --diff --dry-run --allow-risky=yes",
+        "csf": "php-cs-fixer fix --using-cache=no --allow-risky=yes",
+        "test": "phpunit",
+        "test-coverage": "@php -d xdebug.mode=coverage ./vendor/bin/phpunit --coverage-html .phpunit.cache/cov-html",
+        "test-8.5": "docker-compose run php8.5 composer test",
+        "test-all": [
+            "composer test-8.5"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}

@@ -1,0 +1,111 @@
+<?php
+
+declare(strict_types=1);
+
+namespace CyberWolf\Discord\Rest;
+
+use Discord\Http\Endpoint;
+use CyberWolf\Discord\Parts\Sticker;
+use CyberWolf\Discord\Rest\Helpers\GuildSticker\ModifyStickerBuilder;
+use CyberWolf\Discord\Rest\Helpers\GuildSticker\StickerBuilder;
+use React\Promise\PromiseInterface;
+
+/**
+ * @see https://discord.com/developers/docs/resources/sticker
+ */
+class GuildSticker extends HttpResource
+{
+    /**
+     * @see https://discord.com/developers/docs/resources/sticker#list-guild-stickers
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\Sticker[]>
+     */
+    public function list(string $guildId): PromiseInterface
+    {
+        return $this->mapArrayPromise(
+            $this->http->get(
+                Endpoint::bind(
+                    Endpoint::GUILD_STICKERS,
+                    $guildId,
+                )
+            ),
+            Sticker::class
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/sticker#get-guild-sticker
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\Sticker>
+     */
+    public function get(string $guildId, string $stickerId): PromiseInterface
+    {
+        return $this->mapPromise(
+            $this->http->get(
+                Endpoint::bind(
+                    Endpoint::GUILD_STICKER,
+                    $guildId,
+                    $stickerId
+                )
+            ),
+            Sticker::class
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/sticker#get-guild-sticker
+     *
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\Sticker>
+     */
+    public function create(string $guildId, StickerBuilder $stickerBuilder): PromiseInterface
+    {
+        return $this->mapPromise(
+            $this->http->post(
+                Endpoint::bind(
+                    Endpoint::GUILD_STICKERS,
+                    $guildId
+                ),
+                $stickerBuilder->get()
+            ),
+            Sticker::class
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/sticker#modify-guild-sticker
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\Sticker>
+     */
+    public function modify(
+        string $guildId,
+        string $stickerId,
+        ModifyStickerBuilder $modifyStickerBuilder
+    ): PromiseInterface {
+        return $this->mapPromise(
+            $this->http->patch(
+                Endpoint::bind(
+                    Endpoint::GUILD_STICKER,
+                    $guildId,
+                    $stickerId
+                ),
+                $modifyStickerBuilder->get()
+            ),
+            Sticker::class
+        );
+    }
+
+    /**
+     * @see https://discord.com/developers/docs/resources/sticker#delete-guild-sticker
+     *
+     * @return PromiseInterface<void>
+     */
+    public function delete(string $guildId, string $stickerId): PromiseInterface
+    {
+        return $this->http->delete(
+            Endpoint::bind(
+                Endpoint::GUILD_STICKER,
+                $guildId,
+                $stickerId
+            )
+        );
+    }
+}
