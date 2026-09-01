@@ -33,6 +33,7 @@ use Ratchet\RFC6455\Messaging\MessageInterface;
 use React\EventLoop\LoopInterface;
 use React\EventLoop\TimerInterface;
 use ReflectionProperty;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 use function React\Async\await;
 
@@ -545,8 +546,8 @@ class ConnectionTest extends MockeryTestCase
     }
 
     /**
-     * @dataProvider reconnectCloseCodesProvider
      */
+    #[DataProvider('reconnectCloseCodesProvider')]
     public function testItReconnectsWhenWebsocketConnectionClosedWithCertainCodes(int $code)
     {
         $websocket = new WebsocketFake();
@@ -587,9 +588,7 @@ class ConnectionTest extends MockeryTestCase
         ];
     }
 
-    /**
-     * @dataProvider resumeCloseCodesProvider
-     */
+    #[DataProvider('resumeCloseCodesProvider')]
     public function testItResumesWhenWebsocketConnectionClosedWithCertainCodes(int $code)
     {
         $websocket = new WebsocketFake();
@@ -627,9 +626,7 @@ class ConnectionTest extends MockeryTestCase
         $this->assertEquals(['::resume url::?v=' . Connection::DISCORD_VERSION], $websocket->openings);
     }
 
-    /**
-     * @dataProvider resumeCloseCodesProvider
-     */
+    #[DataProvider('resumeCloseCodesProvider')]
     public function testItReconnectsIfMissingResumeUrl(int $code)
     {
         $websocket = new WebsocketFake();
@@ -662,9 +659,7 @@ class ConnectionTest extends MockeryTestCase
         $this->assertEquals([Connection::DEFAULT_WEBSOCKET_URL . '?v=' . Connection::DISCORD_VERSION], $websocket->openings);
     }
 
-    /**
-     * @dataProvider resumeCloseCodesProvider
-     */
+    #[DataProvider('resumeCloseCodesProvider')]
     public function testItReconnectsIfMissingSessionId(int $code)
     {
         $websocket = new WebsocketFake();

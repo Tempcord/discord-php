@@ -13,6 +13,7 @@ use Tempcord\Discord\DataMapper;
 use Tempcord\Discord\Gateway\ConnectionInterface;
 use Tempcord\Discord\Gateway\Handlers\ReadyEvent;
 use Tempcord\Discord\Gateway\Objects\Payload;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 class ReadyEventTest extends MockeryTestCase
 {
@@ -25,9 +26,7 @@ class ReadyEventTest extends MockeryTestCase
         $this->mapper = new DataMapper(new NullLogger());
     }
 
-    /**
-     * @dataProvider listenerDataProvider
-     */
+    #[DataProvider('listenerDataProvider')]
     public function testItListensToTheCorrectEvent(object $payload, bool $expectation): void
     {
         $event = new ReadyEvent(
@@ -61,9 +60,7 @@ class ReadyEventTest extends MockeryTestCase
         ];
     }
 
-    /**
-     * @dataProvider payloadProvider
-     */
+    #[DataProvider('payloadProvider')]
     public function testItSetsResumeUrlAndSessionId(object $payload, bool $shouldSet): void
     {
         /** @var MockInterface&ConnectionInterface */

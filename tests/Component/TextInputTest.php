@@ -7,12 +7,11 @@ namespace Tests\Tempcord\Discord\Component;
 use PHPUnit\Framework\TestCase;
 use Tempcord\Discord\Component\TextInput;
 use Tempcord\Discord\Enums\TextInputStyle;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 class TextInputTest extends TestCase
 {
-    /**
-     * @dataProvider convertionExpectationProvider
-     */
+    #[DataProvider('convertionExpectationProvider')]
     public function testCorrectlyConverted(array $args, array $expected): void
     {
         $textInput = new TextInput(...$args);

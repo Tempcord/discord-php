@@ -14,6 +14,8 @@ use Fakes\Tempcord\Discord\PromiseFake;
 use Mockery;
 use Mockery\Adapter\Phpunit\MockeryTestCase;
 use React\EventLoop\LoopInterface;
+use PHPUnit\Framework\Attributes\PreserveGlobalState;
+use PHPUnit\Framework\Attributes\RunInSeparateProcess;
 
 /**
  * @runTestsInSeparateProcesses
@@ -85,6 +87,13 @@ class FilteredEventListenerTest extends MockeryTestCase
         $this->assertCount(0, $eventEmitter->listeners('event'));
     }
 
+    /**
+     * Mockery's overload: defines the class itself, so it can only run where
+     * the real React\EventLoop\Loop has not been autoloaded yet — which any
+     * earlier test in the same process may have done.
+     */
+    #[RunInSeparateProcess]
+    #[PreserveGlobalState(false)]
     public function testCancelByTimeout(): void
     {
         /**

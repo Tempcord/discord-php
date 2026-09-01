@@ -15,6 +15,7 @@ use Tempcord\Discord\Gateway\Events\InteractionCreate;
 use Tempcord\Discord\Interaction\CommandInteraction;
 use Tempcord\Discord\Parts\ApplicationCommandInteractionDataOptionStructure;
 use Tempcord\Discord\Parts\InteractionData;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 class GuildCommandExtensionTest extends TestCase
 {
@@ -92,10 +93,7 @@ class GuildCommandExtensionTest extends TestCase
         $this->assertFalse($hasRun, 'Command 1 did not run');
     }
 
-    /**
-     * @dataProvider nameMappingProvider
-     * @depends testItEmitsEventsForApplicationCommands
-     */
+    #[DataProvider('nameMappingProvider')]
     public function testItMapsNamesCorrectly(InteractionCreate $interaction, string $expectedName)
     {
         $extension = new GuildCommandExtension('::guild id::');

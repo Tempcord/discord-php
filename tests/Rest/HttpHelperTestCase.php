@@ -13,6 +13,7 @@ use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;
 use React\Promise\Promise;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 use function React\Async\await;
 
@@ -43,9 +44,7 @@ abstract class HttpHelperTestCase extends TestCase
 
     abstract public static function httpBindingsProvider(): array;
 
-    /**
-     * @dataProvider httpBindingsProvider
-     */
+    #[DataProvider('httpBindingsProvider')]
     public function testFunctions(string $method, array $args, array $mockOptions, array $validationOptions): void
     {
         $this->http->shouldReceive($mockOptions['method'])->andReturns(

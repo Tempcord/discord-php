@@ -8,12 +8,11 @@ use PHPUnit\Framework\TestCase;
 use Tempcord\Discord\Component\SelectMenu\ChannelSelectMenu;
 use Tempcord\Discord\Enums\ChannelType;
 use Tempcord\Discord\Enums\SelectMenuType;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 class ChannelSelectMenuTest extends TestCase
 {
-    /**
-     * @dataProvider convertionExpectationProvider
-     */
+    #[DataProvider('convertionExpectationProvider')]
     public function testCorrectlyConverted(array $args, array $expected): void
     {
         $select = new ChannelSelectMenu(...$args);
