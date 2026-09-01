@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Parts;
+namespace Tempcord\Discord\Parts;
 
-use CyberWolf\Discord\Enums\ConnectionService;
-use CyberWolf\Discord\Enums\ConnectionVisibility;
-use CyberWolf\Discord\Mapping\ArrayMapping;
+use Tempcord\Discord\Enums\ConnectionService;
+use Tempcord\Discord\Enums\ConnectionVisibility;
+use Tempcord\Discord\Mapping\ArrayMapping;
 
 class Connection
 {

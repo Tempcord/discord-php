@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Fakes\CyberWolf\Discord;
+namespace Fakes\Tempcord\Discord;
 
 use Exan\Eventer\Eventer;
-use Fakes\CyberWolf\Discord\DataMapperFake;
-use CyberWolf\Discord\EventHandler;
-use CyberWolf\Discord\Websocket;
+use Fakes\Tempcord\Discord\DataMapperFake;
+use Tempcord\Discord\EventHandler;
+use Tempcord\Discord\Websocket;
 use Mockery;
 use Mockery\MockInterface;
-use CyberWolf\Discord\Gateway\Connection;
+use Tempcord\Discord\Gateway\Connection;
 
 class GatewayFake
 {

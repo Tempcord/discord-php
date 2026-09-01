@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest;
+namespace Tempcord\Discord\Rest;
 
 use Discord\Http\Endpoint;
-use CyberWolf\Discord\Parts\Gateway as PartsGateway;
-use CyberWolf\Discord\Parts\GatewayBot;
+use Tempcord\Discord\Parts\Gateway as PartsGateway;
+use Tempcord\Discord\Parts\GatewayBot;
 use React\Promise\PromiseInterface;
 
 /**

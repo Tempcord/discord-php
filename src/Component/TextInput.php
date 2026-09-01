@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Component;
+namespace Tempcord\Discord\Component;
 
-use CyberWolf\Discord\Enums\TextInputStyle;
+use Tempcord\Discord\Enums\TextInputStyle;
 
 class TextInput extends Component
 {

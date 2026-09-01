@@ -8,8 +8,8 @@
 
 <div align="center">
 
-[![Code Quality](https://github.com/CyberWolf-Studio/discord-php/actions/workflows/code-quality.yml/badge.svg)](https://github.com/CyberWolf-Studio/discord-php/actions/workflows/code-quality.yml)
-[![Unit Tests](https://github.com/CyberWolf-Studio/discord-php/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/CyberWolf-Studio/discord-php/actions/workflows/unit-tests.yml)
+[![Code Quality](https://github.com/Tempcord/discord-php/actions/workflows/code-quality.yml/badge.svg)](https://github.com/Tempcord/discord-php/actions/workflows/code-quality.yml)
+[![Unit Tests](https://github.com/Tempcord/discord-php/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/Tempcord/discord-php/actions/workflows/unit-tests.yml)
 
 </div>
 
@@ -34,12 +34,12 @@ composer require cyberwolf-studio/discord-php
 ## Example bot
 
 ```php
-use CyberWolf\Discord\Bitwise\Bitwise;
-use CyberWolf\Discord\Constants\Events;
-use CyberWolf\Discord\Discord;
-use CyberWolf\Discord\Enums\Intent;
-use CyberWolf\Discord\Gateway\Events\MessageCreate;
-use CyberWolf\Discord\Rest\Helpers\Channel\MessageBuilder;
+use Tempcord\Discord\Bitwise\Bitwise;
+use Tempcord\Discord\Constants\Events;
+use Tempcord\Discord\Discord;
+use Tempcord\Discord\Enums\Intent;
+use Tempcord\Discord\Gateway\Events\MessageCreate;
+use Tempcord\Discord\Rest\Helpers\Channel\MessageBuilder;
 
 require './vendor/autoload.php';
 
@@ -69,8 +69,8 @@ $discord->gateway->open(); // Nothing after this line is executed
 ## REST-only example
 
 ```php
-use CyberWolf\Discord\Discord;
-use CyberWolf\Discord\Rest\Helpers\Channel\MessageBuilder;
+use Tempcord\Discord\Discord;
+use Tempcord\Discord\Rest\Helpers\Channel\MessageBuilder;
 
 require './vendor/autoload.php';
 

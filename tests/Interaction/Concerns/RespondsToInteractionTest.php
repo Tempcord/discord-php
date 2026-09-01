@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Interaction\Concerns;
+namespace Tests\Tempcord\Discord\Interaction\Concerns;
 
-use CyberWolf\Discord\Enums\InteractionCallbackType;
-use CyberWolf\Discord\Enums\MessageFlag;
-use CyberWolf\Discord\Gateway\Events\InteractionCreate;
-use CyberWolf\Discord\Interaction\ButtonInteraction;
-use CyberWolf\Discord\Interaction\CommandInteraction;
-use CyberWolf\Discord\Interaction\Helpers\InteractionCallbackBuilder;
-use CyberWolf\Discord\Interaction\Helpers\ModalBuilder;
-use CyberWolf\Discord\Interaction\ModalSubmitInteraction;
-use CyberWolf\Discord\Rest\Helpers\Channel\EmbedBuilder;
-use CyberWolf\Discord\Rest\Helpers\Webhook\EditWebhookBuilder;
-use CyberWolf\Discord\Rest\Helpers\Webhook\WebhookBuilder;
-use Fakes\CyberWolf\Discord\DiscordFake;
-use Fakes\CyberWolf\Discord\PromiseFake;
+use Tempcord\Discord\Enums\InteractionCallbackType;
+use Tempcord\Discord\Enums\MessageFlag;
+use Tempcord\Discord\Gateway\Events\InteractionCreate;
+use Tempcord\Discord\Interaction\ButtonInteraction;
+use Tempcord\Discord\Interaction\CommandInteraction;
+use Tempcord\Discord\Interaction\Helpers\InteractionCallbackBuilder;
+use Tempcord\Discord\Interaction\Helpers\ModalBuilder;
+use Tempcord\Discord\Interaction\ModalSubmitInteraction;
+use Tempcord\Discord\Rest\Helpers\Channel\EmbedBuilder;
+use Tempcord\Discord\Rest\Helpers\Webhook\EditWebhookBuilder;
+use Tempcord\Discord\Rest\Helpers\Webhook\WebhookBuilder;
+use Fakes\Tempcord\Discord\DiscordFake;
+use Fakes\Tempcord\Discord\PromiseFake;
 use Mockery;
 use Mockery\Adapter\Phpunit\MockeryTestCase;
 
@@ -107,10 +107,28 @@ class RespondsToInteractionTest extends MockeryTestCase
     public function testReplyingEphemerallyIsFlagged(): void
     {
         $response = $this->captureResponse(
-            static fn (ButtonInteraction $interaction) => $interaction->replyEphemeral('only you')
+            static fn (ButtonInteraction $interaction) => $interaction->reply('only you', ephemeral: true)
         );
 
         $this->assertEquals(MessageFlag::EPHEMERAL->value, $response->getFlags());
+    }
+
+    /**
+     * A response built by hand carries its own flags, so the shorthand must not
+     * quietly override what it was told.
+     */
+    public function testABuiltResponseIgnoresTheEphemeralShorthand(): void
+    {
+        $built = InteractionCallbackBuilder::new()
+            ->setType(InteractionCallbackType::CHANNEL_MESSAGE_WITH_SOURCE)
+            ->setContent('::built::');
+
+        $response = $this->captureResponse(
+            static fn (ButtonInteraction $interaction) => $interaction->reply($built, ephemeral: true)
+        );
+
+        $this->assertSame($built, $response);
+        $this->assertNull($response->getFlags());
     }
 
     public function testDeferring(): void
@@ -260,5 +278,29 @@ class RespondsToInteractionTest extends MockeryTestCase
     {
         $this->assertFalse(method_exists(CommandInteraction::class, 'update'));
         $this->assertFalse(method_exists(CommandInteraction::class, 'deferUpdate'));
+    }
+
+    public function testFollowingUpMayBeEphemeral(): void
+    {
+        $discord = DiscordFake::get();
+
+        $discord->rest->webhook
+            ->shouldReceive('execute')
+            ->with('::application id::', '::interaction token::', Mockery::on(
+                static fn (WebhookBuilder $builder) => $builder->getFlags() === MessageFlag::EPHEMERAL->value
+            ))
+            ->andReturn(PromiseFake::get('::result::'))
+            ->once();
+
+        new ButtonInteraction($this->interactionCreate(), $discord)->followUp('::more::', ephemeral: true);
+    }
+
+    /**
+     * The shorthand is gone: there is one way to answer, and whether only the
+     * presser sees it is an argument rather than a second method.
+     */
+    public function testThereIsNoSeparateEphemeralReply(): void
+    {
+        $this->assertFalse(method_exists(ButtonInteraction::class, 'replyEphemeral'));
     }
 }

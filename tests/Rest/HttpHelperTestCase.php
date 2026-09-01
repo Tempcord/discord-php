@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest;
+namespace Tests\Tempcord\Discord\Rest;
 
 use Discord\Http\Http;
-use CyberWolf\Discord\DataMapper;
-use CyberWolf\Discord\Rest\HttpResource;
-use Fakes\CyberWolf\Discord\DataMapperFake;
+use Tempcord\Discord\DataMapper;
+use Tempcord\Discord\Rest\HttpResource;
+use Fakes\Tempcord\Discord\DataMapperFake;
 use Mockery;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use PHPUnit\Framework\TestCase;

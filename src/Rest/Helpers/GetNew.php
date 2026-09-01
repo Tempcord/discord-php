@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers;
+namespace Tempcord\Discord\Rest\Helpers;
 
 trait GetNew
 {

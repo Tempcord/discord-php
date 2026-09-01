@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Parts;
+namespace Tempcord\Discord\Parts;
 
-use CyberWolf\Discord\Enums\MessageComponentType;
-use CyberWolf\Discord\Mapping\ArrayMapping;
+use Tempcord\Discord\Enums\MessageComponentType;
+use Tempcord\Discord\Mapping\ArrayMapping;
 
 class InteractionData
 {

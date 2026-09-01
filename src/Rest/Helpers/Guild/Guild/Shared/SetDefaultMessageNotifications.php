@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Guild\Guild\Shared;
+namespace Tempcord\Discord\Rest\Helpers\Guild\Guild\Shared;
 
-use CyberWolf\Discord\Enums\DefaultMessageNotification;
+use Tempcord\Discord\Enums\DefaultMessageNotification;
 
 trait SetDefaultMessageNotifications
 {

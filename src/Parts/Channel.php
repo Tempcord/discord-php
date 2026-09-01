@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Parts;
+namespace Tempcord\Discord\Parts;
 
 use Carbon\Carbon;
-use CyberWolf\Discord\Bitwise\Bitwise;
-use CyberWolf\Discord\Enums\ChannelType;
-use CyberWolf\Discord\Enums\ForumLayoutType;
-use CyberWolf\Discord\Enums\SortOrderType;
-use CyberWolf\Discord\Enums\VideoQualityMode;
-use CyberWolf\Discord\Mapping\ArrayMapping;
+use Tempcord\Discord\Bitwise\Bitwise;
+use Tempcord\Discord\Enums\ChannelType;
+use Tempcord\Discord\Enums\ForumLayoutType;
+use Tempcord\Discord\Enums\SortOrderType;
+use Tempcord\Discord\Enums\VideoQualityMode;
+use Tempcord\Discord\Mapping\ArrayMapping;
 
 class Channel
 {

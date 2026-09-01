@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Channel;
+namespace Tempcord\Discord\Rest\Helpers\Channel;
 
 use Discord\Http\Multipart\MultipartBody;
-use CyberWolf\Discord\Exceptions\Rest\Helpers\MessageBuilder\TooManyStickersException;
-use CyberWolf\Discord\Rest\Helpers\Channel\Message\AddAttachment;
-use CyberWolf\Discord\Rest\Helpers\Channel\Message\AddComponent;
-use CyberWolf\Discord\Rest\Helpers\Channel\Message\AddEmbed;
-use CyberWolf\Discord\Rest\Helpers\Channel\Message\AddFile;
-use CyberWolf\Discord\Rest\Helpers\Channel\Message\AllowMentions;
-use CyberWolf\Discord\Rest\Helpers\Channel\Message\MultipartMessage;
-use CyberWolf\Discord\Rest\Helpers\Channel\Message\SetContent;
-use CyberWolf\Discord\Rest\Helpers\Channel\Message\SetFlags;
-use CyberWolf\Discord\Rest\Helpers\Channel\Message\SetPoll;
-use CyberWolf\Discord\Rest\Helpers\Channel\Message\SetTts;
-use CyberWolf\Discord\Rest\Helpers\GetNew;
+use Tempcord\Discord\Exceptions\Rest\Helpers\MessageBuilder\TooManyStickersException;
+use Tempcord\Discord\Rest\Helpers\Channel\Message\AddAttachment;
+use Tempcord\Discord\Rest\Helpers\Channel\Message\AddComponent;
+use Tempcord\Discord\Rest\Helpers\Channel\Message\AddEmbed;
+use Tempcord\Discord\Rest\Helpers\Channel\Message\AddFile;
+use Tempcord\Discord\Rest\Helpers\Channel\Message\AllowMentions;
+use Tempcord\Discord\Rest\Helpers\Channel\Message\MultipartMessage;
+use Tempcord\Discord\Rest\Helpers\Channel\Message\SetContent;
+use Tempcord\Discord\Rest\Helpers\Channel\Message\SetFlags;
+use Tempcord\Discord\Rest\Helpers\Channel\Message\SetPoll;
+use Tempcord\Discord\Rest\Helpers\Channel\Message\SetTts;
+use Tempcord\Discord\Rest\Helpers\GetNew;
 
 /**
  * @see https://discord.com/developers/docs/resources/channel#create-message

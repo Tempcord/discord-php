@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Parts;
+namespace Tempcord\Discord\Parts;
 
-use CyberWolf\Discord\Enums\InteractionType;
+use Tempcord\Discord\Enums\InteractionType;
 
 /**
  * @see https://discord.com/developers/docs/resources/message#message-interaction-metadata-object-message-interaction-metadata-structure

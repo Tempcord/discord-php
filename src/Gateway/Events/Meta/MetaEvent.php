@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Gateway\Events\Meta;
+namespace Tempcord\Discord\Gateway\Events\Meta;
 
 use Exan\Eventer\EventInterface;
 use Psr\Log\LoggerInterface;
-use CyberWolf\Discord\Gateway\ConnectionInterface;
+use Tempcord\Discord\Gateway\ConnectionInterface;
 
 abstract class MetaEvent implements EventInterface
 {

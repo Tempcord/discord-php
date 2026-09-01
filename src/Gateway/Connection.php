@@ -2,32 +2,32 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Gateway;
+namespace Tempcord\Discord\Gateway;
 
 use Exan\Eventer\Eventer;
 use Exan\Retrier\Retrier;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
-use CyberWolf\Discord\Bitwise\Bitwise;
-use CyberWolf\Discord\Constants\GatewayCloseCodes;
-use CyberWolf\Discord\Constants\MetaEvents;
-use CyberWolf\Discord\Constants\WebsocketEvents;
-use CyberWolf\Discord\DataMapper;
-use CyberWolf\Discord\EventHandler;
-use CyberWolf\Discord\Gateway\Handlers\HeartbeatAcknowledgedEvent;
-use CyberWolf\Discord\Gateway\Handlers\IdentifyHelloEvent;
-use CyberWolf\Discord\Gateway\Handlers\IdentifyResumeEvent;
-use CyberWolf\Discord\Gateway\Handlers\InvalidSessionEvent;
-use CyberWolf\Discord\Gateway\Handlers\Meta\UnacknowledgedHeartbeatEvent;
-use CyberWolf\Discord\Gateway\Handlers\PassthroughEvent;
-use CyberWolf\Discord\Gateway\Handlers\ReadyEvent;
-use CyberWolf\Discord\Gateway\Handlers\ReconnectEvent;
-use CyberWolf\Discord\Gateway\Handlers\RecoverableInvalidSessionEvent;
-use CyberWolf\Discord\Gateway\Handlers\RequestHeartbeatEvent;
-use CyberWolf\Discord\Gateway\Helpers\PresenceUpdateBuilder;
-use CyberWolf\Discord\Gateway\Helpers\RequestGuildMembersBuilder;
-use CyberWolf\Discord\Gateway\Objects\Payload;
-use CyberWolf\Discord\WebsocketInterface;
+use Tempcord\Discord\Bitwise\Bitwise;
+use Tempcord\Discord\Constants\GatewayCloseCodes;
+use Tempcord\Discord\Constants\MetaEvents;
+use Tempcord\Discord\Constants\WebsocketEvents;
+use Tempcord\Discord\DataMapper;
+use Tempcord\Discord\EventHandler;
+use Tempcord\Discord\Gateway\Handlers\HeartbeatAcknowledgedEvent;
+use Tempcord\Discord\Gateway\Handlers\IdentifyHelloEvent;
+use Tempcord\Discord\Gateway\Handlers\IdentifyResumeEvent;
+use Tempcord\Discord\Gateway\Handlers\InvalidSessionEvent;
+use Tempcord\Discord\Gateway\Handlers\Meta\UnacknowledgedHeartbeatEvent;
+use Tempcord\Discord\Gateway\Handlers\PassthroughEvent;
+use Tempcord\Discord\Gateway\Handlers\ReadyEvent;
+use Tempcord\Discord\Gateway\Handlers\ReconnectEvent;
+use Tempcord\Discord\Gateway\Handlers\RecoverableInvalidSessionEvent;
+use Tempcord\Discord\Gateway\Handlers\RequestHeartbeatEvent;
+use Tempcord\Discord\Gateway\Helpers\PresenceUpdateBuilder;
+use Tempcord\Discord\Gateway\Helpers\RequestGuildMembersBuilder;
+use Tempcord\Discord\Gateway\Objects\Payload;
+use Tempcord\Discord\WebsocketInterface;
 use React\EventLoop\LoopInterface;
 use React\EventLoop\TimerInterface;
 use React\Promise\PromiseInterface;
@@ -308,8 +308,8 @@ class Connection implements ConnectionInterface
                 'intents' => $this->intents->get(),
                 'properties' => [
                     'os' => PHP_OS,
-                    'browser' => 'CyberWolf\Discord',
-                    'device' => 'CyberWolf\Discord',
+                    'browser' => 'Tempcord\Discord',
+                    'device' => 'Tempcord\Discord',
                 ]
             ]
         ];

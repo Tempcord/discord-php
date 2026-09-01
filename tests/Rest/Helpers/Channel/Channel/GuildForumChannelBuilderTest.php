@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest\Helpers\Channel\Channel;
+namespace Tests\Tempcord\Discord\Rest\Helpers\Channel\Channel;
 
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Bitwise\Bitwise;
-use CyberWolf\Discord\Enums\ChannelFlag;
-use CyberWolf\Discord\Enums\ChannelType;
-use CyberWolf\Discord\Enums\ForumLayoutType;
-use CyberWolf\Discord\Enums\SortOrderType;
-use CyberWolf\Discord\Exceptions\Rest\Helpers\Channel\Channel\GuildForumChannelBuilder\TooManyAvailableTagsException;
-use CyberWolf\Discord\Rest\Helpers\Channel\Channel\GuildForumChannelBuilder;
-use CyberWolf\Discord\Rest\Helpers\Emoji\EmojiBuilder;
+use Tempcord\Discord\Bitwise\Bitwise;
+use Tempcord\Discord\Enums\ChannelFlag;
+use Tempcord\Discord\Enums\ChannelType;
+use Tempcord\Discord\Enums\ForumLayoutType;
+use Tempcord\Discord\Enums\SortOrderType;
+use Tempcord\Discord\Exceptions\Rest\Helpers\Channel\Channel\GuildForumChannelBuilder\TooManyAvailableTagsException;
+use Tempcord\Discord\Rest\Helpers\Channel\Channel\GuildForumChannelBuilder;
+use Tempcord\Discord\Rest\Helpers\Emoji\EmojiBuilder;
 
 class GuildForumChannelBuilderTest extends TestCase
 {

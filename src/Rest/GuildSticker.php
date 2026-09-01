@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest;
+namespace Tempcord\Discord\Rest;
 
 use Discord\Http\Endpoint;
-use CyberWolf\Discord\Parts\Sticker;
-use CyberWolf\Discord\Rest\Helpers\GuildSticker\ModifyStickerBuilder;
-use CyberWolf\Discord\Rest\Helpers\GuildSticker\StickerBuilder;
+use Tempcord\Discord\Parts\Sticker;
+use Tempcord\Discord\Rest\Helpers\GuildSticker\ModifyStickerBuilder;
+use Tempcord\Discord\Rest\Helpers\GuildSticker\StickerBuilder;
 use React\Promise\PromiseInterface;
 
 /**
@@ -18,7 +18,7 @@ class GuildSticker extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/sticker#list-guild-stickers
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Sticker[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Sticker[]>
      */
     public function list(string $guildId): PromiseInterface
     {
@@ -36,7 +36,7 @@ class GuildSticker extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/sticker#get-guild-sticker
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Sticker>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Sticker>
      */
     public function get(string $guildId, string $stickerId): PromiseInterface
     {
@@ -55,7 +55,7 @@ class GuildSticker extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/sticker#get-guild-sticker
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Sticker>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Sticker>
      */
     public function create(string $guildId, StickerBuilder $stickerBuilder): PromiseInterface
     {
@@ -73,7 +73,7 @@ class GuildSticker extends HttpResource
 
     /**
      * @see https://discord.com/developers/docs/resources/sticker#modify-guild-sticker
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Sticker>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Sticker>
      */
     public function modify(
         string $guildId,

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest;
+namespace Tests\Tempcord\Discord\Rest;
 
-use CyberWolf\Discord\Enums\InteractionCallbackType;
-use CyberWolf\Discord\Interaction\Helpers\InteractionCallbackBuilder;
-use CyberWolf\Discord\Parts\Message;
-use CyberWolf\Discord\Rest\Helpers\Webhook\EditWebhookBuilder;
-use CyberWolf\Discord\Rest\Webhook;
-use Tests\CyberWolf\Discord\Rest\HttpHelperTestCase;
+use Tempcord\Discord\Enums\InteractionCallbackType;
+use Tempcord\Discord\Interaction\Helpers\InteractionCallbackBuilder;
+use Tempcord\Discord\Parts\Message;
+use Tempcord\Discord\Rest\Helpers\Webhook\EditWebhookBuilder;
+use Tempcord\Discord\Rest\Webhook;
+use Tests\Tempcord\Discord\Rest\HttpHelperTestCase;
 
 class WebhookTest extends HttpHelperTestCase
 {

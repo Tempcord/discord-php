@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest\Helpers\Channel\Channel;
+namespace Tests\Tempcord\Discord\Rest\Helpers\Channel\Channel;
 
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Enums\ChannelType;
-use CyberWolf\Discord\Enums\VideoQualityMode;
-use CyberWolf\Discord\Rest\Helpers\Channel\Channel\GuildVoiceChannelBuilder;
+use Tempcord\Discord\Enums\ChannelType;
+use Tempcord\Discord\Enums\VideoQualityMode;
+use Tempcord\Discord\Rest\Helpers\Channel\Channel\GuildVoiceChannelBuilder;
 
 class GuildVoiceChannelBuilderTest extends TestCase
 {

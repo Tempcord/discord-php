@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Parts;
+namespace Tempcord\Discord\Parts;
 
-use CyberWolf\Discord\Enums\AutoModerationKeywordPresetType;
-use CyberWolf\Discord\Mapping\ArrayMapping;
+use Tempcord\Discord\Enums\AutoModerationKeywordPresetType;
+use Tempcord\Discord\Mapping\ArrayMapping;
 
 class AutoModerationTriggerMetadata
 {

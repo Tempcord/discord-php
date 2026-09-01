@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest\Helpers\Channel\Channel\Shared;
+namespace Tests\Tempcord\Discord\Rest\Helpers\Channel\Channel\Shared;
 
-use CyberWolf\Discord\Rest\Helpers\Channel\Channel\Shared\SetTopic;
+use Tempcord\Discord\Rest\Helpers\Channel\Channel\Shared\SetTopic;
 use PHPUnit\Framework\TestCase;
 
 class SetTopicTest extends TestCase

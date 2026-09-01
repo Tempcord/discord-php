@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest\Helpers\Channel\Channel\Shared;
+namespace Tests\Tempcord\Discord\Rest\Helpers\Channel\Channel\Shared;
 
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Enums\ChannelType;
-use CyberWolf\Discord\Exceptions\Rest\Helpers\Channel\Channel\Shared\SetType\UnsupportedConversionException;
-use CyberWolf\Discord\Rest\Helpers\Channel\Channel\Shared\SetType;
+use Tempcord\Discord\Enums\ChannelType;
+use Tempcord\Discord\Exceptions\Rest\Helpers\Channel\Channel\Shared\SetType\UnsupportedConversionException;
+use Tempcord\Discord\Rest\Helpers\Channel\Channel\Shared\SetType;
 
 class SetTypeTest extends TestCase
 {

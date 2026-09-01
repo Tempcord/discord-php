@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord;
+namespace Tempcord\Discord;
 
 use Composer\InstalledVersions;
 use Discord\Http\DriverInterface;
@@ -10,14 +10,14 @@ use Discord\Http\Drivers\React;
 use Discord\Http\Http;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
-use CyberWolf\Discord\Bitwise\Bitwise;
-use CyberWolf\Discord\Buffer\BufferInterface;
-use CyberWolf\Discord\Buffer\Passthrough;
-use CyberWolf\Discord\Enums\TokenType;
-use CyberWolf\Discord\Exceptions\Extension\ExtensionNotFoundException;
-use CyberWolf\Discord\Extension\Extension;
-use CyberWolf\Discord\Gateway\Connection;
-use CyberWolf\Discord\Rest\Rest;
+use Tempcord\Discord\Bitwise\Bitwise;
+use Tempcord\Discord\Buffer\BufferInterface;
+use Tempcord\Discord\Buffer\Passthrough;
+use Tempcord\Discord\Enums\TokenType;
+use Tempcord\Discord\Exceptions\Extension\ExtensionNotFoundException;
+use Tempcord\Discord\Extension\Extension;
+use Tempcord\Discord\Gateway\Connection;
+use Tempcord\Discord\Rest\Rest;
 use React\EventLoop\Loop;
 use React\EventLoop\LoopInterface;
 
@@ -46,7 +46,7 @@ class Discord
     }
 
     /**
-     * @param Bitwise<\CyberWolf\Discord\Enums\Intent> $intents
+     * @param Bitwise<\Tempcord\Discord\Enums\Intent> $intents
      */
     public function withGateway(
         Bitwise $intents,

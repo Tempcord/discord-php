@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Gateway\Handlers;
+namespace Tempcord\Discord\Gateway\Handlers;
 
-use CyberWolf\Discord\Constants\GatewayCloseCodes;
+use Tempcord\Discord\Constants\GatewayCloseCodes;
 
 class RecoverableInvalidSessionEvent extends InvalidSessionEvent
 {

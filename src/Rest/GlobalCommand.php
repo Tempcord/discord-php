@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest;
+namespace Tempcord\Discord\Rest;
 
 use Discord\Http\Endpoint;
-use CyberWolf\Discord\Parts\ApplicationCommand;
-use CyberWolf\Discord\Rest\Helpers\Command\CommandBuilder;
+use Tempcord\Discord\Parts\ApplicationCommand;
+use Tempcord\Discord\Rest\Helpers\Command\CommandBuilder;
 use React\Promise\PromiseInterface;
 
 /**
@@ -30,7 +30,7 @@ class GlobalCommand extends HttpResource
     /**
      * @see https://discord.com/developers/docs/interactions/application-commands#making-a-global-command
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\ApplicationCommand>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\ApplicationCommand>
      */
     public function createApplicationCommand(
         string $applicationId,
@@ -52,7 +52,7 @@ class GlobalCommand extends HttpResource
     /**
      * @see https://discord.com/developers/docs/interactions/application-commands#get-global-application-command
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\ApplicationCommand>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\ApplicationCommand>
      */
     public function getApplicationCommand(
         string $applicationId,
@@ -73,7 +73,7 @@ class GlobalCommand extends HttpResource
     /**
      * @see https://discord.com/developers/docs/interactions/application-commands#edit-global-application-command
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\ApplicationCommand>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\ApplicationCommand>
      */
     public function editApplicationCommand(
         string $applicationId,
@@ -122,7 +122,7 @@ class GlobalCommand extends HttpResource
      *
      * @param CommandBuilder[] $commandBuilders
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\ApplicationCommand[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\ApplicationCommand[]>
      */
     public function bulkOverwriteApplicationCommands(
         string $applicationId,

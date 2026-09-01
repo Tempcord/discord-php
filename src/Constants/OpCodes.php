@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Constants;
+namespace Tempcord\Discord\Constants;
 
 class OpCodes
 {

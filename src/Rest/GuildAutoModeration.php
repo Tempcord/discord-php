@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest;
+namespace Tempcord\Discord\Rest;
 
 use Discord\Http\Endpoint;
-use CyberWolf\Discord\Parts\AutoModerationRuleObject;
+use Tempcord\Discord\Parts\AutoModerationRuleObject;
 use React\Promise\PromiseInterface;
 
 /**
@@ -15,7 +15,7 @@ class GuildAutoModeration extends HttpResource
 {
     /**
      * @see https://discord.com/developers/docs/resources/auto-moderation#list-auto-moderation-rules-for-guild
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\AutoModerationRuleObject[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\AutoModerationRuleObject[]>
      */
     public function list(string $guildId): PromiseInterface
     {
@@ -27,7 +27,7 @@ class GuildAutoModeration extends HttpResource
 
     /**
      * @see https://discord.com/developers/docs/resources/auto-moderation#get-auto-moderation-rule
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\AutoModerationRuleObject>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\AutoModerationRuleObject>
      */
     public function get(string $guildId, string $autoModerationRuleId): PromiseInterface
     {
@@ -45,7 +45,7 @@ class GuildAutoModeration extends HttpResource
 
     /**
      * @see https://discord.com/developers/docs/resources/auto-moderation#create-auto-moderation-rule
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\AutoModerationRuleObject>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\AutoModerationRuleObject>
      */
     public function create(string $guildId, array $params, ?string $reason = null): PromiseInterface
     {
@@ -64,7 +64,7 @@ class GuildAutoModeration extends HttpResource
 
     /**
      * @see https://discord.com/developers/docs/resources/auto-moderation#modify-auto-moderation-rule
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\AutoModerationRuleObject>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\AutoModerationRuleObject>
      */
     public function modify(string $guildId, string $autoModerationRuleId, array $params, ?string $reason = null): PromiseInterface
     {

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Gateway\Buffer;
+namespace Tests\Tempcord\Discord\Gateway\Buffer;
 
 use Closure;
 use PHPUnit\Framework\Assert;
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Buffer\BufferInterface;
-use CyberWolf\Discord\Buffer\Multilayer;
+use Tempcord\Discord\Buffer\BufferInterface;
+use Tempcord\Discord\Buffer\Multilayer;
 
 class MultilayerTest extends TestCase
 {

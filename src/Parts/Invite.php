@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Parts;
+namespace Tempcord\Discord\Parts;
 
 use Carbon\Carbon;
-use CyberWolf\Discord\Enums\InviteTargetType;
+use Tempcord\Discord\Enums\InviteTargetType;
 
 class Invite
 {

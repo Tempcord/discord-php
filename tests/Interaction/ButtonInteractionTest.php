@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Interaction;
+namespace Tests\Tempcord\Discord\Interaction;
 
-use CyberWolf\Discord\Interaction\ButtonInteraction;
+use Tempcord\Discord\Interaction\ButtonInteraction;
 use Mockery;
 use Mockery\Adapter\Phpunit\MockeryTestCase;
-use CyberWolf\Discord\Interaction\Helpers\InteractionCallbackBuilder;
-use CyberWolf\Discord\Gateway\Events\InteractionCreate;
-use Fakes\CyberWolf\Discord\DiscordFake;
-use Fakes\CyberWolf\Discord\PromiseFake;
+use Tempcord\Discord\Interaction\Helpers\InteractionCallbackBuilder;
+use Tempcord\Discord\Gateway\Events\InteractionCreate;
+use Fakes\Tempcord\Discord\DiscordFake;
+use Fakes\Tempcord\Discord\PromiseFake;
 
 class ButtonInteractionTest extends MockeryTestCase
 {

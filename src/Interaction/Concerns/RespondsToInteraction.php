@@ -2,13 +2,14 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Interaction\Concerns;
+namespace Tempcord\Discord\Interaction\Concerns;
 
-use CyberWolf\Discord\Interaction\Helpers\InteractionCallbackBuilder;
-use CyberWolf\Discord\Interaction\Response;
-use CyberWolf\Discord\Rest\Helpers\Channel\EmbedBuilder;
-use CyberWolf\Discord\Rest\Helpers\Webhook\EditWebhookBuilder;
-use CyberWolf\Discord\Rest\Helpers\Webhook\WebhookBuilder;
+use Tempcord\Discord\Enums\MessageFlag;
+use Tempcord\Discord\Interaction\Helpers\InteractionCallbackBuilder;
+use Tempcord\Discord\Interaction\Response;
+use Tempcord\Discord\Rest\Helpers\Channel\EmbedBuilder;
+use Tempcord\Discord\Rest\Helpers\Webhook\EditWebhookBuilder;
+use Tempcord\Discord\Rest\Helpers\Webhook\WebhookBuilder;
 use React\Promise\PromiseInterface;
 
 /**
@@ -32,24 +33,23 @@ trait RespondsToInteraction
     }
 
     /**
-     * Answers with a message everyone in the channel can see.
+     * Answers the interaction.
      *
      * Takes the text, an embed, or a fully built response for anything more
-     * involved.
+     * involved — components, files, several embeds. A built response is sent as
+     * it stands, so $ephemeral is ignored there: say it on the response itself.
      */
-    public function reply(string|EmbedBuilder|InteractionCallbackBuilder $content): PromiseInterface
-    {
-        return $this->createInteractionResponse(
-            $content instanceof InteractionCallbackBuilder ? $content : Response::message($content)
-        );
-    }
+    public function reply(
+        string|EmbedBuilder|InteractionCallbackBuilder $content,
+        bool $ephemeral = false,
+    ): PromiseInterface {
+        if ($content instanceof InteractionCallbackBuilder) {
+            return $this->createInteractionResponse($content);
+        }
 
-    /**
-     * Answers only the person who triggered the interaction.
-     */
-    public function replyEphemeral(string|EmbedBuilder $content): PromiseInterface
-    {
-        return $this->createInteractionResponse(Response::ephemeral($content));
+        return $this->createInteractionResponse(
+            $ephemeral ? Response::ephemeral($content) : Response::message($content)
+        );
     }
 
     /**
@@ -107,14 +107,22 @@ trait RespondsToInteraction
     /**
      * Sends another message under the same interaction, after the first answer.
      */
-    public function followUp(string|EmbedBuilder|WebhookBuilder $content): PromiseInterface
-    {
+    public function followUp(
+        string|EmbedBuilder|WebhookBuilder $content,
+        bool $ephemeral = false,
+    ): PromiseInterface {
+        if (!$content instanceof WebhookBuilder) {
+            $content = $this->fill(WebhookBuilder::new(), $content);
+
+            if ($ephemeral) {
+                $content->setFlags(MessageFlag::EPHEMERAL->value);
+            }
+        }
+
         return $this->discord->rest->webhook->execute(
             $this->interaction->application_id,
             $this->interaction->token,
-            $content instanceof WebhookBuilder
-                ? $content
-                : $this->fill(WebhookBuilder::new(), $content)
+            $content
         );
     }
 

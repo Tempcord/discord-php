@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest\Helpers\Channel\Channel\Shared;
+namespace Tests\Tempcord\Discord\Rest\Helpers\Channel\Channel\Shared;
 
-use CyberWolf\Discord\Rest\Helpers\Channel\Channel\Shared\SetBitrate;
+use Tempcord\Discord\Rest\Helpers\Channel\Channel\Shared\SetBitrate;
 use PHPUnit\Framework\TestCase;
 
 class SetBitrateTest extends TestCase

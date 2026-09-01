@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest\Helpers\Entitlement;
+namespace Tests\Tempcord\Discord\Rest\Helpers\Entitlement;
 
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Rest\Helpers\Entitlement\GetEntitlementsBuilder;
+use Tempcord\Discord\Rest\Helpers\Entitlement\GetEntitlementsBuilder;
 
 class GetEntitlementsBuilderTest extends TestCase
 {

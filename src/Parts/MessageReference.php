@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Parts;
+namespace Tempcord\Discord\Parts;
 
-use CyberWolf\Discord\Enums\MessageReferenceType;
+use Tempcord\Discord\Enums\MessageReferenceType;
 
 class MessageReference
 {

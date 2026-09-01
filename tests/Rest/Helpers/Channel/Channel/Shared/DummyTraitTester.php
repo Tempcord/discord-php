@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest\Helpers\Channel\Channel\Shared;
+namespace Tests\Tempcord\Discord\Rest\Helpers\Channel\Channel\Shared;
 
 class DummyTraitTester
 {

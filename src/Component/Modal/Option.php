@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Component\Modal;
+namespace Tempcord\Discord\Component\Modal;
 
 /**
  * One choice within a radio group or checkbox group. Both take the same shape.

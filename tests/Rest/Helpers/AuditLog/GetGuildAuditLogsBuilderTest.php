@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest\Helpers\AuditLog;
+namespace Tests\Tempcord\Discord\Rest\Helpers\AuditLog;
 
-use CyberWolf\Discord\Rest\Helpers\AuditLog\GetGuildAuditLogsBuilder;
+use Tempcord\Discord\Rest\Helpers\AuditLog\GetGuildAuditLogsBuilder;
 use PHPUnit\Framework\TestCase;
 
 class GetGuildAuditLogsBuilderTest extends TestCase

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest;
+namespace Tempcord\Discord\Rest;
 
 use Discord\Http\Endpoint;
-use CyberWolf\Discord\Parts\Message;
-use CyberWolf\Discord\Parts\PollAnswerVoters;
+use Tempcord\Discord\Parts\Message;
+use Tempcord\Discord\Parts\PollAnswerVoters;
 use React\Promise\PromiseInterface;
 
 /**
@@ -17,7 +17,7 @@ class Poll extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/poll#get-answer-voters
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\PollAnswerVoters>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\PollAnswerVoters>
      */
     public function getAnswerVoters(
         string $channelId,
@@ -53,7 +53,7 @@ class Poll extends HttpResource
      *
      * @see https://discord.com/developers/docs/resources/poll#end-poll
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Message>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Message>
      */
     public function endPoll(string $channelId, string $messageId): PromiseInterface
     {

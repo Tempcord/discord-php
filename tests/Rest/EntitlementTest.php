@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest;
+namespace Tests\Tempcord\Discord\Rest;
 
-use CyberWolf\Discord\Enums\EntitlementOwnerType;
-use CyberWolf\Discord\Parts\Entitlement as EntitlementPart;
-use CyberWolf\Discord\Rest\Entitlement;
-use CyberWolf\Discord\Rest\Helpers\Entitlement\GetEntitlementsBuilder;
-use Tests\CyberWolf\Discord\Rest\HttpHelperTestCase;
+use Tempcord\Discord\Enums\EntitlementOwnerType;
+use Tempcord\Discord\Parts\Entitlement as EntitlementPart;
+use Tempcord\Discord\Rest\Entitlement;
+use Tempcord\Discord\Rest\Helpers\Entitlement\GetEntitlementsBuilder;
+use Tests\Tempcord\Discord\Rest\HttpHelperTestCase;
 
 class EntitlementTest extends HttpHelperTestCase
 {

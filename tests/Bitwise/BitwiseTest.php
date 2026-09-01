@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Bitwise;
+namespace Tests\Tempcord\Discord\Bitwise;
 
-use CyberWolf\Discord\Bitwise\Bitwise;
+use Tempcord\Discord\Bitwise\Bitwise;
 use PHPUnit\Framework\TestCase;
 
 class BitwiseTest extends TestCase

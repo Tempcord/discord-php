@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest;
+namespace Tempcord\Discord\Rest;
 
 use Discord\Http\Endpoint;
-use CyberWolf\Discord\Parts\ApplicationCommand;
-use CyberWolf\Discord\Parts\ApplicationCommandPermissionObject;
-use CyberWolf\Discord\Parts\ApplicationCommandPermissionStructure;
-use CyberWolf\Discord\Rest\Helpers\Command\CommandBuilder;
+use Tempcord\Discord\Parts\ApplicationCommand;
+use Tempcord\Discord\Parts\ApplicationCommandPermissionObject;
+use Tempcord\Discord\Parts\ApplicationCommandPermissionStructure;
+use Tempcord\Discord\Rest\Helpers\Command\CommandBuilder;
 use React\Promise\PromiseInterface;
 
 /**
@@ -19,7 +19,7 @@ class GuildCommand extends HttpResource
     /**
      * @see https://discord.com/developers/docs/interactions/application-commands#get-guild-application-command
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\ApplicationCommand[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\ApplicationCommand[]>
      */
     public function getCommands(string $guildId, string $applicationId, bool $withLocalizations = false): PromiseInterface
     {
@@ -37,7 +37,7 @@ class GuildCommand extends HttpResource
     /**
      * @see https://discord.com/developers/docs/interactions/application-commands#create-guild-application-command
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\ApplicationCommand>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\ApplicationCommand>
      */
     public function createApplicationCommand(
         string $applicationId,
@@ -60,7 +60,7 @@ class GuildCommand extends HttpResource
     /**
      * @see https://discord.com/developers/docs/interactions/application-commands#get-guild-application-command
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\ApplicationCommand>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\ApplicationCommand>
      */
     public function getApplicationCommand(
         string $applicationId,
@@ -83,7 +83,7 @@ class GuildCommand extends HttpResource
     /**
      * @see https://discord.com/developers/docs/interactions/application-commands#edit-guild-application-command
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\ApplicationCommand>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\ApplicationCommand>
      */
     public function editApplicationCommand(
         string $applicationId,
@@ -137,7 +137,7 @@ class GuildCommand extends HttpResource
      *
      * @param CommandBuilder[] $commandBuilders
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\ApplicationCommand[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\ApplicationCommand[]>
      */
     public function bulkOverwriteApplicationCommands(
         string $applicationId,
@@ -163,7 +163,7 @@ class GuildCommand extends HttpResource
     /**
      * @see https://discord.com/developers/docs/interactions/application-commands#get-application-command-permissions
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\ApplicationCommandPermissionObject>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\ApplicationCommandPermissionObject>
      */
     public function getApplicationCommandPermissions(
         string $applicationId,
@@ -192,7 +192,7 @@ class GuildCommand extends HttpResource
      *
      * @param ApplicationCommandPermissionStructure[] $permissions
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\ApplicationCommandPermissionObject>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\ApplicationCommandPermissionObject>
      */
     public function editApplicationCommandPermissions(
         string $applicationId,

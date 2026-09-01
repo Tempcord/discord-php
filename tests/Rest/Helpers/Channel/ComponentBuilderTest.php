@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest\Helpers\Channel;
+namespace Tests\Tempcord\Discord\Rest\Helpers\Channel;
 
-use CyberWolf\Discord\Exceptions\Rest\Helpers\ComponentBuilder\TooManyRowsException;
-use CyberWolf\Discord\Rest\Helpers\Channel\ComponentBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\ComponentRowBuilder;
+use Tempcord\Discord\Exceptions\Rest\Helpers\ComponentBuilder\TooManyRowsException;
+use Tempcord\Discord\Rest\Helpers\Channel\ComponentBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\ComponentRowBuilder;
 use Mockery;
 use PHPUnit\Framework\TestCase;
 

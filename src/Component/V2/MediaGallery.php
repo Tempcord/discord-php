@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Component\V2;
+namespace Tempcord\Discord\Component\V2;
 
-use CyberWolf\Discord\Component\Component;
-use CyberWolf\Discord\Enums\MessageComponentType;
-use CyberWolf\Discord\Exceptions\Component\TooManyItemsException;
+use Tempcord\Discord\Component\Component;
+use Tempcord\Discord\Enums\MessageComponentType;
+use Tempcord\Discord\Exceptions\Component\TooManyItemsException;
 
 /**
  * A grid of up to ten images or videos.

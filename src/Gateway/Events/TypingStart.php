@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Gateway\Events;
+namespace Tempcord\Discord\Gateway\Events;
 
 use Carbon\Carbon;
-use CyberWolf\Discord\Attributes\RequiresIntent;
-use CyberWolf\Discord\Enums\Intent;
-use CyberWolf\Discord\Parts\GuildMember;
+use Tempcord\Discord\Attributes\RequiresIntent;
+use Tempcord\Discord\Enums\Intent;
+use Tempcord\Discord\Parts\GuildMember;
 
 /**
  * Note: this event is sent every 5 seconds while a user is typing. It is not

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Parts;
+namespace Tempcord\Discord\Parts;
 
-use CyberWolf\Discord\Attributes\Partial;
-use CyberWolf\Discord\Bitwise\Bitwise;
-use CyberWolf\Discord\Enums\PremiumTier;
+use Tempcord\Discord\Attributes\Partial;
+use Tempcord\Discord\Bitwise\Bitwise;
+use Tempcord\Discord\Enums\PremiumTier;
 
 class User
 {

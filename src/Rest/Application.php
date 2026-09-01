@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest;
+namespace Tempcord\Discord\Rest;
 
-use CyberWolf\Discord\Parts\Application as PartsApplication;
+use Tempcord\Discord\Parts\Application as PartsApplication;
 use React\Promise\PromiseInterface;
 
 /**
@@ -15,7 +15,7 @@ class Application extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/application#get-current-application
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Application>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Application>
      */
     public function getCurrent(): PromiseInterface
     {
@@ -30,7 +30,7 @@ class Application extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/application#edit-current-application
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Application>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Application>
      */
     public function editCurrent(array $params): PromiseInterface
     {

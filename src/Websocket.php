@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord;
+namespace Tempcord\Discord;
 
 use Evenement\EventEmitter;
 use JsonSerializable;
 use Psr\Log\LoggerInterface;
-use CyberWolf\Discord\Buffer\BufferInterface;
-use CyberWolf\Discord\Buffer\Passthrough;
-use CyberWolf\Discord\Constants\WebsocketEvents;
-use CyberWolf\Discord\Exceptions\Websocket\ConnectionFailedException;
-use CyberWolf\Discord\Exceptions\Websocket\ConnectionNotInitializedException;
+use Tempcord\Discord\Buffer\BufferInterface;
+use Tempcord\Discord\Buffer\Passthrough;
+use Tempcord\Discord\Constants\WebsocketEvents;
+use Tempcord\Discord\Exceptions\Websocket\ConnectionFailedException;
+use Tempcord\Discord\Exceptions\Websocket\ConnectionNotInitializedException;
 use Ratchet\Client\Connector;
 use Ratchet\Client\WebSocket as RatchetWebsocket;
 use Ratchet\RFC6455\Messaging\MessageInterface;

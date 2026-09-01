@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Exceptions\Rest\Helpers\PollBuilder;
+namespace Tempcord\Discord\Exceptions\Rest\Helpers\PollBuilder;
 
 use Exception;
 

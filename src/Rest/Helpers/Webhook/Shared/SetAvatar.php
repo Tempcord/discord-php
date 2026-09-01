@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Webhook\Shared;
+namespace Tempcord\Discord\Rest\Helpers\Webhook\Shared;
 
-use CyberWolf\Discord\Enums\ImageData;
-use CyberWolf\Discord\Rest\Helpers\GetBase64Image;
+use Tempcord\Discord\Enums\ImageData;
+use Tempcord\Discord\Rest\Helpers\GetBase64Image;
 
 trait SetAvatar
 {

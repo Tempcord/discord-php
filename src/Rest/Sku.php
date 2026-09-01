@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest;
+namespace Tempcord\Discord\Rest;
 
 use Discord\Http\Endpoint;
-use CyberWolf\Discord\Parts\Sku as SkuPart;
+use Tempcord\Discord\Parts\Sku as SkuPart;
 use React\Promise\PromiseInterface;
 
 /**
@@ -20,7 +20,7 @@ class Sku extends HttpResource
      *
      * @see https://discord.com/developers/docs/resources/sku#list-skus
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Sku[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Sku[]>
      */
     public function listSkus(string $applicationId): PromiseInterface
     {

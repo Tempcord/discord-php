@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Component;
+namespace Tests\Tempcord\Discord\Component;
 
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Component\SelectMenu\MentionableSelectMenu;
-use CyberWolf\Discord\Component\SelectMenu\RoleSelectMenu;
-use CyberWolf\Discord\Component\SelectMenu\UserSelectMenu;
-use CyberWolf\Discord\Enums\SelectMenuType;
+use Tempcord\Discord\Component\SelectMenu\MentionableSelectMenu;
+use Tempcord\Discord\Component\SelectMenu\RoleSelectMenu;
+use Tempcord\Discord\Component\SelectMenu\UserSelectMenu;
+use Tempcord\Discord\Enums\SelectMenuType;
 
 class GeneralSelectMenuTest extends TestCase
 {

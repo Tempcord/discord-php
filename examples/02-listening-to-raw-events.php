@@ -1,11 +1,11 @@
 <?php
 
-use CyberWolf\Discord\Bitwise\Bitwise;
-use CyberWolf\Discord\Constants\Events;
-use CyberWolf\Discord\Constants\OpCodes;
-use CyberWolf\Discord\Discord;
-use CyberWolf\Discord\Gateway\Handlers\GatewayEvent;
-use CyberWolf\Discord\Gateway\Objects\Payload;
+use Tempcord\Discord\Bitwise\Bitwise;
+use Tempcord\Discord\Constants\Events;
+use Tempcord\Discord\Constants\OpCodes;
+use Tempcord\Discord\Discord;
+use Tempcord\Discord\Gateway\Handlers\GatewayEvent;
+use Tempcord\Discord\Gateway\Objects\Payload;
 
 require './vendor/autoload.php';
 

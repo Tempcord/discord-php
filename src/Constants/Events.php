@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Constants;
+namespace Tempcord\Discord\Constants;
 
 class Events
 {
@@ -103,103 +103,103 @@ class Events
     final public const WEBHOOKS_UPDATE = 'WEBHOOKS_UPDATE';
 
     final public const MAPPINGS = [
-        self::READY => \CyberWolf\Discord\Gateway\Events\Ready::class,
+        self::READY => \Tempcord\Discord\Gateway\Events\Ready::class,
 
         self::APPLICATION_COMMAND_PERMISSIONS_UPDATE =>
-            \CyberWolf\Discord\Gateway\Events\ApplicationCommandPermissionsUpdate::class,
-        self::AUTO_MODERATION_RULE_CREATE => \CyberWolf\Discord\Gateway\Events\AutoModerationRuleCreate::class,
-        self::AUTO_MODERATION_RULE_UPDATE => \CyberWolf\Discord\Gateway\Events\AutoModerationRuleUpdate::class,
-        self::AUTO_MODERATION_RULE_DELETE => \CyberWolf\Discord\Gateway\Events\AutoModerationRuleDelete::class,
+            \Tempcord\Discord\Gateway\Events\ApplicationCommandPermissionsUpdate::class,
+        self::AUTO_MODERATION_RULE_CREATE => \Tempcord\Discord\Gateway\Events\AutoModerationRuleCreate::class,
+        self::AUTO_MODERATION_RULE_UPDATE => \Tempcord\Discord\Gateway\Events\AutoModerationRuleUpdate::class,
+        self::AUTO_MODERATION_RULE_DELETE => \Tempcord\Discord\Gateway\Events\AutoModerationRuleDelete::class,
         self::AUTO_MODERATION_ACTION_EXECUTION =>
-            \CyberWolf\Discord\Gateway\Events\AutoModerationActionExecution::class,
+            \Tempcord\Discord\Gateway\Events\AutoModerationActionExecution::class,
 
-        self::CHANNEL_CREATE => \CyberWolf\Discord\Gateway\Events\ChannelCreate::class,
-        self::CHANNEL_UPDATE => \CyberWolf\Discord\Gateway\Events\ChannelUpdate::class,
-        self::CHANNEL_DELETE => \CyberWolf\Discord\Gateway\Events\ChannelDelete::class,
-        self::CHANNEL_PINS_UPDATE => \CyberWolf\Discord\Gateway\Events\ChannelPinsUpdate::class,
+        self::CHANNEL_CREATE => \Tempcord\Discord\Gateway\Events\ChannelCreate::class,
+        self::CHANNEL_UPDATE => \Tempcord\Discord\Gateway\Events\ChannelUpdate::class,
+        self::CHANNEL_DELETE => \Tempcord\Discord\Gateway\Events\ChannelDelete::class,
+        self::CHANNEL_PINS_UPDATE => \Tempcord\Discord\Gateway\Events\ChannelPinsUpdate::class,
 
-        self::THREAD_CREATE => \CyberWolf\Discord\Gateway\Events\ThreadCreate::class,
-        self::THREAD_UPDATE => \CyberWolf\Discord\Gateway\Events\ThreadUpdate::class,
-        self::THREAD_DELETE => \CyberWolf\Discord\Gateway\Events\ThreadDelete::class,
-        self::THREAD_LIST_SYNC => \CyberWolf\Discord\Gateway\Events\ThreadListSync::class,
-        self::THREAD_MEMBER_UPDATE => \CyberWolf\Discord\Gateway\Events\ThreadMemberUpdate::class,
-        self::THREAD_MEMBERS_UPDATE => \CyberWolf\Discord\Gateway\Events\ThreadMembersUpdate::class,
+        self::THREAD_CREATE => \Tempcord\Discord\Gateway\Events\ThreadCreate::class,
+        self::THREAD_UPDATE => \Tempcord\Discord\Gateway\Events\ThreadUpdate::class,
+        self::THREAD_DELETE => \Tempcord\Discord\Gateway\Events\ThreadDelete::class,
+        self::THREAD_LIST_SYNC => \Tempcord\Discord\Gateway\Events\ThreadListSync::class,
+        self::THREAD_MEMBER_UPDATE => \Tempcord\Discord\Gateway\Events\ThreadMemberUpdate::class,
+        self::THREAD_MEMBERS_UPDATE => \Tempcord\Discord\Gateway\Events\ThreadMembersUpdate::class,
 
-        self::ENTITLEMENT_CREATE => \CyberWolf\Discord\Gateway\Events\EntitlementCreate::class,
-        self::ENTITLEMENT_UPDATE => \CyberWolf\Discord\Gateway\Events\EntitlementUpdate::class,
-        self::ENTITLEMENT_DELETE => \CyberWolf\Discord\Gateway\Events\EntitlementDelete::class,
+        self::ENTITLEMENT_CREATE => \Tempcord\Discord\Gateway\Events\EntitlementCreate::class,
+        self::ENTITLEMENT_UPDATE => \Tempcord\Discord\Gateway\Events\EntitlementUpdate::class,
+        self::ENTITLEMENT_DELETE => \Tempcord\Discord\Gateway\Events\EntitlementDelete::class,
 
-        self::GUILD_CREATE => \CyberWolf\Discord\Gateway\Events\GuildCreate::class,
-        self::GUILD_UPDATE => \CyberWolf\Discord\Gateway\Events\GuildUpdate::class,
-        self::GUILD_DELETE => \CyberWolf\Discord\Gateway\Events\GuildDelete::class,
+        self::GUILD_CREATE => \Tempcord\Discord\Gateway\Events\GuildCreate::class,
+        self::GUILD_UPDATE => \Tempcord\Discord\Gateway\Events\GuildUpdate::class,
+        self::GUILD_DELETE => \Tempcord\Discord\Gateway\Events\GuildDelete::class,
 
         self::GUILD_AUDIT_LOG_ENTRY_CREATE =>
-            \CyberWolf\Discord\Gateway\Events\GuildAuditLogEntryCreate::class,
+            \Tempcord\Discord\Gateway\Events\GuildAuditLogEntryCreate::class,
 
-        self::GUILD_BAN_ADD => \CyberWolf\Discord\Gateway\Events\GuildBanAdd::class,
-        self::GUILD_BAN_REMOVE => \CyberWolf\Discord\Gateway\Events\GuildBanRemove::class,
+        self::GUILD_BAN_ADD => \Tempcord\Discord\Gateway\Events\GuildBanAdd::class,
+        self::GUILD_BAN_REMOVE => \Tempcord\Discord\Gateway\Events\GuildBanRemove::class,
 
-        self::GUILD_EMOJIS_UPDATE => \CyberWolf\Discord\Gateway\Events\GuildEmojisUpdate::class,
-        self::GUILD_STICKERS_UPDATE => \CyberWolf\Discord\Gateway\Events\GuildStickersUpdate::class,
+        self::GUILD_EMOJIS_UPDATE => \Tempcord\Discord\Gateway\Events\GuildEmojisUpdate::class,
+        self::GUILD_STICKERS_UPDATE => \Tempcord\Discord\Gateway\Events\GuildStickersUpdate::class,
 
-        self::GUILD_INTEGRATIONS_UPDATE => \CyberWolf\Discord\Gateway\Events\GuildIntegrationsUpdate::class,
+        self::GUILD_INTEGRATIONS_UPDATE => \Tempcord\Discord\Gateway\Events\GuildIntegrationsUpdate::class,
 
-        self::GUILD_MEMBER_ADD => \CyberWolf\Discord\Gateway\Events\GuildMemberAdd::class,
-        self::GUILD_MEMBER_REMOVE => \CyberWolf\Discord\Gateway\Events\GuildMemberRemove::class,
-        self::GUILD_MEMBER_UPDATE => \CyberWolf\Discord\Gateway\Events\GuildMemberUpdate::class,
-        self::GUILD_MEMBERS_CHUNK => \CyberWolf\Discord\Gateway\Events\GuildMembersChunk::class,
+        self::GUILD_MEMBER_ADD => \Tempcord\Discord\Gateway\Events\GuildMemberAdd::class,
+        self::GUILD_MEMBER_REMOVE => \Tempcord\Discord\Gateway\Events\GuildMemberRemove::class,
+        self::GUILD_MEMBER_UPDATE => \Tempcord\Discord\Gateway\Events\GuildMemberUpdate::class,
+        self::GUILD_MEMBERS_CHUNK => \Tempcord\Discord\Gateway\Events\GuildMembersChunk::class,
 
-        self::GUILD_ROLE_CREATE => \CyberWolf\Discord\Gateway\Events\GuildRoleCreate::class,
-        self::GUILD_ROLE_UPDATE => \CyberWolf\Discord\Gateway\Events\GuildRoleUpdate::class,
-        self::GUILD_ROLE_DELETE => \CyberWolf\Discord\Gateway\Events\GuildRoleDelete::class,
+        self::GUILD_ROLE_CREATE => \Tempcord\Discord\Gateway\Events\GuildRoleCreate::class,
+        self::GUILD_ROLE_UPDATE => \Tempcord\Discord\Gateway\Events\GuildRoleUpdate::class,
+        self::GUILD_ROLE_DELETE => \Tempcord\Discord\Gateway\Events\GuildRoleDelete::class,
 
-        self::GUILD_SCHEDULED_EVENT_CREATE => \CyberWolf\Discord\Gateway\Events\GuildScheduledEventCreate::class,
-        self::GUILD_SCHEDULED_EVENT_UPDATE => \CyberWolf\Discord\Gateway\Events\GuildScheduledEventUpdate::class,
-        self::GUILD_SCHEDULED_EVENT_DELETE => \CyberWolf\Discord\Gateway\Events\GuildScheduledEventDelete::class,
-        self::GUILD_SCHEDULED_EVENT_USER_ADD => \CyberWolf\Discord\Gateway\Events\GuildScheduledEventUserAdd::class,
+        self::GUILD_SCHEDULED_EVENT_CREATE => \Tempcord\Discord\Gateway\Events\GuildScheduledEventCreate::class,
+        self::GUILD_SCHEDULED_EVENT_UPDATE => \Tempcord\Discord\Gateway\Events\GuildScheduledEventUpdate::class,
+        self::GUILD_SCHEDULED_EVENT_DELETE => \Tempcord\Discord\Gateway\Events\GuildScheduledEventDelete::class,
+        self::GUILD_SCHEDULED_EVENT_USER_ADD => \Tempcord\Discord\Gateway\Events\GuildScheduledEventUserAdd::class,
         self::GUILD_SCHEDULED_EVENT_USER_REMOVE =>
-            \CyberWolf\Discord\Gateway\Events\GuildScheduledEventUserRemove::class,
+            \Tempcord\Discord\Gateway\Events\GuildScheduledEventUserRemove::class,
 
-        self::GUILD_SOUNDBOARD_SOUND_CREATE => \CyberWolf\Discord\Gateway\Events\GuildSoundboardSoundCreate::class,
-        self::GUILD_SOUNDBOARD_SOUND_UPDATE => \CyberWolf\Discord\Gateway\Events\GuildSoundboardSoundUpdate::class,
-        self::GUILD_SOUNDBOARD_SOUND_DELETE => \CyberWolf\Discord\Gateway\Events\GuildSoundboardSoundDelete::class,
+        self::GUILD_SOUNDBOARD_SOUND_CREATE => \Tempcord\Discord\Gateway\Events\GuildSoundboardSoundCreate::class,
+        self::GUILD_SOUNDBOARD_SOUND_UPDATE => \Tempcord\Discord\Gateway\Events\GuildSoundboardSoundUpdate::class,
+        self::GUILD_SOUNDBOARD_SOUND_DELETE => \Tempcord\Discord\Gateway\Events\GuildSoundboardSoundDelete::class,
         self::GUILD_SOUNDBOARD_SOUNDS_UPDATE =>
-            \CyberWolf\Discord\Gateway\Events\GuildSoundboardSoundsUpdate::class,
-        self::SOUNDBOARD_SOUNDS => \CyberWolf\Discord\Gateway\Events\SoundboardSounds::class,
+            \Tempcord\Discord\Gateway\Events\GuildSoundboardSoundsUpdate::class,
+        self::SOUNDBOARD_SOUNDS => \Tempcord\Discord\Gateway\Events\SoundboardSounds::class,
 
-        self::INTEGRATION_CREATE => \CyberWolf\Discord\Gateway\Events\IntegrationCreate::class,
-        self::INTEGRATION_UPDATE => \CyberWolf\Discord\Gateway\Events\IntegrationUpdate::class,
-        self::INTEGRATION_DELETE => \CyberWolf\Discord\Gateway\Events\IntegrationDelete::class,
-        self::INTERACTION_CREATE => \CyberWolf\Discord\Gateway\Events\InteractionCreate::class,
+        self::INTEGRATION_CREATE => \Tempcord\Discord\Gateway\Events\IntegrationCreate::class,
+        self::INTEGRATION_UPDATE => \Tempcord\Discord\Gateway\Events\IntegrationUpdate::class,
+        self::INTEGRATION_DELETE => \Tempcord\Discord\Gateway\Events\IntegrationDelete::class,
+        self::INTERACTION_CREATE => \Tempcord\Discord\Gateway\Events\InteractionCreate::class,
 
-        self::INVITE_CREATE => \CyberWolf\Discord\Gateway\Events\InviteCreate::class,
-        self::INVITE_DELETE => \CyberWolf\Discord\Gateway\Events\InviteDelete::class,
+        self::INVITE_CREATE => \Tempcord\Discord\Gateway\Events\InviteCreate::class,
+        self::INVITE_DELETE => \Tempcord\Discord\Gateway\Events\InviteDelete::class,
 
-        self::MESSAGE_CREATE => \CyberWolf\Discord\Gateway\Events\MessageCreate::class,
-        self::MESSAGE_UPDATE => \CyberWolf\Discord\Gateway\Events\MessageUpdate::class,
-        self::MESSAGE_DELETE => \CyberWolf\Discord\Gateway\Events\MessageDelete::class,
-        self::MESSAGE_DELETE_BULK => \CyberWolf\Discord\Gateway\Events\MessageDeleteBulk::class,
-        self::MESSAGE_REACTION_ADD => \CyberWolf\Discord\Gateway\Events\MessageReactionAdd::class,
-        self::MESSAGE_REACTION_REMOVE => \CyberWolf\Discord\Gateway\Events\MessageReactionRemove::class,
-        self::MESSAGE_REACTION_REMOVE_ALL => \CyberWolf\Discord\Gateway\Events\MessageReactionRemoveAll::class,
-        self::MESSAGE_REACTION_REMOVE_EMOJI => \CyberWolf\Discord\Gateway\Events\MessageReactionRemoveEmoji::class,
+        self::MESSAGE_CREATE => \Tempcord\Discord\Gateway\Events\MessageCreate::class,
+        self::MESSAGE_UPDATE => \Tempcord\Discord\Gateway\Events\MessageUpdate::class,
+        self::MESSAGE_DELETE => \Tempcord\Discord\Gateway\Events\MessageDelete::class,
+        self::MESSAGE_DELETE_BULK => \Tempcord\Discord\Gateway\Events\MessageDeleteBulk::class,
+        self::MESSAGE_REACTION_ADD => \Tempcord\Discord\Gateway\Events\MessageReactionAdd::class,
+        self::MESSAGE_REACTION_REMOVE => \Tempcord\Discord\Gateway\Events\MessageReactionRemove::class,
+        self::MESSAGE_REACTION_REMOVE_ALL => \Tempcord\Discord\Gateway\Events\MessageReactionRemoveAll::class,
+        self::MESSAGE_REACTION_REMOVE_EMOJI => \Tempcord\Discord\Gateway\Events\MessageReactionRemoveEmoji::class,
 
-        self::PRESENCE_UPDATE => \CyberWolf\Discord\Gateway\Events\PresenceUpdate::class,
+        self::PRESENCE_UPDATE => \Tempcord\Discord\Gateway\Events\PresenceUpdate::class,
 
-        self::STAGE_INSTANCE_CREATE => \CyberWolf\Discord\Gateway\Events\StageInstanceCreate::class,
-        self::STAGE_INSTANCE_UPDATE => \CyberWolf\Discord\Gateway\Events\StageInstanceUpdate::class,
-        self::STAGE_INSTANCE_DELETE => \CyberWolf\Discord\Gateway\Events\StageInstanceDelete::class,
+        self::STAGE_INSTANCE_CREATE => \Tempcord\Discord\Gateway\Events\StageInstanceCreate::class,
+        self::STAGE_INSTANCE_UPDATE => \Tempcord\Discord\Gateway\Events\StageInstanceUpdate::class,
+        self::STAGE_INSTANCE_DELETE => \Tempcord\Discord\Gateway\Events\StageInstanceDelete::class,
 
-        self::SUBSCRIPTION_CREATE => \CyberWolf\Discord\Gateway\Events\SubscriptionCreate::class,
-        self::SUBSCRIPTION_UPDATE => \CyberWolf\Discord\Gateway\Events\SubscriptionUpdate::class,
-        self::SUBSCRIPTION_DELETE => \CyberWolf\Discord\Gateway\Events\SubscriptionDelete::class,
+        self::SUBSCRIPTION_CREATE => \Tempcord\Discord\Gateway\Events\SubscriptionCreate::class,
+        self::SUBSCRIPTION_UPDATE => \Tempcord\Discord\Gateway\Events\SubscriptionUpdate::class,
+        self::SUBSCRIPTION_DELETE => \Tempcord\Discord\Gateway\Events\SubscriptionDelete::class,
 
-        self::TYPING_START => \CyberWolf\Discord\Gateway\Events\TypingStart::class,
-        self::USER_UPDATE => \CyberWolf\Discord\Gateway\Events\UserUpdate::class,
+        self::TYPING_START => \Tempcord\Discord\Gateway\Events\TypingStart::class,
+        self::USER_UPDATE => \Tempcord\Discord\Gateway\Events\UserUpdate::class,
 
-        self::VOICE_STATE_UPDATE => \CyberWolf\Discord\Gateway\Events\VoiceStateUpdate::class,
-        self::VOICE_SERVER_UPDATE => \CyberWolf\Discord\Gateway\Events\VoiceServerUpdate::class,
+        self::VOICE_STATE_UPDATE => \Tempcord\Discord\Gateway\Events\VoiceStateUpdate::class,
+        self::VOICE_SERVER_UPDATE => \Tempcord\Discord\Gateway\Events\VoiceServerUpdate::class,
 
-        self::WEBHOOKS_UPDATE => \CyberWolf\Discord\Gateway\Events\WebhooksUpdate::class,
+        self::WEBHOOKS_UPDATE => \Tempcord\Discord\Gateway\Events\WebhooksUpdate::class,
     ];
 }

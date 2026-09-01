@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest\Helpers\Guild;
+namespace Tests\Tempcord\Discord\Rest\Helpers\Guild;
 
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Enums\GuildOnboardingMode;
-use CyberWolf\Discord\Enums\OnboardingPromptType;
-use CyberWolf\Discord\Exceptions\Component\TooManyItemsException;
-use CyberWolf\Discord\Rest\Helpers\Guild\ModifyGuildOnboardingBuilder;
-use CyberWolf\Discord\Rest\Helpers\Guild\OnboardingPromptBuilder;
-use CyberWolf\Discord\Rest\Helpers\Guild\OnboardingPromptOptionBuilder;
+use Tempcord\Discord\Enums\GuildOnboardingMode;
+use Tempcord\Discord\Enums\OnboardingPromptType;
+use Tempcord\Discord\Exceptions\Component\TooManyItemsException;
+use Tempcord\Discord\Rest\Helpers\Guild\ModifyGuildOnboardingBuilder;
+use Tempcord\Discord\Rest\Helpers\Guild\OnboardingPromptBuilder;
+use Tempcord\Discord\Rest\Helpers\Guild\OnboardingPromptOptionBuilder;
 
 class OnboardingBuildersTest extends TestCase
 {

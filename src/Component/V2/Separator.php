@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Component\V2;
+namespace Tempcord\Discord\Component\V2;
 
-use CyberWolf\Discord\Component\Component;
-use CyberWolf\Discord\Enums\MessageComponentType;
-use CyberWolf\Discord\Enums\SeparatorSpacingSize;
+use Tempcord\Discord\Component\Component;
+use Tempcord\Discord\Enums\MessageComponentType;
+use Tempcord\Discord\Enums\SeparatorSpacingSize;
 
 /**
  * Vertical padding between components, optionally drawn as a divider line.

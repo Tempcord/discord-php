@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest;
+namespace Tests\Tempcord\Discord\Rest;
 
-use CyberWolf\Discord\Parts\Sticker;
-use CyberWolf\Discord\Rest\GuildSticker;
-use CyberWolf\Discord\Rest\Helpers\GuildSticker\ModifyStickerBuilder;
-use CyberWolf\Discord\Rest\Helpers\GuildSticker\StickerBuilder;
-use Tests\CyberWolf\Discord\Rest\HttpHelperTestCase;
+use Tempcord\Discord\Parts\Sticker;
+use Tempcord\Discord\Rest\GuildSticker;
+use Tempcord\Discord\Rest\Helpers\GuildSticker\ModifyStickerBuilder;
+use Tempcord\Discord\Rest\Helpers\GuildSticker\StickerBuilder;
+use Tests\Tempcord\Discord\Rest\HttpHelperTestCase;
 
 class GuildStickerTest extends HttpHelperTestCase
 {

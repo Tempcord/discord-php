@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord;
+namespace Tests\Tempcord\Discord;
 
 use Mockery;
 use Mockery\Adapter\Phpunit\MockeryTestCase;
 use Mockery\MockInterface;
-use CyberWolf\Discord\Bitwise\Bitwise;
-use CyberWolf\Discord\Discord;
-use CyberWolf\Discord\Exceptions\Extension\ExtensionNotFoundException;
-use CyberWolf\Discord\InteractionHandler;
-use CyberWolf\Discord\Rest\Rest;
-use CyberWolf\Discord\Extension\Extension;
-use CyberWolf\Discord\Gateway\Connection;
+use Tempcord\Discord\Bitwise\Bitwise;
+use Tempcord\Discord\Discord;
+use Tempcord\Discord\Exceptions\Extension\ExtensionNotFoundException;
+use Tempcord\Discord\InteractionHandler;
+use Tempcord\Discord\Rest\Rest;
+use Tempcord\Discord\Extension\Extension;
+use Tempcord\Discord\Gateway\Connection;
 
 class DiscordTest extends MockeryTestCase
 {

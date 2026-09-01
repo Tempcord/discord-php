@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Fakes\CyberWolf\Discord;
+namespace Fakes\Tempcord\Discord;
 
-use CyberWolf\Discord\InteractionHandler;
-use CyberWolf\Discord\Rest\Helpers\Command\CommandBuilder;
+use Tempcord\Discord\InteractionHandler;
+use Tempcord\Discord\Rest\Helpers\Command\CommandBuilder;
 use PHPUnit\Framework\Assert;
 
 class InteractionHandlerFake extends InteractionHandler

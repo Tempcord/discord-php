@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest;
+namespace Tempcord\Discord\Rest;
 
 use Discord\Http\Endpoint;
-use CyberWolf\Discord\Parts\ApplicationRoleConnectionMetadata as PartsApplicationRoleConnectionMetadata;
+use Tempcord\Discord\Parts\ApplicationRoleConnectionMetadata as PartsApplicationRoleConnectionMetadata;
 use React\Promise\PromiseInterface;
 
 /**
@@ -16,7 +16,7 @@ class ApplicationRoleConnectionMetadata extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/application-role-connection-metadata#get-application-role-connection-metadata-records
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\ApplicationRoleConnectionMetadata>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\ApplicationRoleConnectionMetadata>
      */
     public function getRecords(string $applicationId): PromiseInterface
     {
@@ -34,7 +34,7 @@ class ApplicationRoleConnectionMetadata extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/application-role-connection-metadata#update-application-role-connection-metadata-records
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\ApplicationRoleConnectionMetadata>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\ApplicationRoleConnectionMetadata>
      */
     public function updateRecords(string $applicationId, array $params): PromiseInterface
     {

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Parts;
+namespace Tempcord\Discord\Parts;
 
 use Carbon\Carbon;
-use CyberWolf\Discord\Enums\GuildScheduledEventEntityType;
-use CyberWolf\Discord\Enums\GuildScheduledEventPrivacyLevel;
-use CyberWolf\Discord\Enums\GuildScheduledEventStatus;
+use Tempcord\Discord\Enums\GuildScheduledEventEntityType;
+use Tempcord\Discord\Enums\GuildScheduledEventPrivacyLevel;
+use Tempcord\Discord\Enums\GuildScheduledEventStatus;
 
 class GuildScheduledEvent
 {

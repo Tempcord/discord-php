@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Orchestration;
+namespace Tempcord\Discord\Orchestration;
 
 use Carbon\Carbon;
 use DateTimeInterface;
 use Evenement\EventEmitter;
-use CyberWolf\Discord\Parts\GatewayBot;
-use CyberWolf\Discord\Parts\SessionStartLimit;
-use CyberWolf\Discord\Rest\Gateway;
+use Tempcord\Discord\Parts\GatewayBot;
+use Tempcord\Discord\Parts\SessionStartLimit;
+use Tempcord\Discord\Rest\Gateway;
 use React\EventLoop\LoopInterface;
 use React\Promise\Promise;
 use React\Promise\PromiseInterface;

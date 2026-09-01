@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest;
+namespace Tempcord\Discord\Rest;
 
 use Discord\Http\Endpoint;
-use CyberWolf\Discord\Parts\ApplicationRoleConnection;
-use CyberWolf\Discord\Parts\Channel;
-use CyberWolf\Discord\Parts\Connection;
-use CyberWolf\Discord\Parts\Guild;
-use CyberWolf\Discord\Parts\GuildMember;
-use CyberWolf\Discord\Parts\User as PartsUser;
+use Tempcord\Discord\Parts\ApplicationRoleConnection;
+use Tempcord\Discord\Parts\Channel;
+use Tempcord\Discord\Parts\Connection;
+use Tempcord\Discord\Parts\Guild;
+use Tempcord\Discord\Parts\GuildMember;
+use Tempcord\Discord\Parts\User as PartsUser;
 use React\Promise\PromiseInterface;
 
 /**
@@ -21,7 +21,7 @@ class User extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/user#get-user
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\User>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\User>
      */
     public function get(string $userId): PromiseInterface
     {
@@ -39,7 +39,7 @@ class User extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/user#get-current-user
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\User>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\User>
      */
     public function getCurrent(): PromiseInterface
     {
@@ -54,7 +54,7 @@ class User extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/user#modify-current-user
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\User>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\User>
      */
     public function modifyCurrent(array $params): PromiseInterface
     {
@@ -70,7 +70,7 @@ class User extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/user#get-current-user-guilds
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Guild[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Guild[]>
      */
     public function getCurrentUserGuilds(
         ?string $before = null,
@@ -107,7 +107,7 @@ class User extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/user#get-current-user-guild-member
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildMember>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\GuildMember>
      */
     public function getCurrentUserGuildMember(string $guildId): PromiseInterface
     {
@@ -140,7 +140,7 @@ class User extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/user#create-dm
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Channel>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Channel>
      */
     public function createDm(string $recipientId): PromiseInterface
     {
@@ -156,7 +156,7 @@ class User extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/user#create-dm
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Channel>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Channel>
      */
     public function createGroupDm(array $params): PromiseInterface
     {
@@ -172,7 +172,7 @@ class User extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/user#get-current-user-connections
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Connection>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Connection>
      */
     public function getCurrentUserConnections(): PromiseInterface
     {
@@ -187,7 +187,7 @@ class User extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/user#get-current-user-application-role-connection
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\ApplicationRoleConnection>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\ApplicationRoleConnection>
      */
     public function getCurrentUserApplicationRoleConnection(string $applicationId): PromiseInterface
     {
@@ -205,7 +205,7 @@ class User extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/user#update-current-user-application-role-connection
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\ApplicationRoleConnection>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\ApplicationRoleConnection>
      */
     public function updateCurrentUserApplicationRoleConnection(string $applicationId, array $params): PromiseInterface
     {

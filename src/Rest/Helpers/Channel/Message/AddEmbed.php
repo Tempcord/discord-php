@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Channel\Message;
+namespace Tempcord\Discord\Rest\Helpers\Channel\Message;
 
-use CyberWolf\Discord\Rest\Helpers\Channel\EmbedBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\EmbedBuilder;
 
 trait AddEmbed
 {

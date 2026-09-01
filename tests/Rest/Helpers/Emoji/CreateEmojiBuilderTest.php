@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest\Helpers\Emoji;
+namespace Tests\Tempcord\Discord\Rest\Helpers\Emoji;
 
-use CyberWolf\Discord\Enums\ImageData;
-use CyberWolf\Discord\Rest\Helpers\Emoji\CreateEmojiBuilder;
+use Tempcord\Discord\Enums\ImageData;
+use Tempcord\Discord\Rest\Helpers\Emoji\CreateEmojiBuilder;
 use PHPUnit\Framework\TestCase;
 
 class CreateEmojiBuilderTest extends TestCase

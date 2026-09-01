@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Component\V2;
+namespace Tempcord\Discord\Component\V2;
 
-use CyberWolf\Discord\Component\Component;
-use CyberWolf\Discord\Enums\MessageComponentType;
+use Tempcord\Discord\Component\Component;
+use Tempcord\Discord\Enums\MessageComponentType;
 
 /**
  * A small image, only valid as the accessory of a section.

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Gateway;
+namespace Tempcord\Discord\Gateway;
 
 class Shard implements ShardInterface
 {

@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Orchestration;
+namespace Tests\Tempcord\Discord\Orchestration;
 
 use Carbon\Carbon;
 use DateTimeInterface;
-use Fakes\CyberWolf\Discord\LoopFake;
-use Fakes\CyberWolf\Discord\PromiseFake;
+use Fakes\Tempcord\Discord\LoopFake;
+use Fakes\Tempcord\Discord\PromiseFake;
 use Mockery;
 use Mockery\MockInterface;
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Orchestration\Orchestrator;
-use CyberWolf\Discord\Parts\GatewayBot;
-use CyberWolf\Discord\Parts\SessionStartLimit;
-use CyberWolf\Discord\Rest\Gateway as HttpGateway;
+use Tempcord\Discord\Orchestration\Orchestrator;
+use Tempcord\Discord\Parts\GatewayBot;
+use Tempcord\Discord\Parts\SessionStartLimit;
+use Tempcord\Discord\Rest\Gateway as HttpGateway;
 
 class OrchestratorTest extends TestCase
 {

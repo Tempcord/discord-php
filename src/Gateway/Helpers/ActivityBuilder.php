@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Gateway\Helpers;
+namespace Tempcord\Discord\Gateway\Helpers;
 
-use CyberWolf\Discord\Enums\ActivityType;
-use CyberWolf\Discord\Rest\Helpers\Emoji\EmojiBuilder;
-use CyberWolf\Discord\Rest\Helpers\GetNew;
+use Tempcord\Discord\Enums\ActivityType;
+use Tempcord\Discord\Rest\Helpers\Emoji\EmojiBuilder;
+use Tempcord\Discord\Rest\Helpers\GetNew;
 
 /**
  * @see https://discord.com/developers/docs/topics/gateway-events#activity-object

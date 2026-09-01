@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest;
+namespace Tests\Tempcord\Discord\Rest;
 
-use CyberWolf\Discord\Enums\ApplicationCommandPermissionType;
-use CyberWolf\Discord\Parts\ApplicationCommand;
-use CyberWolf\Discord\Parts\ApplicationCommandPermissionObject;
-use CyberWolf\Discord\Parts\ApplicationCommandPermissionStructure;
-use CyberWolf\Discord\Rest\GuildCommand;
-use CyberWolf\Discord\Rest\Helpers\Command\CommandBuilder;
-use Tests\CyberWolf\Discord\Rest\HttpHelperTestCase;
+use Tempcord\Discord\Enums\ApplicationCommandPermissionType;
+use Tempcord\Discord\Parts\ApplicationCommand;
+use Tempcord\Discord\Parts\ApplicationCommandPermissionObject;
+use Tempcord\Discord\Parts\ApplicationCommandPermissionStructure;
+use Tempcord\Discord\Rest\GuildCommand;
+use Tempcord\Discord\Rest\Helpers\Command\CommandBuilder;
+use Tests\Tempcord\Discord\Rest\HttpHelperTestCase;
 
 class GuildCommandTest extends HttpHelperTestCase
 {

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest\Helpers\Channel\Channel;
+namespace Tests\Tempcord\Discord\Rest\Helpers\Channel\Channel;
 
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Enums\ChannelType;
-use CyberWolf\Discord\Rest\Helpers\Channel\Channel\GuildTextChannelBuilder;
+use Tempcord\Discord\Enums\ChannelType;
+use Tempcord\Discord\Rest\Helpers\Channel\Channel\GuildTextChannelBuilder;
 
 class GuildTextChannelBuilderTest extends TestCase
 {

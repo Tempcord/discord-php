@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Parts;
+namespace Tempcord\Discord\Parts;
 
-use CyberWolf\Discord\Bitwise\Bitwise;
-use CyberWolf\Discord\Enums\SkuType;
+use Tempcord\Discord\Bitwise\Bitwise;
+use Tempcord\Discord\Enums\SkuType;
 
 /**
  * @see https://discord.com/developers/docs/resources/sku#sku-object

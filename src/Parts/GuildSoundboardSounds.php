@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Parts;
+namespace Tempcord\Discord\Parts;
 
-use CyberWolf\Discord\Mapping\ArrayMapping;
+use Tempcord\Discord\Mapping\ArrayMapping;
 
 /**
  * Discord wraps a guild's soundboard sounds in an object rather than returning

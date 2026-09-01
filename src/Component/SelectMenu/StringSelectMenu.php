@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Component\SelectMenu;
+namespace Tempcord\Discord\Component\SelectMenu;
 
-use CyberWolf\Discord\Enums\SelectMenuType;
-use CyberWolf\Discord\Exceptions\Components\SelectMenu\StringSelectMenu\NoOptionsException;
-use CyberWolf\Discord\Exceptions\Components\SelectMenu\StringSelectMenu\TooManyOptionsException;
-use CyberWolf\Discord\Rest\Helpers\Emoji\EmojiBuilder;
+use Tempcord\Discord\Enums\SelectMenuType;
+use Tempcord\Discord\Exceptions\Components\SelectMenu\StringSelectMenu\NoOptionsException;
+use Tempcord\Discord\Exceptions\Components\SelectMenu\StringSelectMenu\TooManyOptionsException;
+use Tempcord\Discord\Rest\Helpers\Emoji\EmojiBuilder;
 
 class StringSelectMenu extends SelectMenu
 {

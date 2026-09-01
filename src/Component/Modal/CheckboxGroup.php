@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Component\Modal;
+namespace Tempcord\Discord\Component\Modal;
 
-use CyberWolf\Discord\Component\Component;
-use CyberWolf\Discord\Enums\MessageComponentType;
-use CyberWolf\Discord\Exceptions\Component\TooManyItemsException;
+use Tempcord\Discord\Component\Component;
+use Tempcord\Discord\Enums\MessageComponentType;
+use Tempcord\Discord\Exceptions\Component\TooManyItemsException;
 
 /**
  * Several checkboxes the user can tick independently.

@@ -1,9 +1,9 @@
 <?php
 
-use CyberWolf\Discord\Discord;
+use Tempcord\Discord\Discord;
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
-use CyberWolf\Discord\Bitwise\Bitwise;
+use Tempcord\Discord\Bitwise\Bitwise;
 
 $log = new Logger('name', [new StreamHandler('/path/to/your.log')]); // Log to a file
 $log = new Logger('name', [new StreamHandler('php://stdout')]); // Log to stdout (terminal output)

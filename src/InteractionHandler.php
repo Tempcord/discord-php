@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord;
+namespace Tempcord\Discord;
 
-use CyberWolf\Discord\Component\Button\InteractionButton;
-use CyberWolf\Discord\Constants\Events;
-use CyberWolf\Discord\Enums\InteractionType;
-use CyberWolf\Discord\Enums\MessageComponentType;
-use CyberWolf\Discord\Extension\Extension;
-use CyberWolf\Discord\Gateway\Events\InteractionCreate;
-use CyberWolf\Discord\Gateway\Events\Ready;
-use CyberWolf\Discord\Interaction\ButtonInteraction;
-use CyberWolf\Discord\Interaction\CommandInteraction;
-use CyberWolf\Discord\Parts\ApplicationCommand;
-use CyberWolf\Discord\Rest\Helpers\Command\CommandBuilder;
+use Tempcord\Discord\Component\Button\InteractionButton;
+use Tempcord\Discord\Constants\Events;
+use Tempcord\Discord\Enums\InteractionType;
+use Tempcord\Discord\Enums\MessageComponentType;
+use Tempcord\Discord\Extension\Extension;
+use Tempcord\Discord\Gateway\Events\InteractionCreate;
+use Tempcord\Discord\Gateway\Events\Ready;
+use Tempcord\Discord\Interaction\ButtonInteraction;
+use Tempcord\Discord\Interaction\CommandInteraction;
+use Tempcord\Discord\Parts\ApplicationCommand;
+use Tempcord\Discord\Rest\Helpers\Command\CommandBuilder;
 
 class InteractionHandler implements Extension
 {
@@ -95,7 +95,7 @@ class InteractionHandler implements Extension
     /**
      * @deprecated
      *
-     * use \CyberWolf\Discord\Command\GlobalCommandExtension or \CyberWolf\Discord\Command\GuildCommandExtension instead
+     * use \Tempcord\Discord\Command\GlobalCommandExtension or \Tempcord\Discord\Command\GuildCommandExtension instead
      *
      * This implementation is flawed in terms of rate limiting and should not be used.
      *  It will be removed in a later version
@@ -114,7 +114,7 @@ class InteractionHandler implements Extension
     /**
      * @deprecated
      *
-     * use \CyberWolf\Discord\Command\GlobalCommandExtension or \CyberWolf\Discord\Command\GuildCommandExtension instead
+     * use \Tempcord\Discord\Command\GlobalCommandExtension or \Tempcord\Discord\Command\GuildCommandExtension instead
      *
      * This implementation is flawed in terms of rate limiting and should not be used.
      *  It will be removed in a later version
@@ -139,7 +139,7 @@ class InteractionHandler implements Extension
     /**
      * @deprecated
      *
-     * use \CyberWolf\Discord\Command\GlobalCommandExtension or \CyberWolf\Discord\Command\GuildCommandExtension instead
+     * use \Tempcord\Discord\Command\GlobalCommandExtension or \Tempcord\Discord\Command\GuildCommandExtension instead
      *
      * This implementation is flawed in terms of rate limiting and should not be used.
      *  It will be removed in a later version

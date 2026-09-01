@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use CyberWolf\Discord\Attributes\RequiresIntent;
-use CyberWolf\Discord\Constants\Events;
+use Tempcord\Discord\Attributes\RequiresIntent;
+use Tempcord\Discord\Constants\Events;
 
 require __DIR__ . '/../vendor/autoload.php';
 
@@ -20,7 +20,7 @@ $events = array_combine($events, $namedEvents);
 foreach ($events as $className => $friendlyName) {
     $eventInfo = [];
 
-    $class = 'CyberWolf\\Discord\\Gateway\\Events\\' . $className;
+    $class = 'Tempcord\\Discord\\Gateway\\Events\\' . $className;
 
     if (!class_exists($class)) {
         continue;

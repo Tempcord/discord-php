@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Channel\Message;
+namespace Tempcord\Discord\Rest\Helpers\Channel\Message;
 
 trait SetTts
 {

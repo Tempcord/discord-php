@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Interaction\Concerns;
+namespace Tempcord\Discord\Interaction\Concerns;
 
-use CyberWolf\Discord\Interaction\Response;
-use CyberWolf\Discord\Rest\Helpers\Channel\EmbedBuilder;
+use Tempcord\Discord\Interaction\Response;
+use Tempcord\Discord\Rest\Helpers\Channel\EmbedBuilder;
 use React\Promise\PromiseInterface;
 
 /**

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Parts;
+namespace Tempcord\Discord\Parts;
 
 use Carbon\Carbon;
-use CyberWolf\Discord\Enums\PollLayoutType;
-use CyberWolf\Discord\Mapping\ArrayMapping;
+use Tempcord\Discord\Enums\PollLayoutType;
+use Tempcord\Discord\Mapping\ArrayMapping;
 
 /**
  * @see https://discord.com/developers/docs/resources/poll#poll-object

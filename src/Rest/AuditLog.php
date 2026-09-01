@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest;
+namespace Tempcord\Discord\Rest;
 
 use Discord\Http\Endpoint;
-use CyberWolf\Discord\Parts\AuditLog as PartsAuditLog;
-use CyberWolf\Discord\Rest\Helpers\AuditLog\GetGuildAuditLogsBuilder;
+use Tempcord\Discord\Parts\AuditLog as PartsAuditLog;
+use Tempcord\Discord\Rest\Helpers\AuditLog\GetGuildAuditLogsBuilder;
 use React\Promise\PromiseInterface;
 
 /**
@@ -17,7 +17,7 @@ class AuditLog extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/audit-log#get-guild-audit-log
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\AuditLog>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\AuditLog>
      */
     public function getGuildAuditLogs(
         string $guildId,

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Exceptions\Gateway\Helpers\RequestGuildMembers;
+namespace Tempcord\Discord\Exceptions\Gateway\Helpers\RequestGuildMembers;
 
 use Exception;
 

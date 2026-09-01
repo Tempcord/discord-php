@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Soundboard;
+namespace Tempcord\Discord\Rest\Helpers\Soundboard;
 
-use CyberWolf\Discord\Rest\Helpers\GetNew;
+use Tempcord\Discord\Rest\Helpers\GetNew;
 
 class ModifySoundboardSoundBuilder
 {

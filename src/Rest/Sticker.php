@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest;
+namespace Tempcord\Discord\Rest;
 
 use Discord\Http\Endpoint;
-use CyberWolf\Discord\Parts\Sticker as PartsSticker;
-use CyberWolf\Discord\Parts\StickerPack;
+use Tempcord\Discord\Parts\Sticker as PartsSticker;
+use Tempcord\Discord\Parts\StickerPack;
 use React\Promise\PromiseInterface;
 
 /**
@@ -17,7 +17,7 @@ class Sticker extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/sticker#get-sticker
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Sticker>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Sticker>
      */
     public function get(string $stickerId): PromiseInterface
     {
@@ -35,7 +35,7 @@ class Sticker extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/sticker#list-nitro-sticker-packs
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\StickerPack[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\StickerPack[]>
      */
     public function listNitroPacks(): PromiseInterface
     {

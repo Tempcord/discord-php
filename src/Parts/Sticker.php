@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Parts;
+namespace Tempcord\Discord\Parts;
 
-use CyberWolf\Discord\Enums\StickerFormatType;
-use CyberWolf\Discord\Enums\StickerType;
+use Tempcord\Discord\Enums\StickerFormatType;
+use Tempcord\Discord\Enums\StickerType;
 
 class Sticker
 {

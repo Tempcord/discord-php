@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Gateway\Helpers;
+namespace Tests\Tempcord\Discord\Gateway\Helpers;
 
-use CyberWolf\Discord\Exceptions\Gateway\Helpers\RequestGuildMembers\InvalidRequestException;
-use CyberWolf\Discord\Gateway\Helpers\RequestGuildMembersBuilder;
+use Tempcord\Discord\Exceptions\Gateway\Helpers\RequestGuildMembers\InvalidRequestException;
+use Tempcord\Discord\Gateway\Helpers\RequestGuildMembersBuilder;
 use PHPUnit\Framework\TestCase;
 
 class RequestGuildMembersBuilderTest extends TestCase

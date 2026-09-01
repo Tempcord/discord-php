@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Parts;
+namespace Tempcord\Discord\Parts;
 
 use Carbon\Carbon;
-use CyberWolf\Discord\Bitwise\Bitwise;
-use CyberWolf\Discord\Enums\ActivityType;
-use CyberWolf\Discord\Mapping\ArrayMapping;
+use Tempcord\Discord\Bitwise\Bitwise;
+use Tempcord\Discord\Enums\ActivityType;
+use Tempcord\Discord\Mapping\ArrayMapping;
 
 class Activity
 {

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest\Helpers\Guild;
+namespace Tests\Tempcord\Discord\Rest\Helpers\Guild;
 
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Rest\Helpers\Guild\ModifyChannelPositionsBuilder;
+use Tempcord\Discord\Rest\Helpers\Guild\ModifyChannelPositionsBuilder;
 
 class ModifyChannelPositionsBuilderTest extends TestCase
 {

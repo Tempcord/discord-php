@@ -1,8 +1,8 @@
 <?php
 
-use CyberWolf\Discord\Bitwise\Bitwise;
-use CyberWolf\Discord\Discord;
-use CyberWolf\Discord\Gateway\Shard;
+use Tempcord\Discord\Bitwise\Bitwise;
+use Tempcord\Discord\Discord;
+use Tempcord\Discord\Gateway\Shard;
 
 require './vendor/autoload.php';
 

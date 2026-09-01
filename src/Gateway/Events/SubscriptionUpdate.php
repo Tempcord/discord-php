@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Gateway\Events;
+namespace Tempcord\Discord\Gateway\Events;
 
-use CyberWolf\Discord\Parts\Subscription;
+use Tempcord\Discord\Parts\Subscription;
 
 /**
  * Subscription events are not gated behind an intent.

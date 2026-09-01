@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest;
+namespace Tempcord\Discord\Rest;
 
 use Discord\Http\Http;
 use Psr\Log\LoggerInterface;
-use CyberWolf\Discord\DataMapper;
+use Tempcord\Discord\DataMapper;
 use React\Promise\PromiseInterface;
 
 abstract class HttpResource

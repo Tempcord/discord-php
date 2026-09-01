@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest;
+namespace Tempcord\Discord\Rest;
 
 use Discord\Http\Endpoint;
-use CyberWolf\Discord\Parts\Guild;
-use CyberWolf\Discord\Parts\GuildTemplate as PartsGuildTemplate;
-use CyberWolf\Discord\Rest\Helpers\HttpHelper;
+use Tempcord\Discord\Parts\Guild;
+use Tempcord\Discord\Parts\GuildTemplate as PartsGuildTemplate;
+use Tempcord\Discord\Rest\Helpers\HttpHelper;
 use React\Promise\PromiseInterface;
 
 /**
@@ -17,7 +17,7 @@ class GuildTemplate extends HttpResource
 {
     /**
      * @see https://discord.com/developers/docs/resources/guild-template#get-guild-templates
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildTemplate>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\GuildTemplate>
      */
     public function list(string $guildId): PromiseInterface
     {
@@ -29,7 +29,7 @@ class GuildTemplate extends HttpResource
 
     /**
      * @see https://discord.com/developers/docs/resources/guild-template#get-guild-template
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildTemplate>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\GuildTemplate>
      */
     public function get(string $code): PromiseInterface
     {
@@ -41,7 +41,7 @@ class GuildTemplate extends HttpResource
 
     /**
      * @see https://discord.com/developers/docs/resources/guild-template#create-guild-template
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildTemplate>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\GuildTemplate>
      */
     public function create(string $guildId, array $params): PromiseInterface
     {
@@ -53,7 +53,7 @@ class GuildTemplate extends HttpResource
 
     /**
      * @see https://discord.com/developers/docs/resources/guild-template#modify-guild-template
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildTemplate>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\GuildTemplate>
      */
     public function modify(string $guildId, string $code, array $params): PromiseInterface
     {
@@ -65,7 +65,7 @@ class GuildTemplate extends HttpResource
 
     /**
      * @see https://discord.com/developers/docs/resources/guild-template#delete-guild-template
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildTemplate>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\GuildTemplate>
      */
     public function delete(string $guildId, string $code): PromiseInterface
     {
@@ -77,7 +77,7 @@ class GuildTemplate extends HttpResource
 
     /**
      * @see https://discord.com/developers/docs/resources/guild-template#create-guild-from-guild-template
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Guild>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Guild>
      */
     public function createGuildFromTemplate(string $code, array $params): PromiseInterface
     {
@@ -89,7 +89,7 @@ class GuildTemplate extends HttpResource
 
     /**
      * @see https://discord.com/developers/docs/resources/guild-template#sync-guild-template
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildTemplate>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\GuildTemplate>
      */
     public function sync(string $guildId, string $code): PromiseInterface
     {

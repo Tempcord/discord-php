@@ -1,13 +1,13 @@
 <?php
 
-use CyberWolf\Discord\Bitwise\Bitwise;
-use CyberWolf\Discord\Constants\Events;
-use CyberWolf\Discord\Discord;
-use CyberWolf\Discord\Enums\Intent;
-use CyberWolf\Discord\FilteredEventEmitter;
-use CyberWolf\Discord\Gateway\Events\MessageCreate;
-use CyberWolf\Discord\Gateway\Events\MessageReactionAdd;
-use CyberWolf\Discord\Rest\Helpers\Channel\MessageBuilder;
+use Tempcord\Discord\Bitwise\Bitwise;
+use Tempcord\Discord\Constants\Events;
+use Tempcord\Discord\Discord;
+use Tempcord\Discord\Enums\Intent;
+use Tempcord\Discord\FilteredEventEmitter;
+use Tempcord\Discord\Gateway\Events\MessageCreate;
+use Tempcord\Discord\Gateway\Events\MessageReactionAdd;
+use Tempcord\Discord\Rest\Helpers\Channel\MessageBuilder;
 
 require './vendor/autoload.php';
 

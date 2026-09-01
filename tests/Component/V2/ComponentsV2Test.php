@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Component\V2;
+namespace Tests\Tempcord\Discord\Component\V2;
 
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Component\Button\PrimaryButton;
-use CyberWolf\Discord\Component\V2\Container;
-use CyberWolf\Discord\Component\V2\File;
-use CyberWolf\Discord\Component\V2\MediaGallery;
-use CyberWolf\Discord\Component\V2\MediaGalleryItem;
-use CyberWolf\Discord\Component\V2\Section;
-use CyberWolf\Discord\Component\V2\Separator;
-use CyberWolf\Discord\Component\V2\TextDisplay;
-use CyberWolf\Discord\Component\V2\Thumbnail;
-use CyberWolf\Discord\Component\V2\UnfurledMedia;
-use CyberWolf\Discord\Enums\SeparatorSpacingSize;
-use CyberWolf\Discord\Exceptions\Component\TooManyItemsException;
+use Tempcord\Discord\Component\Button\PrimaryButton;
+use Tempcord\Discord\Component\V2\Container;
+use Tempcord\Discord\Component\V2\File;
+use Tempcord\Discord\Component\V2\MediaGallery;
+use Tempcord\Discord\Component\V2\MediaGalleryItem;
+use Tempcord\Discord\Component\V2\Section;
+use Tempcord\Discord\Component\V2\Separator;
+use Tempcord\Discord\Component\V2\TextDisplay;
+use Tempcord\Discord\Component\V2\Thumbnail;
+use Tempcord\Discord\Component\V2\UnfurledMedia;
+use Tempcord\Discord\Enums\SeparatorSpacingSize;
+use Tempcord\Discord\Exceptions\Component\TooManyItemsException;
 
 class ComponentsV2Test extends TestCase
 {

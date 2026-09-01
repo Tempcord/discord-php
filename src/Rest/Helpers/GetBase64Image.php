@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers;
+namespace Tempcord\Discord\Rest\Helpers;
 
-use CyberWolf\Discord\Enums\ImageData;
+use Tempcord\Discord\Enums\ImageData;
 
 trait GetBase64Image
 {

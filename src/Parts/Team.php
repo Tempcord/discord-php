@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Parts;
+namespace Tempcord\Discord\Parts;
 
-use CyberWolf\Discord\Mapping\ArrayMapping;
+use Tempcord\Discord\Mapping\ArrayMapping;
 
 class Team
 {

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Channel\Channel\Shared;
+namespace Tempcord\Discord\Rest\Helpers\Channel\Channel\Shared;
 
-use CyberWolf\Discord\Constants\Validation\RateLimit;
+use Tempcord\Discord\Constants\Validation\RateLimit;
 
 trait SetDefaultThreadRateLimitPerUser
 {

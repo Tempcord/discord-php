@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest\Helpers\Channel\Channel\Shared;
+namespace Tests\Tempcord\Discord\Rest\Helpers\Channel\Channel\Shared;
 
-use CyberWolf\Discord\Constants\Validation\RateLimit;
-use CyberWolf\Discord\Rest\Helpers\Channel\Channel\Shared\SetRateLimitPerUser;
+use Tempcord\Discord\Constants\Validation\RateLimit;
+use Tempcord\Discord\Rest\Helpers\Channel\Channel\Shared\SetRateLimitPerUser;
 use PHPUnit\Framework\TestCase;
 
 class SetRateLimitPerUserTest extends TestCase

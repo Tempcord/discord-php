@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Interaction;
+namespace Tempcord\Discord\Interaction;
 
-use CyberWolf\Discord\Discord;
-use CyberWolf\Discord\Enums\ApplicationCommandOptionType as OptionTypes;
-use CyberWolf\Discord\Gateway\Events\InteractionCreate;
-use CyberWolf\Discord\Interaction\Concerns\OpensModal;
-use CyberWolf\Discord\Interaction\Concerns\RespondsToInteraction;
-use CyberWolf\Discord\Parts\ApplicationCommandInteractionDataOptionStructure as OptionStructure;
+use Tempcord\Discord\Discord;
+use Tempcord\Discord\Enums\ApplicationCommandOptionType as OptionTypes;
+use Tempcord\Discord\Gateway\Events\InteractionCreate;
+use Tempcord\Discord\Interaction\Concerns\OpensModal;
+use Tempcord\Discord\Interaction\Concerns\RespondsToInteraction;
+use Tempcord\Discord\Parts\ApplicationCommandInteractionDataOptionStructure as OptionStructure;
 
 class CommandInteraction
 {

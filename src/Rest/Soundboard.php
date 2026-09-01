@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest;
+namespace Tempcord\Discord\Rest;
 
 use Discord\Http\Endpoint;
-use CyberWolf\Discord\Parts\GuildSoundboardSounds;
-use CyberWolf\Discord\Parts\SoundboardSound;
-use CyberWolf\Discord\Rest\Helpers\Soundboard\CreateSoundboardSoundBuilder;
-use CyberWolf\Discord\Rest\Helpers\Soundboard\ModifySoundboardSoundBuilder;
+use Tempcord\Discord\Parts\GuildSoundboardSounds;
+use Tempcord\Discord\Parts\SoundboardSound;
+use Tempcord\Discord\Rest\Helpers\Soundboard\CreateSoundboardSoundBuilder;
+use Tempcord\Discord\Rest\Helpers\Soundboard\ModifySoundboardSoundBuilder;
 use React\Promise\PromiseInterface;
 
 /**
@@ -47,7 +47,7 @@ class Soundboard extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/soundboard#list-default-soundboard-sounds
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\SoundboardSound[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\SoundboardSound[]>
      */
     public function listDefaultSounds(): PromiseInterface
     {
@@ -65,7 +65,7 @@ class Soundboard extends HttpResource
      *
      * @see https://discord.com/developers/docs/resources/soundboard#list-guild-soundboard-sounds
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildSoundboardSounds>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\GuildSoundboardSounds>
      */
     public function listGuildSounds(string $guildId): PromiseInterface
     {
@@ -83,7 +83,7 @@ class Soundboard extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/soundboard#get-guild-soundboard-sound
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\SoundboardSound>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\SoundboardSound>
      */
     public function getGuildSound(string $guildId, string $soundId): PromiseInterface
     {
@@ -102,7 +102,7 @@ class Soundboard extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/soundboard#create-guild-soundboard-sound
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\SoundboardSound>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\SoundboardSound>
      */
     public function createGuildSound(
         string $guildId,
@@ -125,7 +125,7 @@ class Soundboard extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/soundboard#modify-guild-soundboard-sound
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\SoundboardSound>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\SoundboardSound>
      */
     public function modifyGuildSound(
         string $guildId,

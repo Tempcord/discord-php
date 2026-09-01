@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest;
+namespace Tests\Tempcord\Discord\Rest;
 
-use CyberWolf\Discord\Parts\Sku as SkuPart;
-use CyberWolf\Discord\Rest\Sku;
-use Tests\CyberWolf\Discord\Rest\HttpHelperTestCase;
+use Tempcord\Discord\Parts\Sku as SkuPart;
+use Tempcord\Discord\Rest\Sku;
+use Tests\Tempcord\Discord\Rest\HttpHelperTestCase;
 
 class SkuTest extends HttpHelperTestCase
 {

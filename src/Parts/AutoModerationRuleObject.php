@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Parts;
+namespace Tempcord\Discord\Parts;
 
-use CyberWolf\Discord\Enums\AutoModerationRuleTriggerType;
-use CyberWolf\Discord\Enums\AutoModerationRuleEventType;
-use CyberWolf\Discord\Mapping\ArrayMapping;
+use Tempcord\Discord\Enums\AutoModerationRuleTriggerType;
+use Tempcord\Discord\Enums\AutoModerationRuleEventType;
+use Tempcord\Discord\Mapping\ArrayMapping;
 
 class AutoModerationRuleObject
 {

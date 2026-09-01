@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Interaction;
+namespace Tempcord\Discord\Interaction;
 
-use CyberWolf\Discord\Enums\InteractionCallbackType;
-use CyberWolf\Discord\Enums\MessageFlag;
-use CyberWolf\Discord\Interaction\Helpers\InteractionCallbackBuilder;
-use CyberWolf\Discord\Interaction\Helpers\ModalBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\EmbedBuilder;
+use Tempcord\Discord\Enums\InteractionCallbackType;
+use Tempcord\Discord\Enums\MessageFlag;
+use Tempcord\Discord\Interaction\Helpers\InteractionCallbackBuilder;
+use Tempcord\Discord\Interaction\Helpers\ModalBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\EmbedBuilder;
 
 /**
  * The ways an interaction may be answered.

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest;
+namespace Tests\Tempcord\Discord\Rest;
 
-use CyberWolf\Discord\Parts\GuildSoundboardSounds;
-use CyberWolf\Discord\Parts\SoundboardSound;
-use CyberWolf\Discord\Rest\Helpers\Soundboard\CreateSoundboardSoundBuilder;
-use CyberWolf\Discord\Rest\Helpers\Soundboard\ModifySoundboardSoundBuilder;
-use CyberWolf\Discord\Rest\Soundboard;
-use Tests\CyberWolf\Discord\Rest\HttpHelperTestCase;
+use Tempcord\Discord\Parts\GuildSoundboardSounds;
+use Tempcord\Discord\Parts\SoundboardSound;
+use Tempcord\Discord\Rest\Helpers\Soundboard\CreateSoundboardSoundBuilder;
+use Tempcord\Discord\Rest\Helpers\Soundboard\ModifySoundboardSoundBuilder;
+use Tempcord\Discord\Rest\Soundboard;
+use Tests\Tempcord\Discord\Rest\HttpHelperTestCase;
 
 class SoundboardTest extends HttpHelperTestCase
 {

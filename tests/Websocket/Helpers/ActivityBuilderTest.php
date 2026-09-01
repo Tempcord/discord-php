@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Websocket\Helpers;
+namespace Tests\Tempcord\Discord\Websocket\Helpers;
 
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Enums\ActivityType;
-use CyberWolf\Discord\Gateway\Helpers\ActivityBuilder;
-use CyberWolf\Discord\Rest\Helpers\Emoji\EmojiBuilder;
+use Tempcord\Discord\Enums\ActivityType;
+use Tempcord\Discord\Gateway\Helpers\ActivityBuilder;
+use Tempcord\Discord\Rest\Helpers\Emoji\EmojiBuilder;
 
 class ActivityBuilderTest extends TestCase
 {

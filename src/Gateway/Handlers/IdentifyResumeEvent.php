@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Gateway\Handlers;
+namespace Tempcord\Discord\Gateway\Handlers;
 
 class IdentifyResumeEvent extends IdentifyEvent
 {

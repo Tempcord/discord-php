@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Channel\Message;
+namespace Tempcord\Discord\Rest\Helpers\Channel\Message;
 
 use Discord\Http\Multipart\MultipartBody;
 use Discord\Http\Multipart\MultipartField;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Exceptions\Extension;
+namespace Tempcord\Discord\Exceptions\Extension;
 
 use Exception;
 

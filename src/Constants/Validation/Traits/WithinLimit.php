@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Constants\Validation\Traits;
+namespace Tempcord\Discord\Constants\Validation\Traits;
 
 trait WithinLimit
 {

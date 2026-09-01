@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Command;
+namespace Tempcord\Discord\Command;
 
 use Evenement\EventEmitter;
-use CyberWolf\Discord\Constants\Events;
-use CyberWolf\Discord\Discord;
-use CyberWolf\Discord\Enums\ApplicationCommandOptionType;
-use CyberWolf\Discord\Enums\InteractionType;
-use CyberWolf\Discord\Extension\Extension;
-use CyberWolf\Discord\FilteredEventEmitter;
-use CyberWolf\Discord\Gateway\Events\InteractionCreate;
-use CyberWolf\Discord\Interaction\CommandInteraction;
-use CyberWolf\Discord\Parts\ApplicationCommandInteractionDataOptionStructure;
+use Tempcord\Discord\Constants\Events;
+use Tempcord\Discord\Discord;
+use Tempcord\Discord\Enums\ApplicationCommandOptionType;
+use Tempcord\Discord\Enums\InteractionType;
+use Tempcord\Discord\Extension\Extension;
+use Tempcord\Discord\FilteredEventEmitter;
+use Tempcord\Discord\Gateway\Events\InteractionCreate;
+use Tempcord\Discord\Interaction\CommandInteraction;
+use Tempcord\Discord\Parts\ApplicationCommandInteractionDataOptionStructure;
 
 abstract class CommandExtension extends EventEmitter implements Extension
 {

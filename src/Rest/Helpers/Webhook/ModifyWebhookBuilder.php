@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Webhook;
+namespace Tempcord\Discord\Rest\Helpers\Webhook;
 
-use CyberWolf\Discord\Rest\Helpers\GetNew;
-use CyberWolf\Discord\Rest\Helpers\Webhook\Shared\SetAvatar;
-use CyberWolf\Discord\Rest\Helpers\Webhook\Shared\SetName;
+use Tempcord\Discord\Rest\Helpers\GetNew;
+use Tempcord\Discord\Rest\Helpers\Webhook\Shared\SetAvatar;
+use Tempcord\Discord\Rest\Helpers\Webhook\Shared\SetName;
 
 class ModifyWebhookBuilder
 {

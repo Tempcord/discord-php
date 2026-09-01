@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest\Helpers\Channel;
+namespace Tests\Tempcord\Discord\Rest\Helpers\Channel;
 
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Constants\Validation\RateLimit;
-use CyberWolf\Discord\Enums\ThreadAutoArchiveDuration;
-use CyberWolf\Discord\Rest\Helpers\Channel\StartThreadFromMessageBuilder;
+use Tempcord\Discord\Constants\Validation\RateLimit;
+use Tempcord\Discord\Enums\ThreadAutoArchiveDuration;
+use Tempcord\Discord\Rest\Helpers\Channel\StartThreadFromMessageBuilder;
 
 class StartThreadFromMessageBuilderTest extends TestCase
 {

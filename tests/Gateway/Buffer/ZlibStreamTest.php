@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Gateway\Buffer;
+namespace Tests\Tempcord\Discord\Gateway\Buffer;
 
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Buffer\ZlibStream;
+use Tempcord\Discord\Buffer\ZlibStream;
 
 class ZlibStreamTest extends TestCase
 {

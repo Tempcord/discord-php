@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Channel;
+namespace Tempcord\Discord\Rest\Helpers\Channel;
 
-use CyberWolf\Discord\Constants\Validation\ItemLimit;
-use CyberWolf\Discord\Rest\Helpers\GetNew;
+use Tempcord\Discord\Constants\Validation\ItemLimit;
+use Tempcord\Discord\Rest\Helpers\GetNew;
 
 class GetReactionsBuilder
 {

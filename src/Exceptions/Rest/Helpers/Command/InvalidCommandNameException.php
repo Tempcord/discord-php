@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Exceptions\Rest\Helpers\Command;
+namespace Tempcord\Discord\Exceptions\Rest\Helpers\Command;
 
 use Exception;
-use CyberWolf\Discord\Constants\Validation\Command;
+use Tempcord\Discord\Constants\Validation\Command;
 
 class InvalidCommandNameException extends Exception
 {

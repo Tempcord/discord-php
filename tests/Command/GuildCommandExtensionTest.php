@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Command;
+namespace Tests\Tempcord\Discord\Command;
 
-use Fakes\CyberWolf\Discord\DiscordFake;
+use Fakes\Tempcord\Discord\DiscordFake;
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Command\GuildCommandExtension;
-use CyberWolf\Discord\Constants\Events;
-use CyberWolf\Discord\Discord;
-use CyberWolf\Discord\Enums\ApplicationCommandOptionType;
-use CyberWolf\Discord\Enums\InteractionType;
-use CyberWolf\Discord\Gateway\Events\InteractionCreate;
-use CyberWolf\Discord\Interaction\CommandInteraction;
-use CyberWolf\Discord\Parts\ApplicationCommandInteractionDataOptionStructure;
-use CyberWolf\Discord\Parts\InteractionData;
+use Tempcord\Discord\Command\GuildCommandExtension;
+use Tempcord\Discord\Constants\Events;
+use Tempcord\Discord\Discord;
+use Tempcord\Discord\Enums\ApplicationCommandOptionType;
+use Tempcord\Discord\Enums\InteractionType;
+use Tempcord\Discord\Gateway\Events\InteractionCreate;
+use Tempcord\Discord\Interaction\CommandInteraction;
+use Tempcord\Discord\Parts\ApplicationCommandInteractionDataOptionStructure;
+use Tempcord\Discord\Parts\InteractionData;
 
 class GuildCommandExtensionTest extends TestCase
 {

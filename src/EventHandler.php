@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord;
+namespace Tempcord\Discord;
 
 use Evenement\EventEmitter;
-use CyberWolf\Discord\Constants\Events;
-use CyberWolf\Discord\Gateway\Objects\Payload;
+use Tempcord\Discord\Constants\Events;
+use Tempcord\Discord\Gateway\Objects\Payload;
 
 class EventHandler extends EventEmitter
 {

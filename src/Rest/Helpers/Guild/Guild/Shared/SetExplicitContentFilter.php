@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Guild\Guild\Shared;
+namespace Tempcord\Discord\Rest\Helpers\Guild\Guild\Shared;
 
-use CyberWolf\Discord\Enums\ExplicitContentFilterLevel;
+use Tempcord\Discord\Enums\ExplicitContentFilterLevel;
 
 trait SetExplicitContentFilter
 {

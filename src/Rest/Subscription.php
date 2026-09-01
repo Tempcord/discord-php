@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest;
+namespace Tempcord\Discord\Rest;
 
 use Discord\Http\Endpoint;
-use CyberWolf\Discord\Parts\Subscription as SubscriptionPart;
-use CyberWolf\Discord\Rest\Helpers\Subscription\GetSubscriptionsBuilder;
+use Tempcord\Discord\Parts\Subscription as SubscriptionPart;
+use Tempcord\Discord\Rest\Helpers\Subscription\GetSubscriptionsBuilder;
 use React\Promise\PromiseInterface;
 
 /**
@@ -28,7 +28,7 @@ class Subscription extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/subscription#list-sku-subscriptions
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Subscription[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Subscription[]>
      */
     public function listSkuSubscriptions(
         string $skuId,
@@ -49,7 +49,7 @@ class Subscription extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/subscription#get-sku-subscription
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Subscription>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Subscription>
      */
     public function getSkuSubscription(string $skuId, string $subscriptionId): PromiseInterface
     {

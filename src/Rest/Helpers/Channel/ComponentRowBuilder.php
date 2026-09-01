@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Channel;
+namespace Tempcord\Discord\Rest\Helpers\Channel;
 
-use CyberWolf\Discord\Component\Component;
-use CyberWolf\Discord\Exceptions\Rest\Helpers\ComponentRowBuilder\TooManyItemsException;
-use CyberWolf\Discord\Rest\Helpers\GetNew;
+use Tempcord\Discord\Component\Component;
+use Tempcord\Discord\Exceptions\Rest\Helpers\ComponentRowBuilder\TooManyItemsException;
+use Tempcord\Discord\Rest\Helpers\GetNew;
 
 /**
  * Can not exceed 9 components
@@ -37,5 +37,23 @@ class ComponentRowBuilder
         $this->components[] = $component;
 
         return $this;
+    }
+
+    /**
+     * What the row holds, unserialised.
+     *
+     * get() cannot answer this: it renders every component, and a select menu
+     * with no options yet throws rather than returning.
+     *
+     * @return Component[]
+     */
+    public function getComponents(): array
+    {
+        return $this->components;
+    }
+
+    public function count(): int
+    {
+        return count($this->components);
     }
 }

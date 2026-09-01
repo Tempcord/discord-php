@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Guild\Guild\Shared;
+namespace Tempcord\Discord\Rest\Helpers\Guild\Guild\Shared;
 
-use CyberWolf\Discord\Bitwise\Bitwise;
+use Tempcord\Discord\Bitwise\Bitwise;
 
 trait SetSystemChannelFlags
 {
     /**
-     * @param Bitwise<\CyberWolf\Discord\Enums\SystemChannelFlag> $flags
+     * @param Bitwise<\Tempcord\Discord\Enums\SystemChannelFlag> $flags
      */
     public function setSystemChannelFlags(Bitwise $flags): static
     {
