@@ -16,6 +16,9 @@ class WebsocketFake extends EventEmitter implements WebsocketInterface
     public array $openings = [];
     public array $closings = [];
 
+    /** @var array<int, array|JsonSerializable> every payload sent as JSON */
+    public array $sent = [];
+
     public function __construct(public BufferInterface $buffer = new Passthrough())
     {
     }
@@ -44,5 +47,6 @@ class WebsocketFake extends EventEmitter implements WebsocketInterface
 
     public function sendAsJson(array|JsonSerializable $item, bool $useBucket): void
     {
+        $this->sent[] = $item;
     }
 }

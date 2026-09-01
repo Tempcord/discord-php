@@ -6,6 +6,7 @@ namespace CyberWolf\Discord\Rest;
 
 use Discord\Http\Endpoint;
 use Discord\Http\Multipart\MultipartBody;
+use CyberWolf\Discord\Parts\ArchivedThreads;
 use CyberWolf\Discord\Parts\Channel as PartsChannel;
 use CyberWolf\Discord\Parts\Invite;
 use CyberWolf\Discord\Parts\Message;
@@ -240,7 +241,7 @@ class Channel extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/channel#get-reactions
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Message>
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\User[]>
      */
     public function getReactions(
         string $channelId,
@@ -832,54 +833,54 @@ class Channel extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/channel#list-public-archived-threads
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Channel[]>
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\ArchivedThreads>
      */
     public function listPublicArchivedThreads(string $channelId): PromiseInterface
     {
-        return $this->mapArrayPromise(
+        return $this->mapPromise(
             $this->http->get(
                 Endpoint::bind(
                     Endpoint::CHANNEL_THREADS_ARCHIVED_PUBLIC,
                     $channelId
                 )
             ),
-            PartsChannel::class
+            ArchivedThreads::class
         );
     }
 
     /**
      * @see https://discord.com/developers/docs/resources/channel#list-private-archived-threads
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Channel[]>
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\ArchivedThreads>
      */
     public function listPrivateArchivedThreads(string $channelId): PromiseInterface
     {
-        return $this->mapArrayPromise(
+        return $this->mapPromise(
             $this->http->get(
                 Endpoint::bind(
                     Endpoint::CHANNEL_THREADS_ARCHIVED_PRIVATE,
                     $channelId
                 )
             ),
-            PartsChannel::class
+            ArchivedThreads::class
         );
     }
 
     /**
      * @see https://discord.com/developers/docs/resources/channel#list-joined-private-archived-threads
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Channel[]>
+     * @return PromiseInterface<\CyberWolf\Discord\Parts\ArchivedThreads>
      */
     public function listJoinedPrivateArchivedThreads(string $channelId): PromiseInterface
     {
-        return $this->mapArrayPromise(
+        return $this->mapPromise(
             $this->http->get(
                 Endpoint::bind(
                     Endpoint::CHANNEL_THREADS_ARCHIVED_PRIVATE_ME,
                     $channelId
                 )
             ),
-            PartsChannel::class
+            ArchivedThreads::class
         );
     }
 }

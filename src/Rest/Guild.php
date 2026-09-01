@@ -157,7 +157,7 @@ class Guild extends HttpResource
      */
     public function createChannel(string $guildId, array $params, ?string $reason = null): PromiseInterface
     {
-        return $this->mapArrayPromise(
+        return $this->mapPromise(
             $this->http->post(
                 Endpoint::bind(
                     Endpoint::GUILD_CHANNELS,

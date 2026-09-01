@@ -25,6 +25,7 @@ use CyberWolf\Discord\Gateway\Handlers\ReconnectEvent;
 use CyberWolf\Discord\Gateway\Handlers\RecoverableInvalidSessionEvent;
 use CyberWolf\Discord\Gateway\Handlers\RequestHeartbeatEvent;
 use CyberWolf\Discord\Gateway\Helpers\PresenceUpdateBuilder;
+use CyberWolf\Discord\Gateway\Helpers\RequestGuildMembersBuilder;
 use CyberWolf\Discord\Gateway\Objects\Payload;
 use CyberWolf\Discord\WebsocketInterface;
 use React\EventLoop\LoopInterface;
@@ -347,6 +348,21 @@ class Connection implements ConnectionInterface
         $this->websocket->sendAsJson([
             'op' => 3,
             'd' => $presenceUpdate->get(),
+        ], true);
+    }
+
+    /**
+     * Asks Discord for a guild's members.
+     *
+     * Nothing comes back from this call: the members arrive later as one or
+     * more GUILD_MEMBERS_CHUNK events, which is why there is no promise to
+     * wait on.
+     */
+    public function requestGuildMembers(RequestGuildMembersBuilder $request): void
+    {
+        $this->websocket->sendAsJson([
+            'op' => 8,
+            'd' => $request->get(),
         ], true);
     }
 }
