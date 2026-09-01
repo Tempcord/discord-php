@@ -38,4 +38,22 @@ class ComponentRowBuilder
 
         return $this;
     }
+
+    /**
+     * What the row holds, unserialised.
+     *
+     * get() cannot answer this: it renders every component, and a select menu
+     * with no options yet throws rather than returning.
+     *
+     * @return Component[]
+     */
+    public function getComponents(): array
+    {
+        return $this->components;
+    }
+
+    public function count(): int
+    {
+        return count($this->components);
+    }
 }
