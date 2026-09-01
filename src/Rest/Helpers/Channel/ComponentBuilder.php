@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Channel;
+namespace Tempcord\Discord\Rest\Helpers\Channel;
 
-use CyberWolf\Discord\Component\Component;
-use CyberWolf\Discord\Enums\MessageComponentType;
-use CyberWolf\Discord\Exceptions\Rest\Helpers\ComponentBuilder\TooManyRowsException;
-use CyberWolf\Discord\Rest\Helpers\GetNew;
+use Tempcord\Discord\Component\Component;
+use Tempcord\Discord\Enums\MessageComponentType;
+use Tempcord\Discord\Exceptions\Rest\Helpers\ComponentBuilder\TooManyRowsException;
+use Tempcord\Discord\Rest\Helpers\GetNew;
 
 /**
  * @see https://discord.com/developers/docs/interactions/message-components#component-object

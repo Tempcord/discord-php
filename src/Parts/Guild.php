@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Parts;
+namespace Tempcord\Discord\Parts;
 
-use CyberWolf\Discord\Bitwise\Bitwise;
-use CyberWolf\Discord\Enums\ExplicitContentFilterLevel;
-use CyberWolf\Discord\Enums\GuildFeature;
-use CyberWolf\Discord\Enums\MessageNotificationLevel;
-use CyberWolf\Discord\Enums\MfaLevel;
-use CyberWolf\Discord\Enums\NsfwLevel;
-use CyberWolf\Discord\Enums\PremiumTier;
-use CyberWolf\Discord\Enums\VerificationLevel;
-use CyberWolf\Discord\Mapping\ArrayMapping;
+use Tempcord\Discord\Bitwise\Bitwise;
+use Tempcord\Discord\Enums\ExplicitContentFilterLevel;
+use Tempcord\Discord\Enums\GuildFeature;
+use Tempcord\Discord\Enums\MessageNotificationLevel;
+use Tempcord\Discord\Enums\MfaLevel;
+use Tempcord\Discord\Enums\NsfwLevel;
+use Tempcord\Discord\Enums\PremiumTier;
+use Tempcord\Discord\Enums\VerificationLevel;
+use Tempcord\Discord\Mapping\ArrayMapping;
 
 class Guild
 {

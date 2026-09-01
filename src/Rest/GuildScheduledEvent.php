@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest;
+namespace Tempcord\Discord\Rest;
 
 use Discord\Http\Endpoint;
-use CyberWolf\Discord\Parts\GuildScheduledEvent as PartsGuildScheduledEvent;
-use CyberWolf\Discord\Parts\GuildScheduledEventUser;
+use Tempcord\Discord\Parts\GuildScheduledEvent as PartsGuildScheduledEvent;
+use Tempcord\Discord\Parts\GuildScheduledEventUser;
 use React\Promise\PromiseInterface;
 
 /**
@@ -16,7 +16,7 @@ class GuildScheduledEvent extends HttpResource
 {
     /**
      * @see https://discord.com/developers/docs/resources/guild-scheduled-event#list-scheduled-events-for-guild
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildScheduledEvent[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\GuildScheduledEvent[]>
      */
     public function list(string $guildId, bool $withUserCount = false): PromiseInterface
     {
@@ -33,7 +33,7 @@ class GuildScheduledEvent extends HttpResource
 
     /**
      * @see https://discord.com/developers/docs/resources/guild-scheduled-event#get-guild-scheduled-event
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildScheduledEvent>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\GuildScheduledEvent>
      */
     public function get(string $guildId, string $scheduledEventId, bool $withUserCount = false): PromiseInterface
     {
@@ -50,7 +50,7 @@ class GuildScheduledEvent extends HttpResource
 
     /**
      * @see https://discord.com/developers/docs/resources/guild-scheduled-event#create-guild-scheduled-event
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildScheduledEvent>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\GuildScheduledEvent>
      */
     public function create(string $guildId, array $params, ?string $reason = null): PromiseInterface
     {
@@ -66,7 +66,7 @@ class GuildScheduledEvent extends HttpResource
 
     /**
      * @see https://discord.com/developers/docs/resources/guild-scheduled-event#modify-guild-scheduled-event
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildScheduledEvent>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\GuildScheduledEvent>
      */
     public function modify(string $guildId, string $scheduledEventId, array $params, ?string $reason = null): PromiseInterface
     {

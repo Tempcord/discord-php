@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Component\V2;
+namespace Tempcord\Discord\Component\V2;
 
 /**
  * @see https://discord.com/developers/docs/components/reference#media-gallery-media-gallery-item-structure

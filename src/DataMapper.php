@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord;
+namespace Tempcord\Discord;
 
 use Psr\Log\LoggerInterface;
-use CyberWolf\Discord\Mapping\Mapper;
-use CyberWolf\Discord\Mapping\MappingException;
+use Tempcord\Discord\Mapping\Mapper;
+use Tempcord\Discord\Mapping\MappingException;
 
 class DataMapper
 {

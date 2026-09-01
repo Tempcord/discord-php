@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Gateway\Handlers;
+namespace Tests\Tempcord\Discord\Gateway\Handlers;
 
 use Mockery;
 use Mockery\Adapter\Phpunit\MockeryTestCase;
 use Mockery\MockInterface;
 use Psr\Log\NullLogger;
-use CyberWolf\Discord\Constants\OpCodes;
-use CyberWolf\Discord\DataMapper;
-use CyberWolf\Discord\EventHandler;
-use CyberWolf\Discord\Gateway\ConnectionInterface;
-use CyberWolf\Discord\Gateway\Handlers\PassthroughEvent;
-use CyberWolf\Discord\Gateway\Objects\Payload;
+use Tempcord\Discord\Constants\OpCodes;
+use Tempcord\Discord\DataMapper;
+use Tempcord\Discord\EventHandler;
+use Tempcord\Discord\Gateway\ConnectionInterface;
+use Tempcord\Discord\Gateway\Handlers\PassthroughEvent;
+use Tempcord\Discord\Gateway\Objects\Payload;
 
 class PassthroughEventTest extends MockeryTestCase
 {

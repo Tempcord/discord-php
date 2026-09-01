@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Component\Button;
+namespace Tempcord\Discord\Component\Button;
 
-use CyberWolf\Discord\Component\Component;
-use CyberWolf\Discord\Enums\ButtonStyle;
-use CyberWolf\Discord\Rest\Helpers\Emoji\EmojiBuilder;
+use Tempcord\Discord\Component\Component;
+use Tempcord\Discord\Enums\ButtonStyle;
+use Tempcord\Discord\Rest\Helpers\Emoji\EmojiBuilder;
 
 class LinkButton extends Component
 {

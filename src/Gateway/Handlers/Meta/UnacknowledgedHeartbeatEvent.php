@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Gateway\Handlers\Meta;
+namespace Tempcord\Discord\Gateway\Handlers\Meta;
 
-use CyberWolf\Discord\Constants\GatewayCloseCodes;
-use CyberWolf\Discord\Gateway\Events\Meta\UnacknowledgedHeartbeatEvent as BaseUnacknowledgedHeartbeatEvent;
+use Tempcord\Discord\Constants\GatewayCloseCodes;
+use Tempcord\Discord\Gateway\Events\Meta\UnacknowledgedHeartbeatEvent as BaseUnacknowledgedHeartbeatEvent;
 
 class UnacknowledgedHeartbeatEvent extends BaseUnacknowledgedHeartbeatEvent
 {

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest;
+namespace Tests\Tempcord\Discord\Rest;
 
-use CyberWolf\Discord\Parts\Message;
-use CyberWolf\Discord\Parts\PollAnswerVoters;
-use CyberWolf\Discord\Rest\Poll;
-use Tests\CyberWolf\Discord\Rest\HttpHelperTestCase;
+use Tempcord\Discord\Parts\Message;
+use Tempcord\Discord\Parts\PollAnswerVoters;
+use Tempcord\Discord\Rest\Poll;
+use Tests\Tempcord\Discord\Rest\HttpHelperTestCase;
 
 class PollTest extends HttpHelperTestCase
 {

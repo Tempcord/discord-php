@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Channel;
+namespace Tempcord\Discord\Rest\Helpers\Channel;
 
-use CyberWolf\Discord\Component\Component;
-use CyberWolf\Discord\Exceptions\Rest\Helpers\ComponentRowBuilder\TooManyItemsException;
-use CyberWolf\Discord\Rest\Helpers\GetNew;
+use Tempcord\Discord\Component\Component;
+use Tempcord\Discord\Exceptions\Rest\Helpers\ComponentRowBuilder\TooManyItemsException;
+use Tempcord\Discord\Rest\Helpers\GetNew;
 
 /**
  * Can not exceed 9 components

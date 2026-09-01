@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\AuditLog;
+namespace Tempcord\Discord\Rest\Helpers\AuditLog;
 
-use CyberWolf\Discord\Constants\Validation\ItemLimit;
-use CyberWolf\Discord\Rest\Helpers\GetNew;
+use Tempcord\Discord\Constants\Validation\ItemLimit;
+use Tempcord\Discord\Rest\Helpers\GetNew;
 
 class GetGuildAuditLogsBuilder
 {

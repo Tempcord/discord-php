@@ -1,9 +1,9 @@
 {
-    "name": "cyberwolf-studio/discord-php",
+    "name": "tempcord/discord-php",
     "description": "Discord API & Gateway wrapper for PHP. A rebranded, maintained fork of Ragnarok/Fenrir.",
     "type": "library",
     "license": "MIT",
-    "homepage": "https://github.com/CyberWolf-Studio/discord-php",
+    "homepage": "https://github.com/Tempcord/discord-php",
     "keywords": [
         "discord",
         "discord-api",
@@ -26,24 +26,24 @@
             "role": "Maintainer"
         },
         {
-            "name": "Ragnar\u00f6k",
+            "name": "Ragnarök",
             "homepage": "https://github.com/dc-Ragnarok/Fenrir",
             "role": "Original author (Fenrir)"
         }
     ],
     "support": {
-        "issues": "https://github.com/CyberWolf-Studio/discord-php/issues",
-        "source": "https://github.com/CyberWolf-Studio/discord-php"
+        "issues": "https://github.com/Tempcord/discord-php/issues",
+        "source": "https://github.com/Tempcord/discord-php"
     },
     "autoload": {
         "psr-4": {
-            "CyberWolf\\Discord\\": "src/"
+            "Tempcord\\Discord\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\CyberWolf\\Discord\\": "tests/",
-            "Fakes\\CyberWolf\\Discord\\": "fakes/"
+            "Tests\\Tempcord\\Discord\\": "tests/",
+            "Fakes\\Tempcord\\Discord\\": "fakes/"
         }
     },
     "minimum-stability": "stable",

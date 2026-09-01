@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest;
+namespace Tests\Tempcord\Discord\Rest;
 
-use CyberWolf\Discord\Parts\Emoji as PartsEmoji;
-use CyberWolf\Discord\Rest\Emoji;
-use CyberWolf\Discord\Rest\Helpers\Emoji\CreateEmojiBuilder;
-use Tests\CyberWolf\Discord\Rest\HttpHelperTestCase;
+use Tempcord\Discord\Parts\Emoji as PartsEmoji;
+use Tempcord\Discord\Rest\Emoji;
+use Tempcord\Discord\Rest\Helpers\Emoji\CreateEmojiBuilder;
+use Tests\Tempcord\Discord\Rest\HttpHelperTestCase;
 
 class EmojiTest extends HttpHelperTestCase
 {

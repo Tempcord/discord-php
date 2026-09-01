@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Gateway\Handlers;
+namespace Tempcord\Discord\Gateway\Handlers;
 
-use CyberWolf\Discord\Constants\OpCodes;
+use Tempcord\Discord\Constants\OpCodes;
 
 abstract class IdentifyEvent extends GatewayEvent
 {

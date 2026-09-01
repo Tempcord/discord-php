@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Channel\Channel\Shared;
+namespace Tempcord\Discord\Rest\Helpers\Channel\Channel\Shared;
 
-use CyberWolf\Discord\Enums\ChannelType;
-use CyberWolf\Discord\Exceptions\Rest\Helpers\Channel\Channel\Shared\SetType\UnsupportedConversionException;
+use Tempcord\Discord\Enums\ChannelType;
+use Tempcord\Discord\Exceptions\Rest\Helpers\Channel\Channel\Shared\SetType\UnsupportedConversionException;
 
 trait SetType
 {

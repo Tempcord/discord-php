@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest\Helpers\Command;
+namespace Tests\Tempcord\Discord\Rest\Helpers\Command;
 
 use Mockery;
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Enums\ApplicationCommandOptionType;
-use CyberWolf\Discord\Enums\ChannelType;
-use CyberWolf\Discord\Rest\Helpers\Command\CommandOptionBuilder;
+use Tempcord\Discord\Enums\ApplicationCommandOptionType;
+use Tempcord\Discord\Enums\ChannelType;
+use Tempcord\Discord\Rest\Helpers\Command\CommandOptionBuilder;
 
 class CommandOptionBuilderTest extends TestCase
 {

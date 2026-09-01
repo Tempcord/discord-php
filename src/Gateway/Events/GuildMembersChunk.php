@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Gateway\Events;
+namespace Tempcord\Discord\Gateway\Events;
 
-use CyberWolf\Discord\Mapping\ArrayMapping;
-use CyberWolf\Discord\Parts\GuildMember;
-use CyberWolf\Discord\Parts\Presence;
+use Tempcord\Discord\Mapping\ArrayMapping;
+use Tempcord\Discord\Parts\GuildMember;
+use Tempcord\Discord\Parts\Presence;
 
 /**
  * @see https://discord.com/developers/docs/topics/gateway-events#guild-members-chunk

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Gateway\Objects;
+namespace Tempcord\Discord\Gateway\Objects;
 
 use JsonSerializable;
 

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Channel;
+namespace Tempcord\Discord\Rest\Helpers\Channel;
 
-use CyberWolf\Discord\Enums\SortingOrder;
-use CyberWolf\Discord\Enums\ThreadSearchTagSetting;
-use CyberWolf\Discord\Enums\ThreadSortingMode;
-use CyberWolf\Discord\Rest\Helpers\GetNew;
+use Tempcord\Discord\Enums\SortingOrder;
+use Tempcord\Discord\Enums\ThreadSearchTagSetting;
+use Tempcord\Discord\Enums\ThreadSortingMode;
+use Tempcord\Discord\Rest\Helpers\GetNew;
 
 /**
  * @see https://discord.com/developers/docs/resources/channel#search-threads

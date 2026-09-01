@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Channel;
+namespace Tempcord\Discord\Rest\Helpers\Channel;
 
-use CyberWolf\Discord\Constants\Validation\RateLimit;
-use CyberWolf\Discord\Enums\ChannelType;
-use CyberWolf\Discord\Enums\ThreadAutoArchiveDuration;
-use CyberWolf\Discord\Rest\Helpers\GetNew;
+use Tempcord\Discord\Constants\Validation\RateLimit;
+use Tempcord\Discord\Enums\ChannelType;
+use Tempcord\Discord\Enums\ThreadAutoArchiveDuration;
+use Tempcord\Discord\Rest\Helpers\GetNew;
 
 class StartThreadWithoutMessageBuilder
 {

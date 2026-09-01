@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Enums;
+namespace Tempcord\Discord\Enums;
 
 enum UserFlag: int
 {

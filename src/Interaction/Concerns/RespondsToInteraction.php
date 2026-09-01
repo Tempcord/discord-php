@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Interaction\Concerns;
+namespace Tempcord\Discord\Interaction\Concerns;
 
-use CyberWolf\Discord\Enums\MessageFlag;
-use CyberWolf\Discord\Interaction\Helpers\InteractionCallbackBuilder;
-use CyberWolf\Discord\Interaction\Response;
-use CyberWolf\Discord\Rest\Helpers\Channel\EmbedBuilder;
-use CyberWolf\Discord\Rest\Helpers\Webhook\EditWebhookBuilder;
-use CyberWolf\Discord\Rest\Helpers\Webhook\WebhookBuilder;
+use Tempcord\Discord\Enums\MessageFlag;
+use Tempcord\Discord\Interaction\Helpers\InteractionCallbackBuilder;
+use Tempcord\Discord\Interaction\Response;
+use Tempcord\Discord\Rest\Helpers\Channel\EmbedBuilder;
+use Tempcord\Discord\Rest\Helpers\Webhook\EditWebhookBuilder;
+use Tempcord\Discord\Rest\Helpers\Webhook\WebhookBuilder;
 use React\Promise\PromiseInterface;
 
 /**

@@ -2,24 +2,24 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord;
+namespace Tests\Tempcord\Discord;
 
-use Fakes\CyberWolf\Discord\DataMapperFake;
-use Fakes\CyberWolf\Discord\DiscordFake;
-use Fakes\CyberWolf\Discord\PromiseFake;
+use Fakes\Tempcord\Discord\DataMapperFake;
+use Fakes\Tempcord\Discord\DiscordFake;
+use Fakes\Tempcord\Discord\PromiseFake;
 use Mockery\Adapter\Phpunit\MockeryTestCase;
-use CyberWolf\Discord\Component\Button\DangerButton;
-use CyberWolf\Discord\Constants\Events;
-use CyberWolf\Discord\Enums\InteractionType;
-use CyberWolf\Discord\Enums\MessageComponentType;
-use CyberWolf\Discord\EventHandler;
-use CyberWolf\Discord\Gateway\Events\InteractionCreate;
-use CyberWolf\Discord\Gateway\Objects\Payload;
-use CyberWolf\Discord\Interaction\ButtonInteraction;
-use CyberWolf\Discord\Interaction\CommandInteraction;
-use CyberWolf\Discord\InteractionHandler;
-use CyberWolf\Discord\Parts\ApplicationCommand;
-use CyberWolf\Discord\Rest\Helpers\Command\CommandBuilder;
+use Tempcord\Discord\Component\Button\DangerButton;
+use Tempcord\Discord\Constants\Events;
+use Tempcord\Discord\Enums\InteractionType;
+use Tempcord\Discord\Enums\MessageComponentType;
+use Tempcord\Discord\EventHandler;
+use Tempcord\Discord\Gateway\Events\InteractionCreate;
+use Tempcord\Discord\Gateway\Objects\Payload;
+use Tempcord\Discord\Interaction\ButtonInteraction;
+use Tempcord\Discord\Interaction\CommandInteraction;
+use Tempcord\Discord\InteractionHandler;
+use Tempcord\Discord\Parts\ApplicationCommand;
+use Tempcord\Discord\Rest\Helpers\Command\CommandBuilder;
 use React\Promise\Promise;
 
 class InteractionHandlerTest extends MockeryTestCase

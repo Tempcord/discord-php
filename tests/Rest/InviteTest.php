@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest;
+namespace Tests\Tempcord\Discord\Rest;
 
-use CyberWolf\Discord\Parts\Invite;
-use CyberWolf\Discord\Rest\Invite as RestInvite;
+use Tempcord\Discord\Parts\Invite;
+use Tempcord\Discord\Rest\Invite as RestInvite;
 
 class InviteTest extends HttpHelperTestCase
 {

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest\Helpers\Webhook;
+namespace Tests\Tempcord\Discord\Rest\Helpers\Webhook;
 
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Enums\ImageData;
-use CyberWolf\Discord\Rest\Helpers\Webhook\ModifyWebhookBuilder;
+use Tempcord\Discord\Enums\ImageData;
+use Tempcord\Discord\Rest\Helpers\Webhook\ModifyWebhookBuilder;
 
 class ModifyWebhookBuilderTest extends TestCase
 {

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Component\SelectMenu;
+namespace Tempcord\Discord\Component\SelectMenu;
 
-use CyberWolf\Discord\Enums\SelectMenuType;
+use Tempcord\Discord\Enums\SelectMenuType;
 
 class UserSelectMenu extends SelectMenu
 {

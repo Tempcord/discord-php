@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Gateway\Helpers;
+namespace Tempcord\Discord\Gateway\Helpers;
 
-use CyberWolf\Discord\Exceptions\Gateway\Helpers\RequestGuildMembers\InvalidRequestException;
-use CyberWolf\Discord\Rest\Helpers\GetNew;
+use Tempcord\Discord\Exceptions\Gateway\Helpers\RequestGuildMembers\InvalidRequestException;
+use Tempcord\Discord\Rest\Helpers\GetNew;
 
 /**
  * Asks the gateway for a guild's members.

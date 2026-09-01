@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Channel\Channel\Shared;
+namespace Tempcord\Discord\Rest\Helpers\Channel\Channel\Shared;
 
 trait SetParentId
 {

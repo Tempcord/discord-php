@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord;
+namespace Tests\Tempcord\Discord;
 
-use CyberWolf\Discord\Bucket;
+use Tempcord\Discord\Bucket;
 use Mockery;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use PHPUnit\Framework\TestCase;

@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Command;
+namespace Tempcord\Discord\Rest\Helpers\Command;
 
-use CyberWolf\Discord\Bitwise\Bitwise;
-use CyberWolf\Discord\Constants\Validation\Command;
-use CyberWolf\Discord\Enums\ApplicationCommandTypes;
-use CyberWolf\Discord\Enums\ApplicationIntegrationType;
-use CyberWolf\Discord\Enums\InteractionContextType;
-use CyberWolf\Discord\Exceptions\Rest\Helpers\Command\InvalidCommandNameException;
-use CyberWolf\Discord\Rest\Helpers\GetNew;
+use Tempcord\Discord\Bitwise\Bitwise;
+use Tempcord\Discord\Constants\Validation\Command;
+use Tempcord\Discord\Enums\ApplicationCommandTypes;
+use Tempcord\Discord\Enums\ApplicationIntegrationType;
+use Tempcord\Discord\Enums\InteractionContextType;
+use Tempcord\Discord\Exceptions\Rest\Helpers\Command\InvalidCommandNameException;
+use Tempcord\Discord\Rest\Helpers\GetNew;
 
 class CommandBuilder
 {
@@ -130,7 +130,7 @@ class CommandBuilder
     }
 
     /**
-     * @param Bitwise<\CyberWolf\Discord\Enums\Permission> $permissions
+     * @param Bitwise<\Tempcord\Discord\Enums\Permission> $permissions
      */
     public function setDefaultMemberPermissions(Bitwise $permissions): self
     {
@@ -140,7 +140,7 @@ class CommandBuilder
     }
 
     /**
-     * @return Bitwise<\CyberWolf\Discord\Enums\Permission>
+     * @return Bitwise<\Tempcord\Discord\Enums\Permission>
      */
     public function getDefaultMemberPermissions(): ?Bitwise
     {

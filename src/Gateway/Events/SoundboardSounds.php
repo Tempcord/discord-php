@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Gateway\Events;
+namespace Tempcord\Discord\Gateway\Events;
 
-use CyberWolf\Discord\Mapping\ArrayMapping;
-use CyberWolf\Discord\Parts\SoundboardSound;
+use Tempcord\Discord\Mapping\ArrayMapping;
+use Tempcord\Discord\Parts\SoundboardSound;
 
 /**
  * Sent in response to a request for a guild's soundboard sounds over the

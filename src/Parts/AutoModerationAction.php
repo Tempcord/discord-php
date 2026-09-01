@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Parts;
+namespace Tempcord\Discord\Parts;
 
-use CyberWolf\Discord\Enums\ActionType;
+use Tempcord\Discord\Enums\ActionType;
 
 /**
  * @see https://discord.com/developers/docs/resources/auto-moderation#auto-moderation-action-object

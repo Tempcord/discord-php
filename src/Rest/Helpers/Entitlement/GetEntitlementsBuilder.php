@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Entitlement;
+namespace Tempcord\Discord\Rest\Helpers\Entitlement;
 
-use CyberWolf\Discord\Rest\Helpers\GetNew;
+use Tempcord\Discord\Rest\Helpers\GetNew;
 
 /**
  * @see https://discord.com/developers/docs/resources/entitlement#list-entitlements

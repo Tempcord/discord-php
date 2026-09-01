@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Guild;
+namespace Tempcord\Discord\Rest\Helpers\Guild;
 
-use CyberWolf\Discord\Rest\Helpers\GetNew;
+use Tempcord\Discord\Rest\Helpers\GetNew;
 
 /**
  * @see https://discord.com/developers/docs/resources/guild#modify-guild-welcome-screen

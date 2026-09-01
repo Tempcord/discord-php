@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Soundboard;
+namespace Tempcord\Discord\Rest\Helpers\Soundboard;
 
-use CyberWolf\Discord\Enums\SoundData;
-use CyberWolf\Discord\Rest\Helpers\GetBase64Sound;
-use CyberWolf\Discord\Rest\Helpers\GetNew;
+use Tempcord\Discord\Enums\SoundData;
+use Tempcord\Discord\Rest\Helpers\GetBase64Sound;
+use Tempcord\Discord\Rest\Helpers\GetNew;
 
 class CreateSoundboardSoundBuilder
 {

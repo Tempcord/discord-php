@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Parts;
+namespace Tempcord\Discord\Parts;
 
 /**
  * @see https://discord.com/developers/docs/resources/guild#bulk-guild-ban

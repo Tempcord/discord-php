@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Gateway\Helpers;
+namespace Tempcord\Discord\Gateway\Helpers;
 
 use Carbon\Carbon;
-use CyberWolf\Discord\Enums\StatusType;
-use CyberWolf\Discord\Rest\Helpers\GetNew;
+use Tempcord\Discord\Enums\StatusType;
+use Tempcord\Discord\Rest\Helpers\GetNew;
 
 class PresenceUpdateBuilder
 {

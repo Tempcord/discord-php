@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest;
+namespace Tempcord\Discord\Rest;
 
 use Discord\Http\Endpoint;
-use CyberWolf\Discord\Enums\EntitlementOwnerType;
-use CyberWolf\Discord\Parts\Entitlement as EntitlementPart;
-use CyberWolf\Discord\Rest\Helpers\Entitlement\GetEntitlementsBuilder;
+use Tempcord\Discord\Enums\EntitlementOwnerType;
+use Tempcord\Discord\Parts\Entitlement as EntitlementPart;
+use Tempcord\Discord\Rest\Helpers\Entitlement\GetEntitlementsBuilder;
 use React\Promise\PromiseInterface;
 
 /**
@@ -18,7 +18,7 @@ class Entitlement extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/entitlement#list-entitlements
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Entitlement[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Entitlement[]>
      */
     public function listEntitlements(
         string $applicationId,
@@ -42,7 +42,7 @@ class Entitlement extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/entitlement#get-entitlement
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Entitlement>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Entitlement>
      */
     public function getEntitlement(string $applicationId, string $entitlementId): PromiseInterface
     {
@@ -83,7 +83,7 @@ class Entitlement extends HttpResource
      *
      * @see https://discord.com/developers/docs/resources/entitlement#create-test-entitlement
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Entitlement>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Entitlement>
      */
     public function createTestEntitlement(
         string $applicationId,

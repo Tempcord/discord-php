@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest;
+namespace Tempcord\Discord\Rest;
 
 use Discord\Http\Endpoint;
-use CyberWolf\Discord\Parts\Invite as PartsInvite;
+use Tempcord\Discord\Parts\Invite as PartsInvite;
 use React\Promise\PromiseInterface;
 
 /**
@@ -16,7 +16,7 @@ class Invite extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/invite#get-invite
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Invite>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Invite>
      */
     public function get(string $code): PromiseInterface
     {

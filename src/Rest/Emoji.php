@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest;
+namespace Tempcord\Discord\Rest;
 
 use Discord\Http\Endpoint;
-use CyberWolf\Discord\Parts\Emoji as PartsEmoji;
-use CyberWolf\Discord\Rest\Helpers\Emoji\CreateEmojiBuilder;
+use Tempcord\Discord\Parts\Emoji as PartsEmoji;
+use Tempcord\Discord\Rest\Helpers\Emoji\CreateEmojiBuilder;
 use React\Promise\PromiseInterface;
 
 /**
@@ -17,7 +17,7 @@ class Emoji extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/emoji#list-guild-emojis
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Emoji[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Emoji[]>
      */
     public function listGuildEmojis(string $guildId): PromiseInterface
     {
@@ -35,7 +35,7 @@ class Emoji extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/emoji#get-guild-emoji
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Emoji>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Emoji>
      */
     public function getGuildEmoji(string $guildId, string $emojiId): PromiseInterface
     {
@@ -54,7 +54,7 @@ class Emoji extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/emoji#create-guild-emoji
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Emoji>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Emoji>
      */
     public function createGuildEmoji(
         string $guildId,
@@ -77,7 +77,7 @@ class Emoji extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/emoji#modify-guild-emoji
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Emoji>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Emoji>
      */
     public function modifyGuildEmoji(
         string $guildId,
@@ -123,7 +123,7 @@ class Emoji extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/emoji#list-application-emojis
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Emoji[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Emoji[]>
      */
     public function listApplicationEmojis(string $applicationId): PromiseInterface
     {
@@ -141,7 +141,7 @@ class Emoji extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/emoji#get-application-emoji
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Emoji>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Emoji>
      */
     public function getApplicationEmoji(string $guildId, string $emojiId): PromiseInterface
     {
@@ -160,7 +160,7 @@ class Emoji extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/emoji#create-application-emoji
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Emoji>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Emoji>
      */
     public function createApplicationEmoji(
         string $applicationId,
@@ -181,7 +181,7 @@ class Emoji extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/emoji#modify-application-emoji
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Emoji>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Emoji>
      */
     public function modifyApplicationEmoji(
         string $applicationId,

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Gateway\Events;
+namespace Tempcord\Discord\Gateway\Events;
 
-use CyberWolf\Discord\Attributes\RequiresIntent;
-use CyberWolf\Discord\Enums\Intent;
-use CyberWolf\Discord\Mapping\ArrayMapping;
-use CyberWolf\Discord\Parts\Emoji;
+use Tempcord\Discord\Attributes\RequiresIntent;
+use Tempcord\Discord\Enums\Intent;
+use Tempcord\Discord\Mapping\ArrayMapping;
+use Tempcord\Discord\Parts\Emoji;
 
 /**
  * @see https://discord.com/developers/docs/topics/gateway-events#guild-emojis-update

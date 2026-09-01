@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Component;
+namespace Tests\Tempcord\Discord\Component;
 
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Component\SelectMenu\ChannelSelectMenu;
-use CyberWolf\Discord\Enums\ChannelType;
-use CyberWolf\Discord\Enums\SelectMenuType;
+use Tempcord\Discord\Component\SelectMenu\ChannelSelectMenu;
+use Tempcord\Discord\Enums\ChannelType;
+use Tempcord\Discord\Enums\SelectMenuType;
 
 class ChannelSelectMenuTest extends TestCase
 {

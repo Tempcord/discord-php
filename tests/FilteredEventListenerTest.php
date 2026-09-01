@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord;
+namespace Tests\Tempcord\Discord;
 
 use Evenement\EventEmitter;
-use CyberWolf\Discord\Constants\Events;
-use CyberWolf\Discord\EventHandler;
-use CyberWolf\Discord\FilteredEventEmitter;
-use CyberWolf\Discord\Gateway\Objects\Payload;
-use Fakes\CyberWolf\Discord\DataMapperFake;
-use Fakes\CyberWolf\Discord\PromiseFake;
+use Tempcord\Discord\Constants\Events;
+use Tempcord\Discord\EventHandler;
+use Tempcord\Discord\FilteredEventEmitter;
+use Tempcord\Discord\Gateway\Objects\Payload;
+use Fakes\Tempcord\Discord\DataMapperFake;
+use Fakes\Tempcord\Discord\PromiseFake;
 use Mockery;
 use Mockery\Adapter\Phpunit\MockeryTestCase;
 use React\EventLoop\LoopInterface;

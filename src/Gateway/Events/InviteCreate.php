@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Gateway\Events;
+namespace Tempcord\Discord\Gateway\Events;
 
 use Carbon\Carbon;
-use CyberWolf\Discord\Attributes\RequiresIntent;
-use CyberWolf\Discord\Enums\Intent;
-use CyberWolf\Discord\Enums\TargetType;
-use CyberWolf\Discord\Parts\Application;
-use CyberWolf\Discord\Parts\User;
+use Tempcord\Discord\Attributes\RequiresIntent;
+use Tempcord\Discord\Enums\Intent;
+use Tempcord\Discord\Enums\TargetType;
+use Tempcord\Discord\Parts\Application;
+use Tempcord\Discord\Parts\User;
 
 /**
  * @see https://discord.com/developers/docs/topics/gateway-events#invite-create

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest\Helpers\Channel;
+namespace Tests\Tempcord\Discord\Rest\Helpers\Channel;
 
-use CyberWolf\Discord\Rest\Helpers\Channel\GetReactionsBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\GetReactionsBuilder;
 use Monolog\Test\TestCase;
 
 class GetReactionsBuilderTest extends TestCase

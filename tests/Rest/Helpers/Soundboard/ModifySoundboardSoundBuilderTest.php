@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest\Helpers\Soundboard;
+namespace Tests\Tempcord\Discord\Rest\Helpers\Soundboard;
 
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Rest\Helpers\Soundboard\ModifySoundboardSoundBuilder;
+use Tempcord\Discord\Rest\Helpers\Soundboard\ModifySoundboardSoundBuilder;
 
 class ModifySoundboardSoundBuilderTest extends TestCase
 {

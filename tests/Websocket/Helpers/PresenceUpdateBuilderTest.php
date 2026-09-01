@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Websocket\Helpers;
+namespace Tests\Tempcord\Discord\Websocket\Helpers;
 
 use Carbon\Carbon;
 use Mockery;
 use Mockery\MockInterface;
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Enums\StatusType;
-use CyberWolf\Discord\Gateway\Helpers\ActivityBuilder;
-use CyberWolf\Discord\Gateway\Helpers\PresenceUpdateBuilder;
+use Tempcord\Discord\Enums\StatusType;
+use Tempcord\Discord\Gateway\Helpers\ActivityBuilder;
+use Tempcord\Discord\Gateway\Helpers\PresenceUpdateBuilder;
 
 class PresenceUpdateBuilderTest extends TestCase
 {

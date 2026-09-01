@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\GuildSticker;
+namespace Tempcord\Discord\Rest\Helpers\GuildSticker;
 
-use CyberWolf\Discord\Rest\Helpers\GetNew;
+use Tempcord\Discord\Rest\Helpers\GetNew;
 
 class ModifyStickerBuilder
 {

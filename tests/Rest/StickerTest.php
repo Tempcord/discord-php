@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest;
+namespace Tests\Tempcord\Discord\Rest;
 
-use CyberWolf\Discord\Parts\StickerPack;
-use CyberWolf\Discord\Parts\Sticker as PartsSticker;
-use CyberWolf\Discord\Rest\Sticker;
-use Tests\CyberWolf\Discord\Rest\HttpHelperTestCase;
+use Tempcord\Discord\Parts\StickerPack;
+use Tempcord\Discord\Parts\Sticker as PartsSticker;
+use Tempcord\Discord\Rest\Sticker;
+use Tests\Tempcord\Discord\Rest\HttpHelperTestCase;
 
 class StickerTest extends HttpHelperTestCase
 {

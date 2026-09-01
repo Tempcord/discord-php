@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest\Helpers\GuildSticker;
+namespace Tests\Tempcord\Discord\Rest\Helpers\GuildSticker;
 
-use CyberWolf\Discord\Rest\Helpers\GuildSticker\StickerBuilder;
+use Tempcord\Discord\Rest\Helpers\GuildSticker\StickerBuilder;
 use PHPUnit\Framework\TestCase;
 
 class StickerBuilderTest extends TestCase

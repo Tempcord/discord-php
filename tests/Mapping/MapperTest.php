@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Mapping;
+namespace Tests\Tempcord\Discord\Mapping;
 
 use Carbon\Carbon;
 use Mockery\MockInterface;
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Discord;
-use CyberWolf\Discord\Enums\MessageType;
-use CyberWolf\Discord\Mapping\ArrayMapping;
-use CyberWolf\Discord\Mapping\Mapper;
-use CyberWolf\Discord\Parts\EmbedField;
+use Tempcord\Discord\Discord;
+use Tempcord\Discord\Enums\MessageType;
+use Tempcord\Discord\Mapping\ArrayMapping;
+use Tempcord\Discord\Mapping\Mapper;
+use Tempcord\Discord\Parts\EmbedField;
 
 class MapperTest extends TestCase
 {

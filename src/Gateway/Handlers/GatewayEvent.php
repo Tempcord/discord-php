@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Gateway\Handlers;
+namespace Tempcord\Discord\Gateway\Handlers;
 
 use Exan\Eventer\EventInterface;
 use Exan\Retrier\Retrier;
 use Psr\Log\LoggerInterface;
-use CyberWolf\Discord\Gateway\ConnectionInterface;
-use CyberWolf\Discord\Gateway\Objects\Payload;
+use Tempcord\Discord\Gateway\ConnectionInterface;
+use Tempcord\Discord\Gateway\Objects\Payload;
 
 abstract class GatewayEvent implements EventInterface
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Component\V2;
+namespace Tempcord\Discord\Component\V2;
 
 /**
  * A reference to media, either an external url or an attachment on the same

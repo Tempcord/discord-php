@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Parts;
+namespace Tempcord\Discord\Parts;
 
-use CyberWolf\Discord\Enums\ButtonStyle;
-use CyberWolf\Discord\Enums\ChannelType;
-use CyberWolf\Discord\Enums\MessageComponentType;
-use CyberWolf\Discord\Mapping\ArrayMapping;
+use Tempcord\Discord\Enums\ButtonStyle;
+use Tempcord\Discord\Enums\ChannelType;
+use Tempcord\Discord\Enums\MessageComponentType;
+use Tempcord\Discord\Mapping\ArrayMapping;
 
 class Component
 {

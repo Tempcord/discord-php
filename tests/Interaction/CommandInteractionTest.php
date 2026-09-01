@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Interaction;
+namespace Tests\Tempcord\Discord\Interaction;
 
-use Fakes\CyberWolf\Discord\DataMapperFake;
+use Fakes\Tempcord\Discord\DataMapperFake;
 use Mockery;
 use Mockery\Adapter\Phpunit\MockeryTestCase;
-use CyberWolf\Discord\Interaction\CommandInteraction;
-use CyberWolf\Discord\Interaction\Helpers\InteractionCallbackBuilder;
-use CyberWolf\Discord\Parts\ApplicationCommandInteractionDataOptionStructure;
-use CyberWolf\Discord\Parts\InteractionData;
-use CyberWolf\Discord\Rest\Helpers\Webhook\EditWebhookBuilder;
-use CyberWolf\Discord\Gateway\Events\InteractionCreate;
-use Fakes\CyberWolf\Discord\DiscordFake;
-use Fakes\CyberWolf\Discord\PromiseFake;
+use Tempcord\Discord\Interaction\CommandInteraction;
+use Tempcord\Discord\Interaction\Helpers\InteractionCallbackBuilder;
+use Tempcord\Discord\Parts\ApplicationCommandInteractionDataOptionStructure;
+use Tempcord\Discord\Parts\InteractionData;
+use Tempcord\Discord\Rest\Helpers\Webhook\EditWebhookBuilder;
+use Tempcord\Discord\Gateway\Events\InteractionCreate;
+use Fakes\Tempcord\Discord\DiscordFake;
+use Fakes\Tempcord\Discord\PromiseFake;
 
 class CommandInteractionTest extends MockeryTestCase
 {
@@ -117,7 +117,7 @@ class CommandInteractionTest extends MockeryTestCase
         ];
 
         $interactionCreate->data->options[0]->name = 'foo';
-        $interactionCreate->data->options[0]->type = \CyberWolf\Discord\Enums\ApplicationCommandOptionType::SUB_COMMAND;
+        $interactionCreate->data->options[0]->type = \Tempcord\Discord\Enums\ApplicationCommandOptionType::SUB_COMMAND;
         $interactionCreate->data->options[0]->options = [
             new ApplicationCommandInteractionDataOptionStructure()
         ];

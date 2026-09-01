@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Component\Modal;
+namespace Tests\Tempcord\Discord\Component\Modal;
 
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Component\Modal\Checkbox;
-use CyberWolf\Discord\Component\Modal\CheckboxGroup;
-use CyberWolf\Discord\Component\Modal\FileUpload;
-use CyberWolf\Discord\Component\Modal\Label;
-use CyberWolf\Discord\Component\Modal\Option;
-use CyberWolf\Discord\Component\Modal\RadioGroup;
-use CyberWolf\Discord\Component\TextInput;
-use CyberWolf\Discord\Enums\TextInputStyle;
-use CyberWolf\Discord\Exceptions\Component\TooManyItemsException;
+use Tempcord\Discord\Component\Modal\Checkbox;
+use Tempcord\Discord\Component\Modal\CheckboxGroup;
+use Tempcord\Discord\Component\Modal\FileUpload;
+use Tempcord\Discord\Component\Modal\Label;
+use Tempcord\Discord\Component\Modal\Option;
+use Tempcord\Discord\Component\Modal\RadioGroup;
+use Tempcord\Discord\Component\TextInput;
+use Tempcord\Discord\Enums\TextInputStyle;
+use Tempcord\Discord\Exceptions\Component\TooManyItemsException;
 
 class ModalComponentsTest extends TestCase
 {

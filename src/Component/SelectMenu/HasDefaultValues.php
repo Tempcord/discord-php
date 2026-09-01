@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Component\SelectMenu;
+namespace Tempcord\Discord\Component\SelectMenu;
 
 trait HasDefaultValues
 {

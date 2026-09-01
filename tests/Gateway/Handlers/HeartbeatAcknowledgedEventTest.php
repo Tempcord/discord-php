@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Gateway\Handlers;
+namespace Tests\Tempcord\Discord\Gateway\Handlers;
 
 use Mockery;
 use Mockery\Adapter\Phpunit\MockeryTestCase;
 use Mockery\MockInterface;
 use Psr\Log\NullLogger;
-use CyberWolf\Discord\Gateway\ConnectionInterface;
-use CyberWolf\Discord\Gateway\Handlers\HeartbeatAcknowledgedEvent;
-use CyberWolf\Discord\Gateway\Objects\Payload;
+use Tempcord\Discord\Gateway\ConnectionInterface;
+use Tempcord\Discord\Gateway\Handlers\HeartbeatAcknowledgedEvent;
+use Tempcord\Discord\Gateway\Objects\Payload;
 
 class HeartbeatAcknowledgedEventTest extends MockeryTestCase
 {

@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest\Helpers\Channel;
+namespace Tests\Tempcord\Discord\Rest\Helpers\Channel;
 
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Component\Button\PrimaryButton;
-use CyberWolf\Discord\Component\V2\Container;
-use CyberWolf\Discord\Component\V2\TextDisplay;
-use CyberWolf\Discord\Enums\MessageFlag;
-use CyberWolf\Discord\Rest\Helpers\Channel\ComponentBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\ComponentRowBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\MessageBuilder;
+use Tempcord\Discord\Component\Button\PrimaryButton;
+use Tempcord\Discord\Component\V2\Container;
+use Tempcord\Discord\Component\V2\TextDisplay;
+use Tempcord\Discord\Enums\MessageFlag;
+use Tempcord\Discord\Rest\Helpers\Channel\ComponentBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\ComponentRowBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\MessageBuilder;
 
 class ComponentBuilderV2Test extends TestCase
 {

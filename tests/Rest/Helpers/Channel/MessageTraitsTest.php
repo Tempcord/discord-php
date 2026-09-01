@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest\Helpers\Channel;
+namespace Tests\Tempcord\Discord\Rest\Helpers\Channel;
 
-use CyberWolf\Discord\Rest\Helpers\Channel\AllowedMentionsBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\AttachmentBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\ComponentBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\EmbedBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\Message\AddAttachment;
-use CyberWolf\Discord\Rest\Helpers\Channel\Message\AddComponent;
-use CyberWolf\Discord\Rest\Helpers\Channel\Message\AddEmbed;
-use CyberWolf\Discord\Rest\Helpers\Channel\Message\AddFile;
-use CyberWolf\Discord\Rest\Helpers\Channel\Message\AllowMentions;
-use CyberWolf\Discord\Rest\Helpers\Channel\Message\SetContent;
-use CyberWolf\Discord\Rest\Helpers\Channel\Message\SetFlags;
-use CyberWolf\Discord\Rest\Helpers\Channel\Message\SetTts;
+use Tempcord\Discord\Rest\Helpers\Channel\AllowedMentionsBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\AttachmentBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\ComponentBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\EmbedBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\Message\AddAttachment;
+use Tempcord\Discord\Rest\Helpers\Channel\Message\AddComponent;
+use Tempcord\Discord\Rest\Helpers\Channel\Message\AddEmbed;
+use Tempcord\Discord\Rest\Helpers\Channel\Message\AddFile;
+use Tempcord\Discord\Rest\Helpers\Channel\Message\AllowMentions;
+use Tempcord\Discord\Rest\Helpers\Channel\Message\SetContent;
+use Tempcord\Discord\Rest\Helpers\Channel\Message\SetFlags;
+use Tempcord\Discord\Rest\Helpers\Channel\Message\SetTts;
 use Mockery;
 use PHPUnit\Framework\TestCase;
 

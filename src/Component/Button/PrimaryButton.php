@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Component\Button;
+namespace Tempcord\Discord\Component\Button;
 
-use CyberWolf\Discord\Enums\ButtonStyle;
+use Tempcord\Discord\Enums\ButtonStyle;
 
 class PrimaryButton extends InteractionButton
 {

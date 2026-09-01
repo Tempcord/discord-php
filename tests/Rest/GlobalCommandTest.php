@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest;
+namespace Tests\Tempcord\Discord\Rest;
 
-use CyberWolf\Discord\Parts\ApplicationCommand;
-use CyberWolf\Discord\Rest\GlobalCommand;
-use CyberWolf\Discord\Rest\Helpers\Command\CommandBuilder;
+use Tempcord\Discord\Parts\ApplicationCommand;
+use Tempcord\Discord\Rest\GlobalCommand;
+use Tempcord\Discord\Rest\Helpers\Command\CommandBuilder;
 use React\Promise\Promise;
-use Tests\CyberWolf\Discord\Rest\HttpHelperTestCase;
+use Tests\Tempcord\Discord\Rest\HttpHelperTestCase;
 
 use function React\Async\await;
 

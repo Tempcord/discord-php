@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Channel\Channel;
+namespace Tempcord\Discord\Rest\Helpers\Channel\Channel;
 
-use CyberWolf\Discord\Enums\ChannelType;
-use CyberWolf\Discord\Rest\Helpers\GetNew;
+use Tempcord\Discord\Enums\ChannelType;
+use Tempcord\Discord\Rest\Helpers\GetNew;
 
 /**
  * @see https://discord.com/developers/docs/resources/channel#modify-channel

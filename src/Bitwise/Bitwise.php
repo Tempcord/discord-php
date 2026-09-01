@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Bitwise;
+namespace Tempcord\Discord\Bitwise;
 
 use BackedEnum;
 

@@ -2,30 +2,30 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest;
+namespace Tempcord\Discord\Rest;
 
 use Discord\Http\Endpoint;
-use CyberWolf\Discord\Enums\MfaLevel;
-use CyberWolf\Discord\Parts\ActiveGuildThreads;
-use CyberWolf\Discord\Parts\Channel;
-use CyberWolf\Discord\Parts\Guild as PartsGuild;
-use CyberWolf\Discord\Parts\GuildBan;
-use CyberWolf\Discord\Parts\GuildMember;
-use CyberWolf\Discord\Parts\GuildPreview;
-use CyberWolf\Discord\Parts\Integration;
-use CyberWolf\Discord\Parts\Invite;
-use CyberWolf\Discord\Parts\PruneCount;
-use CyberWolf\Discord\Parts\Role;
-use CyberWolf\Discord\Parts\VoiceRegion;
-use CyberWolf\Discord\Parts\VoiceState;
-use CyberWolf\Discord\Parts\WelcomeScreen;
-use CyberWolf\Discord\Parts\Widget;
-use CyberWolf\Discord\Parts\WidgetSettings;
-use CyberWolf\Discord\Rest\Helpers\Guild\ModifyChannelPositionsBuilder;
-use CyberWolf\Discord\Parts\BulkBanResult;
-use CyberWolf\Discord\Parts\GuildOnboarding;
-use CyberWolf\Discord\Rest\Helpers\Guild\ModifyGuildOnboardingBuilder;
-use CyberWolf\Discord\Rest\Helpers\Guild\ModifyWelcomeScreenBuilder;
+use Tempcord\Discord\Enums\MfaLevel;
+use Tempcord\Discord\Parts\ActiveGuildThreads;
+use Tempcord\Discord\Parts\Channel;
+use Tempcord\Discord\Parts\Guild as PartsGuild;
+use Tempcord\Discord\Parts\GuildBan;
+use Tempcord\Discord\Parts\GuildMember;
+use Tempcord\Discord\Parts\GuildPreview;
+use Tempcord\Discord\Parts\Integration;
+use Tempcord\Discord\Parts\Invite;
+use Tempcord\Discord\Parts\PruneCount;
+use Tempcord\Discord\Parts\Role;
+use Tempcord\Discord\Parts\VoiceRegion;
+use Tempcord\Discord\Parts\VoiceState;
+use Tempcord\Discord\Parts\WelcomeScreen;
+use Tempcord\Discord\Parts\Widget;
+use Tempcord\Discord\Parts\WidgetSettings;
+use Tempcord\Discord\Rest\Helpers\Guild\ModifyChannelPositionsBuilder;
+use Tempcord\Discord\Parts\BulkBanResult;
+use Tempcord\Discord\Parts\GuildOnboarding;
+use Tempcord\Discord\Rest\Helpers\Guild\ModifyGuildOnboardingBuilder;
+use Tempcord\Discord\Rest\Helpers\Guild\ModifyWelcomeScreenBuilder;
 use React\Promise\PromiseInterface;
 
 /**
@@ -36,7 +36,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#create-guild
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Guild>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Guild>
      *
      * @todo Convert to builder
      */
@@ -54,7 +54,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#get-guild
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Guild>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Guild>
      */
     public function get(string $guildId, bool $withCounts = false): PromiseInterface
     {
@@ -78,7 +78,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#get-guild-preview
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildPreview>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\GuildPreview>
      */
     public function getPreview(string $guildId): PromiseInterface
     {
@@ -96,7 +96,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#modify-guild
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Guild>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Guild>
      *
      * @todo Convert to builder
      */
@@ -133,7 +133,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#get-guild-channels
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Channel[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Channel[]>
      */
     public function getChannels(string $guildId): PromiseInterface
     {
@@ -151,7 +151,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#create-guild-channel
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Channel>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Channel>
      *
      * @todo Convert to builder
      */
@@ -191,7 +191,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#list-active-guild-threads
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\ActiveGuildThreads>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\ActiveGuildThreads>
      */
     public function listActiveThreads(string $guildId): PromiseInterface
     {
@@ -209,7 +209,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#get-guild-member
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildMember>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\GuildMember>
      */
     public function getMember(string $guildId, string $memberId): PromiseInterface
     {
@@ -228,7 +228,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#list-guild-members
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildMember[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\GuildMember[]>
      *
      * @todo Convert to builder
      */
@@ -252,7 +252,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#search-guild-members
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildMember[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\GuildMember[]>
      */
     public function searchMembers(string $guildId, array $queryParams): PromiseInterface
     {
@@ -274,7 +274,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#add-guild-member
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildMember>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\GuildMember>
      */
     public function addMember(string $guildId, string $userId, array $params): PromiseInterface
     {
@@ -397,7 +397,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#get-guild-bans
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildBan[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\GuildBan[]>
      */
     public function getBans(string $guildId): PromiseInterface
     {
@@ -415,7 +415,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#get-guild-ban
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildBan[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\GuildBan[]>
      */
     public function getBan(string $guildId, string $userId): PromiseInterface
     {
@@ -473,7 +473,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#get-guild-roles
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Role[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Role[]>
      */
     public function getRoles(string $guildId): PromiseInterface
     {
@@ -491,7 +491,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#get-guild-role
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Role>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Role>
      */
     public function getRole(string $guildId, string $roleId): PromiseInterface
     {
@@ -510,7 +510,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#create-guild-role
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Role>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Role>
      */
     public function createRole(string $guildId, array $params, ?string $reason = null): PromiseInterface
     {
@@ -530,7 +530,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#modify-guild-role-positions
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Role[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Role[]>
      */
     public function modifyRolePositions(
         string $guildId,
@@ -553,7 +553,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#modify-guild-role
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Role>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Role>
      */
     public function modifyRole(
         string $guildId,
@@ -615,7 +615,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#get-guild-prune-count
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\PruneCount>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\PruneCount>
      */
     public function getPruneCount(string $guildId, array $queryParams): PromiseInterface
     {
@@ -639,7 +639,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#begin-guild-prune
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\PruneCount>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\PruneCount>
      */
     public function beginPrune(string $guildId, array $params, ?string $reason = null): PromiseInterface
     {
@@ -659,7 +659,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#get-guild-voice-regions
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\VoiceRegion>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\VoiceRegion>
      */
     public function getVoiceRegions(string $guildId): PromiseInterface
     {
@@ -677,7 +677,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/voice#get-current-user-voice-state
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\VoiceState>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\VoiceState>
      */
     public function getCurrentUserVoiceState(string $guildId): PromiseInterface
     {
@@ -695,7 +695,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/voice#get-user-voice-state
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\VoiceState>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\VoiceState>
      */
     public function getUserVoiceState(string $guildId, string $userId): PromiseInterface
     {
@@ -714,7 +714,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#get-guild-invites
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Invite>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Invite>
      */
     public function getInvites(string $guildId): PromiseInterface
     {
@@ -732,7 +732,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#get-guild-integrations
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Integration>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Integration>
      */
     public function getIntegrations(string $guildId): PromiseInterface
     {
@@ -770,7 +770,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#get-guild-widget-settings
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\WidgetSettings>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\WidgetSettings>
      */
     public function getWidgetSettings(string $guildId): PromiseInterface
     {
@@ -788,7 +788,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#modify-guild-widget
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\WidgetSettings>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\WidgetSettings>
      */
     public function modifyWidget(string $guildId, array $params, ?string $reason = null): PromiseInterface
     {
@@ -808,7 +808,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#get-guild-widget
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Widget>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Widget>
      */
     public function getWidget(string $guildId): PromiseInterface
     {
@@ -826,7 +826,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#get-guild-vanity-url
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Invite>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Invite>
      */
     public function getVanityUrl(string $guildId): PromiseInterface
     {
@@ -863,7 +863,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#get-guild-welcome-screen
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\WelcomeScreen>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\WelcomeScreen>
      */
     public function getWelcomeScreen(string $guildId): PromiseInterface
     {
@@ -914,7 +914,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#modify-guild-welcome-screen
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\WelcomeScreen>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\WelcomeScreen>
      */
     public function modifyWelcomeScreen(
         string $guildId,
@@ -937,7 +937,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#get-guild-onboarding
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildOnboarding>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\GuildOnboarding>
      */
     public function getOnboarding(string $guildId): PromiseInterface
     {
@@ -961,7 +961,7 @@ class Guild extends HttpResource
      *
      * @see https://discord.com/developers/docs/resources/guild#modify-guild-onboarding
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\GuildOnboarding>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\GuildOnboarding>
      */
     public function modifyOnboarding(
         string $guildId,
@@ -992,7 +992,7 @@ class Guild extends HttpResource
      * @param ?int $deleteMessageSeconds How much of their recent message
      *  history to delete, up to 7 days
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\BulkBanResult>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\BulkBanResult>
      */
     public function bulkBan(
         string $guildId,

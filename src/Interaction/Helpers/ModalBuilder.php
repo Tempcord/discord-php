@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Interaction\Helpers;
+namespace Tempcord\Discord\Interaction\Helpers;
 
-use CyberWolf\Discord\Component\Component;
-use CyberWolf\Discord\Exceptions\Component\TooManyItemsException;
-use CyberWolf\Discord\Rest\Helpers\GetNew;
+use Tempcord\Discord\Component\Component;
+use Tempcord\Discord\Exceptions\Component\TooManyItemsException;
+use Tempcord\Discord\Rest\Helpers\GetNew;
 
 /**
  * A modal to show in response to an interaction.

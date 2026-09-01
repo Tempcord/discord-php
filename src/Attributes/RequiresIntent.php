@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Attributes;
+namespace Tempcord\Discord\Attributes;
 
 use Attribute;
-use CyberWolf\Discord\Enums\Intent;
+use Tempcord\Discord\Enums\Intent;
 
 /**
  * Indicates related intents

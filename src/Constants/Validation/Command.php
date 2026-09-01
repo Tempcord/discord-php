@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Constants\Validation;
+namespace Tempcord\Discord\Constants\Validation;
 
 class Command
 {

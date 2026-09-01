@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Fakes\CyberWolf\Discord;
+namespace Fakes\Tempcord\Discord;
 
-use CyberWolf\Discord\Discord;
+use Tempcord\Discord\Discord;
 use Mockery;
 use Mockery\Mock;
 

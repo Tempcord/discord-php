@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest\Helpers\Channel;
+namespace Tests\Tempcord\Discord\Rest\Helpers\Channel;
 
 use Carbon\Carbon;
-use CyberWolf\Discord\Rest\Helpers\Channel\EmbedBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\EmbedBuilder;
 use PHPUnit\Framework\TestCase;
 
 class EmbedBuilderTest extends TestCase

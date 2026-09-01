@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers;
+namespace Tempcord\Discord\Rest\Helpers;
 
-use CyberWolf\Discord\Enums\SoundData;
+use Tempcord\Discord\Enums\SoundData;
 
 trait GetBase64Sound
 {

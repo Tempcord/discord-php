@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest\Helpers\Command;
+namespace Tests\Tempcord\Discord\Rest\Helpers\Command;
 
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Bitwise\Bitwise;
-use CyberWolf\Discord\Enums\ApplicationCommandOptionType;
-use CyberWolf\Discord\Enums\ApplicationCommandTypes;
-use CyberWolf\Discord\Enums\ApplicationIntegrationType;
-use CyberWolf\Discord\Enums\InteractionContextType;
-use CyberWolf\Discord\Exceptions\Rest\Helpers\Command\InvalidCommandNameException;
-use CyberWolf\Discord\Rest\Helpers\Command\CommandBuilder;
-use CyberWolf\Discord\Rest\Helpers\Command\CommandOptionBuilder;
+use Tempcord\Discord\Bitwise\Bitwise;
+use Tempcord\Discord\Enums\ApplicationCommandOptionType;
+use Tempcord\Discord\Enums\ApplicationCommandTypes;
+use Tempcord\Discord\Enums\ApplicationIntegrationType;
+use Tempcord\Discord\Enums\InteractionContextType;
+use Tempcord\Discord\Exceptions\Rest\Helpers\Command\InvalidCommandNameException;
+use Tempcord\Discord\Rest\Helpers\Command\CommandBuilder;
+use Tempcord\Discord\Rest\Helpers\Command\CommandOptionBuilder;
 
 class CommandBuilderTest extends TestCase
 {

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Gateway;
+namespace Tempcord\Discord\Gateway;
 
 use Exan\Eventer\Eventer;
-use CyberWolf\Discord\EventHandler;
-use CyberWolf\Discord\Gateway\Helpers\PresenceUpdateBuilder;
-use CyberWolf\Discord\Gateway\Helpers\RequestGuildMembersBuilder;
+use Tempcord\Discord\EventHandler;
+use Tempcord\Discord\Gateway\Helpers\PresenceUpdateBuilder;
+use Tempcord\Discord\Gateway\Helpers\RequestGuildMembersBuilder;
 use React\Promise\PromiseInterface;
 
 interface ConnectionInterface

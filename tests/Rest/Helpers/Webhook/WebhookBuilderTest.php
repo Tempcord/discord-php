@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest\Helpers\Webhook;
+namespace Tests\Tempcord\Discord\Rest\Helpers\Webhook;
 
-use CyberWolf\Discord\Component\Button\DangerButton;
-use CyberWolf\Discord\Rest\Helpers\Channel\AllowedMentionsBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\AttachmentBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\ComponentBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\ComponentRowBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\EmbedBuilder;
-use CyberWolf\Discord\Rest\Helpers\Webhook\WebhookBuilder;
+use Tempcord\Discord\Component\Button\DangerButton;
+use Tempcord\Discord\Rest\Helpers\Channel\AllowedMentionsBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\AttachmentBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\ComponentBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\ComponentRowBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\EmbedBuilder;
+use Tempcord\Discord\Rest\Helpers\Webhook\WebhookBuilder;
 use PHPUnit\Framework\TestCase;
 
 class WebhookBuilderTest extends TestCase

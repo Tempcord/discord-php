@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Component;
+namespace Tests\Tempcord\Discord\Component;
 
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Component\SelectMenu\StringSelectMenu;
-use CyberWolf\Discord\Enums\SelectMenuType;
-use CyberWolf\Discord\Exceptions\Components\SelectMenu\StringSelectMenu\NoOptionsException;
-use CyberWolf\Discord\Exceptions\Components\SelectMenu\StringSelectMenu\TooManyOptionsException;
-use CyberWolf\Discord\Parts\Emoji;
-use CyberWolf\Discord\Rest\Helpers\Emoji\EmojiBuilder;
+use Tempcord\Discord\Component\SelectMenu\StringSelectMenu;
+use Tempcord\Discord\Enums\SelectMenuType;
+use Tempcord\Discord\Exceptions\Components\SelectMenu\StringSelectMenu\NoOptionsException;
+use Tempcord\Discord\Exceptions\Components\SelectMenu\StringSelectMenu\TooManyOptionsException;
+use Tempcord\Discord\Parts\Emoji;
+use Tempcord\Discord\Rest\Helpers\Emoji\EmojiBuilder;
 
 class StringSelectMenuTest extends TestCase
 {

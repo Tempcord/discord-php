@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord;
+namespace Tests\Tempcord\Discord;
 
-use CyberWolf\Discord\Constants\Events;
-use CyberWolf\Discord\DataMapper;
-use Fakes\CyberWolf\Discord\DataMapperFake;
-use CyberWolf\Discord\EventHandler;
-use CyberWolf\Discord\Gateway\Objects\Payload;
+use Tempcord\Discord\Constants\Events;
+use Tempcord\Discord\DataMapper;
+use Fakes\Tempcord\Discord\DataMapperFake;
+use Tempcord\Discord\EventHandler;
+use Tempcord\Discord\Gateway\Objects\Payload;
 use PHPUnit\Framework\TestCase;
 
 final class EventHandlerTest extends TestCase

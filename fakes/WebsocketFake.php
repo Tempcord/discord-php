@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Fakes\CyberWolf\Discord;
+namespace Fakes\Tempcord\Discord;
 
 use Evenement\EventEmitter;
 use JsonSerializable;
-use CyberWolf\Discord\Buffer\BufferInterface;
-use CyberWolf\Discord\Buffer\Passthrough;
-use CyberWolf\Discord\WebsocketInterface;
+use Tempcord\Discord\Buffer\BufferInterface;
+use Tempcord\Discord\Buffer\Passthrough;
+use Tempcord\Discord\WebsocketInterface;
 use React\Promise\PromiseInterface;
 
 class WebsocketFake extends EventEmitter implements WebsocketInterface

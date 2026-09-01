@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord;
+namespace Tempcord\Discord;
 
 use Evenement\EventEmitterInterface;
 use JsonSerializable;
-use CyberWolf\Discord\Buffer\BufferInterface;
+use Tempcord\Discord\Buffer\BufferInterface;
 use React\Promise\PromiseInterface;
 
 interface WebsocketInterface extends EventEmitterInterface

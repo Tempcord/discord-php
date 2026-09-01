@@ -2,29 +2,29 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest;
+namespace Tempcord\Discord\Rest;
 
 use Discord\Http\Endpoint;
 use Discord\Http\Multipart\MultipartBody;
-use CyberWolf\Discord\Parts\ArchivedThreads;
-use CyberWolf\Discord\Parts\Channel as PartsChannel;
-use CyberWolf\Discord\Parts\Invite;
-use CyberWolf\Discord\Parts\Message;
-use CyberWolf\Discord\Parts\ThreadMember;
-use CyberWolf\Discord\Parts\User;
-use CyberWolf\Discord\Rest\Helpers\Channel\Channel\ChannelBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\EditMessageBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\EditPermissionsBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\GetMessagesBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\GetReactionsBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\InviteBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\MessageBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\StartThreadFromMessageBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\StartThreadWithoutMessageBuilder;
-use CyberWolf\Discord\Rest\Helpers\Emoji\EmojiBuilder;
-use CyberWolf\Discord\Parts\PinnedMessages;
-use CyberWolf\Discord\Parts\ThreadSearchResult;
-use CyberWolf\Discord\Rest\Helpers\Channel\SearchThreadsBuilder;
+use Tempcord\Discord\Parts\ArchivedThreads;
+use Tempcord\Discord\Parts\Channel as PartsChannel;
+use Tempcord\Discord\Parts\Invite;
+use Tempcord\Discord\Parts\Message;
+use Tempcord\Discord\Parts\ThreadMember;
+use Tempcord\Discord\Parts\User;
+use Tempcord\Discord\Rest\Helpers\Channel\Channel\ChannelBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\EditMessageBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\EditPermissionsBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\GetMessagesBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\GetReactionsBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\InviteBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\MessageBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\StartThreadFromMessageBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\StartThreadWithoutMessageBuilder;
+use Tempcord\Discord\Rest\Helpers\Emoji\EmojiBuilder;
+use Tempcord\Discord\Parts\PinnedMessages;
+use Tempcord\Discord\Parts\ThreadSearchResult;
+use Tempcord\Discord\Rest\Helpers\Channel\SearchThreadsBuilder;
 use React\Promise\PromiseInterface;
 
 /**
@@ -37,7 +37,7 @@ class Channel extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/channel#get-channel
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Channel>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Channel>
      */
     public function get(string $channelId): PromiseInterface
     {
@@ -55,7 +55,7 @@ class Channel extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/channel#modify-channel
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Channel>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Channel>
      */
     public function modify(string $channelId, ChannelBuilder $channel, ?string $reason = null): PromiseInterface
     {
@@ -75,7 +75,7 @@ class Channel extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/channel#deleteclose-channel
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Channel>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Channel>
      */
     public function delete(string $channelId, ?string $reason = null): PromiseInterface
     {
@@ -95,7 +95,7 @@ class Channel extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/channel#get-channel-messages
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Message[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Message[]>
      */
     public function getMessages(
         string $channelId,
@@ -120,7 +120,7 @@ class Channel extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/channel#get-channel-message
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Message>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Message>
      */
     public function getMessage(string $channelId, string $messageId): PromiseInterface
     {
@@ -139,7 +139,7 @@ class Channel extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/channel#create-message
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Message>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Message>
      */
     public function createMessage(
         string $channelId,
@@ -160,7 +160,7 @@ class Channel extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/channel#crosspost-message
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Message>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Message>
      */
     public function crosspostMessage(string $channelId, string $messageId): PromiseInterface
     {
@@ -241,7 +241,7 @@ class Channel extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/channel#get-reactions
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\User[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\User[]>
      */
     public function getReactions(
         string $channelId,
@@ -302,7 +302,7 @@ class Channel extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/channel#edit-message
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Message>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Message>
      */
     public function editMessage(
         string $channelId,
@@ -388,7 +388,7 @@ class Channel extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/invite#invite-object
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Invite>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Invite>
      */
     public function getChannelInvites(string $channelId): PromiseInterface
     {
@@ -406,7 +406,7 @@ class Channel extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/channel#get-channel-invites
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Invite>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Invite>
      */
     public function createChannelInvite(
         string $channelId,
@@ -484,7 +484,7 @@ class Channel extends HttpResource
      * @deprecated Discord replaced this with getChannelPins, which paginates
      *  and reports when each message was pinned
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Message[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Message[]>
      */
     public function getPinnedMessages(string $channelId): PromiseInterface
     {
@@ -546,7 +546,7 @@ class Channel extends HttpResource
      * @param ?string $before ISO8601 timestamp to page backwards from
      * @param ?int $limit Up to 50, defaults to 50
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\PinnedMessages>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\PinnedMessages>
      */
     public function getChannelPins(
         string $channelId,
@@ -634,7 +634,7 @@ class Channel extends HttpResource
      *
      * @see https://discord.com/developers/docs/resources/channel#search-threads
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\ThreadSearchResult>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\ThreadSearchResult>
      */
     public function searchThreads(
         string $channelId,
@@ -655,7 +655,7 @@ class Channel extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/channel#start-thread-from-message
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Channel>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Channel>
      */
     public function startThreadFromMessage(
         string $channelId,
@@ -678,7 +678,7 @@ class Channel extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/channel#start-thread-without-message
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Channel>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Channel>
      */
     public function startThreadWithoutMessage(
         string $channelId,
@@ -699,7 +699,7 @@ class Channel extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/channel#start-thread-in-forum-or-media-channel
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Channel> includes $message property
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Channel> includes $message property
      */
     public function startThreadInForumChannel(
         string $channelId,
@@ -785,7 +785,7 @@ class Channel extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/channel#get-thread-member
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\ThreadMember>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\ThreadMember>
      */
     public function getThreadMember(string $channelId, string $userId): PromiseInterface
     {
@@ -804,7 +804,7 @@ class Channel extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/channel#list-thread-members
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\ThreadMember[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\ThreadMember[]>
      */
     public function listThreadMembers(
         string $channelId,
@@ -833,7 +833,7 @@ class Channel extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/channel#list-public-archived-threads
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\ArchivedThreads>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\ArchivedThreads>
      */
     public function listPublicArchivedThreads(string $channelId): PromiseInterface
     {
@@ -851,7 +851,7 @@ class Channel extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/channel#list-private-archived-threads
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\ArchivedThreads>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\ArchivedThreads>
      */
     public function listPrivateArchivedThreads(string $channelId): PromiseInterface
     {
@@ -869,7 +869,7 @@ class Channel extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/channel#list-joined-private-archived-threads
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\ArchivedThreads>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\ArchivedThreads>
      */
     public function listJoinedPrivateArchivedThreads(string $channelId): PromiseInterface
     {

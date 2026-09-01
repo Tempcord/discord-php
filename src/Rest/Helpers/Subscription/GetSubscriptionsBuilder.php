@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Subscription;
+namespace Tempcord\Discord\Rest\Helpers\Subscription;
 
-use CyberWolf\Discord\Rest\Helpers\GetNew;
+use Tempcord\Discord\Rest\Helpers\GetNew;
 
 /**
  * @see https://discord.com/developers/docs/resources/subscription#list-sku-subscriptions

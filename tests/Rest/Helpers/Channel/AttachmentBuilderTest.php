@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest\Helpers\Channel;
+namespace Tests\Tempcord\Discord\Rest\Helpers\Channel;
 
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Rest\Helpers\Channel\AttachmentBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\AttachmentBuilder;
 
 class AttachmentBuilderTest extends TestCase
 {

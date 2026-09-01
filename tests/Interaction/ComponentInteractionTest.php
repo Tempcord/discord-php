@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Interaction;
+namespace Tests\Tempcord\Discord\Interaction;
 
 use Mockery;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\DataMapper;
-use CyberWolf\Discord\Discord;
-use CyberWolf\Discord\Enums\MessageComponentType;
-use CyberWolf\Discord\Gateway\Events\InteractionCreate;
-use CyberWolf\Discord\Interaction\ComponentInteraction;
-use Fakes\CyberWolf\Discord\DataMapperFake;
+use Tempcord\Discord\DataMapper;
+use Tempcord\Discord\Discord;
+use Tempcord\Discord\Enums\MessageComponentType;
+use Tempcord\Discord\Gateway\Events\InteractionCreate;
+use Tempcord\Discord\Interaction\ComponentInteraction;
+use Fakes\Tempcord\Discord\DataMapperFake;
 use Psr\Log\NullLogger;
 
 class ComponentInteractionTest extends TestCase

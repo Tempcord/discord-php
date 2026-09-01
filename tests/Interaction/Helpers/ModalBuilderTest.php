@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Interaction\Helpers;
+namespace Tests\Tempcord\Discord\Interaction\Helpers;
 
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Component\Modal\Label;
-use CyberWolf\Discord\Component\TextInput;
-use CyberWolf\Discord\Enums\InteractionCallbackType;
-use CyberWolf\Discord\Enums\TextInputStyle;
-use CyberWolf\Discord\Interaction\Helpers\InteractionCallbackBuilder;
-use CyberWolf\Discord\Interaction\Helpers\ModalBuilder;
+use Tempcord\Discord\Component\Modal\Label;
+use Tempcord\Discord\Component\TextInput;
+use Tempcord\Discord\Enums\InteractionCallbackType;
+use Tempcord\Discord\Enums\TextInputStyle;
+use Tempcord\Discord\Interaction\Helpers\InteractionCallbackBuilder;
+use Tempcord\Discord\Interaction\Helpers\ModalBuilder;
 
 class ModalBuilderTest extends TestCase
 {

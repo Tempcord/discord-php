@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Fakes\CyberWolf\Discord;
+namespace Fakes\Tempcord\Discord;
 
 use Exan\Retrier\Retrier;
 use React\Promise\PromiseInterface;

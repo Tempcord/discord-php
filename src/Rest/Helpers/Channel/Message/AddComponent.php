@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Channel\Message;
+namespace Tempcord\Discord\Rest\Helpers\Channel\Message;
 
-use CyberWolf\Discord\Component\Component;
-use CyberWolf\Discord\Rest\Helpers\Channel\ComponentBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\ComponentRowBuilder;
+use Tempcord\Discord\Component\Component;
+use Tempcord\Discord\Rest\Helpers\Channel\ComponentBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\ComponentRowBuilder;
 
 trait AddComponent
 {

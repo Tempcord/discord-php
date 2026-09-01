@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Command;
+namespace Tempcord\Discord\Rest\Helpers\Command;
 
-use CyberWolf\Discord\Enums\ApplicationCommandOptionType;
-use CyberWolf\Discord\Enums\ChannelType;
-use CyberWolf\Discord\Rest\Helpers\GetNew;
+use Tempcord\Discord\Enums\ApplicationCommandOptionType;
+use Tempcord\Discord\Enums\ChannelType;
+use Tempcord\Discord\Rest\Helpers\GetNew;
 
 class CommandOptionBuilder
 {

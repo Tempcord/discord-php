@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord;
+namespace Tests\Tempcord\Discord;
 
 use Monolog\Test\TestCase;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
-use CyberWolf\Discord\DataMapper;
-use CyberWolf\Discord\Enums\ApplicationCommandOptionType;
-use CyberWolf\Discord\Gateway\Events\InteractionCreate;
-use CyberWolf\Discord\Parts\ApplicationCommandInteractionDataOptionStructure;
-use CyberWolf\Discord\Parts\InteractionData;
-use CyberWolf\Discord\Parts\Message;
+use Tempcord\Discord\DataMapper;
+use Tempcord\Discord\Enums\ApplicationCommandOptionType;
+use Tempcord\Discord\Gateway\Events\InteractionCreate;
+use Tempcord\Discord\Parts\ApplicationCommandInteractionDataOptionStructure;
+use Tempcord\Discord\Parts\InteractionData;
+use Tempcord\Discord\Parts\Message;
 
 class DataMapperTest extends TestCase
 {

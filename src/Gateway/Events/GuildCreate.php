@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Gateway\Events;
+namespace Tempcord\Discord\Gateway\Events;
 
 use Carbon\Carbon;
-use CyberWolf\Discord\Attributes\RequiresIntent;
-use CyberWolf\Discord\Enums\Intent;
-use CyberWolf\Discord\Mapping\ArrayMapping;
-use CyberWolf\Discord\Parts\Channel;
-use CyberWolf\Discord\Parts\Guild;
-use CyberWolf\Discord\Parts\GuildMember;
-use CyberWolf\Discord\Parts\GuildScheduledEvent;
-use CyberWolf\Discord\Parts\Presence;
-use CyberWolf\Discord\Parts\StageInstance;
-use CyberWolf\Discord\Parts\VoiceState;
+use Tempcord\Discord\Attributes\RequiresIntent;
+use Tempcord\Discord\Enums\Intent;
+use Tempcord\Discord\Mapping\ArrayMapping;
+use Tempcord\Discord\Parts\Channel;
+use Tempcord\Discord\Parts\Guild;
+use Tempcord\Discord\Parts\GuildMember;
+use Tempcord\Discord\Parts\GuildScheduledEvent;
+use Tempcord\Discord\Parts\Presence;
+use Tempcord\Discord\Parts\StageInstance;
+use Tempcord\Discord\Parts\VoiceState;
 
 /**
  * @see https://discord.com/developers/docs/topics/gateway-events#guild-create

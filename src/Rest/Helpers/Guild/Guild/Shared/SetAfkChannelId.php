@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Guild\Guild\Shared;
+namespace Tempcord\Discord\Rest\Helpers\Guild\Guild\Shared;
 
 trait SetAfkChannelId
 {

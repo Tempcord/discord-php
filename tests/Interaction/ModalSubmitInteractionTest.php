@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Interaction;
+namespace Tests\Tempcord\Discord\Interaction;
 
 use Mockery;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\DataMapper;
-use CyberWolf\Discord\Discord;
-use CyberWolf\Discord\Gateway\Events\InteractionCreate;
-use CyberWolf\Discord\Interaction\ModalSubmitInteraction;
+use Tempcord\Discord\DataMapper;
+use Tempcord\Discord\Discord;
+use Tempcord\Discord\Gateway\Events\InteractionCreate;
+use Tempcord\Discord\Interaction\ModalSubmitInteraction;
 use Psr\Log\NullLogger;
 
 class ModalSubmitInteractionTest extends TestCase

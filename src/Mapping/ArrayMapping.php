@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Mapping;
+namespace Tempcord\Discord\Mapping;
 
 use Attribute;
 

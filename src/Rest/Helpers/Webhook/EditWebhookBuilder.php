@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Webhook;
+namespace Tempcord\Discord\Rest\Helpers\Webhook;
 
 use Discord\Http\Multipart\MultipartBody;
-use CyberWolf\Discord\Rest\Helpers\Channel\AttachmentBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\EmbedBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\Message\AddAttachment;
-use CyberWolf\Discord\Rest\Helpers\Channel\Message\AddComponent;
-use CyberWolf\Discord\Rest\Helpers\Channel\Message\AddEmbed;
-use CyberWolf\Discord\Rest\Helpers\Channel\Message\AddFile;
-use CyberWolf\Discord\Rest\Helpers\Channel\Message\AllowMentions;
-use CyberWolf\Discord\Rest\Helpers\Channel\Message\MultipartMessage;
-use CyberWolf\Discord\Rest\Helpers\Channel\Message\SetContent;
-use CyberWolf\Discord\Rest\Helpers\GetNew;
+use Tempcord\Discord\Rest\Helpers\Channel\AttachmentBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\EmbedBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\Message\AddAttachment;
+use Tempcord\Discord\Rest\Helpers\Channel\Message\AddComponent;
+use Tempcord\Discord\Rest\Helpers\Channel\Message\AddEmbed;
+use Tempcord\Discord\Rest\Helpers\Channel\Message\AddFile;
+use Tempcord\Discord\Rest\Helpers\Channel\Message\AllowMentions;
+use Tempcord\Discord\Rest\Helpers\Channel\Message\MultipartMessage;
+use Tempcord\Discord\Rest\Helpers\Channel\Message\SetContent;
+use Tempcord\Discord\Rest\Helpers\GetNew;
 
 /**
  * @see https://discord.com/developers/docs/resources/webhook#edit-webhook-message

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Emoji;
+namespace Tempcord\Discord\Rest\Helpers\Emoji;
 
-use CyberWolf\Discord\Parts\Emoji;
-use CyberWolf\Discord\Rest\Helpers\GetNew;
+use Tempcord\Discord\Parts\Emoji;
+use Tempcord\Discord\Rest\Helpers\GetNew;
 
 class EmojiBuilder
 {

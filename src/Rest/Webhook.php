@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest;
+namespace Tempcord\Discord\Rest;
 
 use Discord\Http\Endpoint;
-use CyberWolf\Discord\Interaction\Helpers\InteractionCallbackBuilder;
-use CyberWolf\Discord\Parts\Message;
-use CyberWolf\Discord\Parts\Webhook as PartsWebhook;
-use CyberWolf\Discord\Rest\Helpers\Webhook\CreateWebhookBuilder;
-use CyberWolf\Discord\Rest\Helpers\Webhook\EditWebhookBuilder;
-use CyberWolf\Discord\Rest\Helpers\Webhook\EditWebhookMessageBuilder;
-use CyberWolf\Discord\Rest\Helpers\Webhook\ModifyWebhookBuilder;
-use CyberWolf\Discord\Rest\Helpers\Webhook\WebhookBuilder;
+use Tempcord\Discord\Interaction\Helpers\InteractionCallbackBuilder;
+use Tempcord\Discord\Parts\Message;
+use Tempcord\Discord\Parts\Webhook as PartsWebhook;
+use Tempcord\Discord\Rest\Helpers\Webhook\CreateWebhookBuilder;
+use Tempcord\Discord\Rest\Helpers\Webhook\EditWebhookBuilder;
+use Tempcord\Discord\Rest\Helpers\Webhook\EditWebhookMessageBuilder;
+use Tempcord\Discord\Rest\Helpers\Webhook\ModifyWebhookBuilder;
+use Tempcord\Discord\Rest\Helpers\Webhook\WebhookBuilder;
 use React\Promise\PromiseInterface;
 
 /**
@@ -97,7 +97,7 @@ class Webhook extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/webhook#create-webhook
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Webhook>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Webhook>
      */
     public function create(string $channelId, CreateWebhookBuilder $builder, ?string $reason = null): PromiseInterface
     {
@@ -117,7 +117,7 @@ class Webhook extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/webhook#get-channel-webhooks
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Webhook[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Webhook[]>
      */
     public function getChannelWebhooks(string $channelId): PromiseInterface
     {
@@ -135,7 +135,7 @@ class Webhook extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/webhook#get-guild-webhooks
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Webhook[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Webhook[]>
      */
     public function getGuildWebhooks(string $guildId)
     {
@@ -153,7 +153,7 @@ class Webhook extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/webhook#get-webhook
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Webhook[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Webhook[]>
      */
     public function get(string $webhookId)
     {
@@ -171,7 +171,7 @@ class Webhook extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/webhook#get-webhook-with-token
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Webhook[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Webhook[]>
      */
     public function getWithToken(string $webhookId, string $token)
     {
@@ -190,7 +190,7 @@ class Webhook extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/webhook#modify-webhook
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Webhook[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Webhook[]>
      */
     public function modify(string $webhookId, ModifyWebhookBuilder $builder, ?string $reason = null): PromiseInterface
     {
@@ -210,7 +210,7 @@ class Webhook extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/webhook#modify-webhook-with-token
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Webhook[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Webhook[]>
      */
     public function modifyWithToken(string $webhookId, string $token, ModifyWebhookBuilder $builder, ?string $reason = null): PromiseInterface
     {
@@ -345,7 +345,7 @@ class Webhook extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/webhook#get-webhook-message
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Message>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Message>
      */
     public function getWebhookMessage(string $webhookId, string $token, string $messageId, ?string $threadId = null): PromiseInterface
     {
@@ -371,7 +371,7 @@ class Webhook extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/webhook#edit-webhook-message
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\Message>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Message>
      */
     public function editWebhookMessage(string $webhookId, string $token, string $messageId, EditWebhookMessageBuilder $builder, ?string $threadId = null): PromiseInterface
     {

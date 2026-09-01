@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Component;
+namespace Tests\Tempcord\Discord\Component;
 
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Component\Button\DangerButton;
-use CyberWolf\Discord\Component\Button\LinkButton;
-use CyberWolf\Discord\Component\Button\PremiumButton;
-use CyberWolf\Discord\Component\Button\PrimaryButton;
-use CyberWolf\Discord\Component\Button\SecondaryButton;
-use CyberWolf\Discord\Component\Button\SuccessButton;
-use CyberWolf\Discord\Enums\ButtonStyle;
-use CyberWolf\Discord\Parts\Emoji;
-use CyberWolf\Discord\Rest\Helpers\Emoji\EmojiBuilder;
+use Tempcord\Discord\Component\Button\DangerButton;
+use Tempcord\Discord\Component\Button\LinkButton;
+use Tempcord\Discord\Component\Button\PremiumButton;
+use Tempcord\Discord\Component\Button\PrimaryButton;
+use Tempcord\Discord\Component\Button\SecondaryButton;
+use Tempcord\Discord\Component\Button\SuccessButton;
+use Tempcord\Discord\Enums\ButtonStyle;
+use Tempcord\Discord\Parts\Emoji;
+use Tempcord\Discord\Rest\Helpers\Emoji\EmojiBuilder;
 
 class ButtonTest extends TestCase
 {

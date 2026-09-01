@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Guild\Guild\Shared;
+namespace Tempcord\Discord\Rest\Helpers\Guild\Guild\Shared;
 
-use CyberWolf\Discord\Enums\VerificationLevel;
+use Tempcord\Discord\Enums\VerificationLevel;
 
 trait SetVerificationLevel
 {

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest;
+namespace Tests\Tempcord\Discord\Rest;
 
 use Discord\Http\Endpoint;
-use CyberWolf\Discord\Parts\Subscription as SubscriptionPart;
-use CyberWolf\Discord\Rest\Helpers\Subscription\GetSubscriptionsBuilder;
-use CyberWolf\Discord\Rest\Subscription;
-use Tests\CyberWolf\Discord\Rest\HttpHelperTestCase;
+use Tempcord\Discord\Parts\Subscription as SubscriptionPart;
+use Tempcord\Discord\Rest\Helpers\Subscription\GetSubscriptionsBuilder;
+use Tempcord\Discord\Rest\Subscription;
+use Tests\Tempcord\Discord\Rest\HttpHelperTestCase;
 
 class SubscriptionTest extends HttpHelperTestCase
 {

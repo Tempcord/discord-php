@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest\Helpers\Channel\Message;
+namespace Tests\Tempcord\Discord\Rest\Helpers\Channel\Message;
 
-use CyberWolf\Discord\Component\Button\PrimaryButton;
-use CyberWolf\Discord\Component\SelectMenu\StringSelectMenu;
-use CyberWolf\Discord\Enums\MessageComponentType;
-use CyberWolf\Discord\Rest\Helpers\Channel\ComponentBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\ComponentRowBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\MessageBuilder;
+use Tempcord\Discord\Component\Button\PrimaryButton;
+use Tempcord\Discord\Component\SelectMenu\StringSelectMenu;
+use Tempcord\Discord\Enums\MessageComponentType;
+use Tempcord\Discord\Rest\Helpers\Channel\ComponentBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\ComponentRowBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\MessageBuilder;
 use PHPUnit\Framework\TestCase;
 
 /**

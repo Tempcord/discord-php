@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Fakes\CyberWolf\Discord;
+namespace Fakes\Tempcord\Discord;
 
-use CyberWolf\Discord\DataMapper;
+use Tempcord\Discord\DataMapper;
 use Psr\Log\NullLogger;
 use React\EventLoop\LoopInterface;
 use React\EventLoop\TimerInterface;

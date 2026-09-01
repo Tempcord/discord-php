@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest;
+namespace Tempcord\Discord\Rest;
 
 use Discord\Http\Endpoint;
-use CyberWolf\Discord\Parts\StageInstance as PartsStageInstance;
+use Tempcord\Discord\Parts\StageInstance as PartsStageInstance;
 use React\Promise\PromiseInterface;
 
 /**
@@ -16,7 +16,7 @@ class StageInstance extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/stage-instance#modify-stage-instance
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\StageInstance>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\StageInstance>
      */
     public function createInstance(array $params, ?string $reason = null): PromiseInterface
     {
@@ -33,7 +33,7 @@ class StageInstance extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/stage-instance#get-stage-instance
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\StageInstance>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\StageInstance>
      */
     public function getInstances(string $channelId): PromiseInterface
     {
@@ -51,7 +51,7 @@ class StageInstance extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/stage-instance#modify-stage-instance
      *
-     * @return PromiseInterface<\CyberWolf\Discord\Parts\StageInstance>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\StageInstance>
      */
     public function modifyInstances(string $channelId, array $params, ?string $reason = null): PromiseInterface
     {

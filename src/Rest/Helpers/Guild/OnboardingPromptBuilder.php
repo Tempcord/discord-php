@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Guild;
+namespace Tempcord\Discord\Rest\Helpers\Guild;
 
-use CyberWolf\Discord\Enums\OnboardingPromptType;
-use CyberWolf\Discord\Exceptions\Component\TooManyItemsException;
-use CyberWolf\Discord\Rest\Helpers\GetNew;
+use Tempcord\Discord\Enums\OnboardingPromptType;
+use Tempcord\Discord\Exceptions\Component\TooManyItemsException;
+use Tempcord\Discord\Rest\Helpers\GetNew;
 
 /**
  * @see https://discord.com/developers/docs/resources/guild#guild-onboarding-object-onboarding-prompt-structure

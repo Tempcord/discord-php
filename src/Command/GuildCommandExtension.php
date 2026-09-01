@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Command;
+namespace Tempcord\Discord\Command;
 
-use CyberWolf\Discord\Gateway\Events\InteractionCreate;
+use Tempcord\Discord\Gateway\Events\InteractionCreate;
 
 /**
  * Emits an event for each Guild Command used on a specific Guild

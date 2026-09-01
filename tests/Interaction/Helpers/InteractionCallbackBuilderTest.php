@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Interaction\Helpers;
+namespace Tests\Tempcord\Discord\Interaction\Helpers;
 
 use Discord\Http\Multipart\MultipartBody;
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Component\Button\DangerButton;
-use CyberWolf\Discord\Enums\InteractionCallbackType;
-use CyberWolf\Discord\Interaction\Helpers\InteractionCallbackBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\AllowedMentionsBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\ComponentBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\ComponentRowBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\EmbedBuilder;
+use Tempcord\Discord\Component\Button\DangerButton;
+use Tempcord\Discord\Enums\InteractionCallbackType;
+use Tempcord\Discord\Interaction\Helpers\InteractionCallbackBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\AllowedMentionsBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\ComponentBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\ComponentRowBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\EmbedBuilder;
 
 class InteractionCallbackBuilderTest extends TestCase
 {

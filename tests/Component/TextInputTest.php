@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Component;
+namespace Tests\Tempcord\Discord\Component;
 
 use PHPUnit\Framework\TestCase;
-use CyberWolf\Discord\Component\TextInput;
-use CyberWolf\Discord\Enums\TextInputStyle;
+use Tempcord\Discord\Component\TextInput;
+use Tempcord\Discord\Enums\TextInputStyle;
 
 class TextInputTest extends TestCase
 {

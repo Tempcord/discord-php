@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Gateway\Events\Meta;
+namespace Tempcord\Discord\Gateway\Events\Meta;
 
-use CyberWolf\Discord\Constants\MetaEvents;
+use Tempcord\Discord\Constants\MetaEvents;
 
 abstract class UnacknowledgedHeartbeatEvent extends MetaEvent
 {

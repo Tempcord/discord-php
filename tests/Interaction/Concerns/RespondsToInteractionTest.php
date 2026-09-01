@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Interaction\Concerns;
+namespace Tests\Tempcord\Discord\Interaction\Concerns;
 
-use CyberWolf\Discord\Enums\InteractionCallbackType;
-use CyberWolf\Discord\Enums\MessageFlag;
-use CyberWolf\Discord\Gateway\Events\InteractionCreate;
-use CyberWolf\Discord\Interaction\ButtonInteraction;
-use CyberWolf\Discord\Interaction\CommandInteraction;
-use CyberWolf\Discord\Interaction\Helpers\InteractionCallbackBuilder;
-use CyberWolf\Discord\Interaction\Helpers\ModalBuilder;
-use CyberWolf\Discord\Interaction\ModalSubmitInteraction;
-use CyberWolf\Discord\Rest\Helpers\Channel\EmbedBuilder;
-use CyberWolf\Discord\Rest\Helpers\Webhook\EditWebhookBuilder;
-use CyberWolf\Discord\Rest\Helpers\Webhook\WebhookBuilder;
-use Fakes\CyberWolf\Discord\DiscordFake;
-use Fakes\CyberWolf\Discord\PromiseFake;
+use Tempcord\Discord\Enums\InteractionCallbackType;
+use Tempcord\Discord\Enums\MessageFlag;
+use Tempcord\Discord\Gateway\Events\InteractionCreate;
+use Tempcord\Discord\Interaction\ButtonInteraction;
+use Tempcord\Discord\Interaction\CommandInteraction;
+use Tempcord\Discord\Interaction\Helpers\InteractionCallbackBuilder;
+use Tempcord\Discord\Interaction\Helpers\ModalBuilder;
+use Tempcord\Discord\Interaction\ModalSubmitInteraction;
+use Tempcord\Discord\Rest\Helpers\Channel\EmbedBuilder;
+use Tempcord\Discord\Rest\Helpers\Webhook\EditWebhookBuilder;
+use Tempcord\Discord\Rest\Helpers\Webhook\WebhookBuilder;
+use Fakes\Tempcord\Discord\DiscordFake;
+use Fakes\Tempcord\Discord\PromiseFake;
 use Mockery;
 use Mockery\Adapter\Phpunit\MockeryTestCase;
 

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Buffer;
+namespace Tempcord\Discord\Buffer;
 
 use Closure;
 use InflateContext;

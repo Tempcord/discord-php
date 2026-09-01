@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Constants\Validation;
+namespace Tempcord\Discord\Constants\Validation;
 
-use CyberWolf\Discord\Constants\Validation\Traits\WithinLimit;
+use Tempcord\Discord\Constants\Validation\Traits\WithinLimit;
 
 class ItemLimit
 {

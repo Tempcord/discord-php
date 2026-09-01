@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Parts;
+namespace Tempcord\Discord\Parts;
 
-use CyberWolf\Discord\Enums\OnboardingPromptType;
-use CyberWolf\Discord\Mapping\ArrayMapping;
+use Tempcord\Discord\Enums\OnboardingPromptType;
+use Tempcord\Discord\Mapping\ArrayMapping;
 
 /**
  * @see https://discord.com/developers/docs/resources/guild#guild-onboarding-object-onboarding-prompt-structure

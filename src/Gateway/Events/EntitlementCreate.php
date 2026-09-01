@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Gateway\Events;
+namespace Tempcord\Discord\Gateway\Events;
 
-use CyberWolf\Discord\Parts\Entitlement;
+use Tempcord\Discord\Parts\Entitlement;
 
 /**
  * Entitlement events are not gated behind an intent.

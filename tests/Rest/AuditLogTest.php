@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest;
+namespace Tests\Tempcord\Discord\Rest;
 
-use CyberWolf\Discord\Parts\AuditLog as PartsAuditLog;
-use CyberWolf\Discord\Rest\AuditLog;
-use CyberWolf\Discord\Rest\Helpers\AuditLog\GetGuildAuditLogsBuilder;
-use Tests\CyberWolf\Discord\Rest\HttpHelperTestCase;
+use Tempcord\Discord\Parts\AuditLog as PartsAuditLog;
+use Tempcord\Discord\Rest\AuditLog;
+use Tempcord\Discord\Rest\Helpers\AuditLog\GetGuildAuditLogsBuilder;
+use Tests\Tempcord\Discord\Rest\HttpHelperTestCase;
 
 class AuditLogTest extends HttpHelperTestCase
 {

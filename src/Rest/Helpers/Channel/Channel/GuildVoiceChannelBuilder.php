@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Rest\Helpers\Channel\Channel;
+namespace Tempcord\Discord\Rest\Helpers\Channel\Channel;
 
-use CyberWolf\Discord\Enums\ChannelType;
-use CyberWolf\Discord\Enums\VideoQualityMode;
-use CyberWolf\Discord\Rest\Helpers\Channel\Channel\Shared\SetBitrate;
-use CyberWolf\Discord\Rest\Helpers\Channel\Channel\Shared\SetNsfw;
-use CyberWolf\Discord\Rest\Helpers\Channel\Channel\Shared\SetParentId;
-use CyberWolf\Discord\Rest\Helpers\Channel\Channel\Shared\SetRtcRegion;
+use Tempcord\Discord\Enums\ChannelType;
+use Tempcord\Discord\Enums\VideoQualityMode;
+use Tempcord\Discord\Rest\Helpers\Channel\Channel\Shared\SetBitrate;
+use Tempcord\Discord\Rest\Helpers\Channel\Channel\Shared\SetNsfw;
+use Tempcord\Discord\Rest\Helpers\Channel\Channel\Shared\SetParentId;
+use Tempcord\Discord\Rest\Helpers\Channel\Channel\Shared\SetRtcRegion;
 
 /**
  * @see https://discord.com/developers/docs/resources/channel#modify-channel

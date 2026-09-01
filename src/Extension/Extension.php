@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Extension;
+namespace Tempcord\Discord\Extension;
 
-use CyberWolf\Discord\Discord;
+use Tempcord\Discord\Discord;
 
 interface Extension
 {

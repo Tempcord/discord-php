@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest;
+namespace Tests\Tempcord\Discord\Rest;
 
-use CyberWolf\Discord\Parts\Channel;
-use CyberWolf\Discord\Parts\Guild as PartsGuild;
-use CyberWolf\Discord\Parts\GuildBan;
-use CyberWolf\Discord\Parts\GuildMember;
-use CyberWolf\Discord\Parts\GuildPreview;
-use CyberWolf\Discord\Parts\WelcomeScreen;
-use CyberWolf\Discord\Parts\BulkBanResult;
-use CyberWolf\Discord\Parts\GuildOnboarding;
-use CyberWolf\Discord\Rest\Helpers\Guild\ModifyGuildOnboardingBuilder;
-use CyberWolf\Discord\Rest\Helpers\Guild\ModifyWelcomeScreenBuilder;
-use CyberWolf\Discord\Rest\Guild;
-use CyberWolf\Discord\Rest\Helpers\Guild\ModifyChannelPositionsBuilder;
-use Tests\CyberWolf\Discord\Rest\HttpHelperTestCase;
+use Tempcord\Discord\Parts\Channel;
+use Tempcord\Discord\Parts\Guild as PartsGuild;
+use Tempcord\Discord\Parts\GuildBan;
+use Tempcord\Discord\Parts\GuildMember;
+use Tempcord\Discord\Parts\GuildPreview;
+use Tempcord\Discord\Parts\WelcomeScreen;
+use Tempcord\Discord\Parts\BulkBanResult;
+use Tempcord\Discord\Parts\GuildOnboarding;
+use Tempcord\Discord\Rest\Helpers\Guild\ModifyGuildOnboardingBuilder;
+use Tempcord\Discord\Rest\Helpers\Guild\ModifyWelcomeScreenBuilder;
+use Tempcord\Discord\Rest\Guild;
+use Tempcord\Discord\Rest\Helpers\Guild\ModifyChannelPositionsBuilder;
+use Tests\Tempcord\Discord\Rest\HttpHelperTestCase;
 
 class GuildTest extends HttpHelperTestCase
 {

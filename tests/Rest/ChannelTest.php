@@ -2,33 +2,33 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest;
+namespace Tests\Tempcord\Discord\Rest;
 
-use CyberWolf\Discord\Parts\ArchivedThreads;
-use CyberWolf\Discord\Parts\Channel as PartsChannel;
-use CyberWolf\Discord\Parts\Invite;
-use CyberWolf\Discord\Parts\Message;
-use CyberWolf\Discord\Parts\ThreadMember;
-use CyberWolf\Discord\Parts\User;
-use CyberWolf\Discord\Enums\SortingOrder;
-use CyberWolf\Discord\Enums\ThreadSearchTagSetting;
-use CyberWolf\Discord\Enums\ThreadSortingMode;
-use CyberWolf\Discord\Parts\PinnedMessages;
-use CyberWolf\Discord\Parts\ThreadSearchResult;
-use CyberWolf\Discord\Rest\Helpers\Channel\SearchThreadsBuilder;
-use CyberWolf\Discord\Rest\Channel;
-use CyberWolf\Discord\Rest\Helpers\Channel\Channel\GuildAnnouncementChannelBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\Channel\GuildForumChannelBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\Channel\GuildStageVoiceChannelBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\Channel\GuildTextChannelBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\Channel\GuildVoiceChannelBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\EditMessageBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\EditPermissionsBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\MessageBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\StartThreadFromMessageBuilder;
-use CyberWolf\Discord\Rest\Helpers\Channel\StartThreadWithoutMessageBuilder;
-use CyberWolf\Discord\Rest\Helpers\Emoji\EmojiBuilder;
-use Tests\CyberWolf\Discord\Rest\HttpHelperTestCase;
+use Tempcord\Discord\Parts\ArchivedThreads;
+use Tempcord\Discord\Parts\Channel as PartsChannel;
+use Tempcord\Discord\Parts\Invite;
+use Tempcord\Discord\Parts\Message;
+use Tempcord\Discord\Parts\ThreadMember;
+use Tempcord\Discord\Parts\User;
+use Tempcord\Discord\Enums\SortingOrder;
+use Tempcord\Discord\Enums\ThreadSearchTagSetting;
+use Tempcord\Discord\Enums\ThreadSortingMode;
+use Tempcord\Discord\Parts\PinnedMessages;
+use Tempcord\Discord\Parts\ThreadSearchResult;
+use Tempcord\Discord\Rest\Helpers\Channel\SearchThreadsBuilder;
+use Tempcord\Discord\Rest\Channel;
+use Tempcord\Discord\Rest\Helpers\Channel\Channel\GuildAnnouncementChannelBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\Channel\GuildForumChannelBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\Channel\GuildStageVoiceChannelBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\Channel\GuildTextChannelBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\Channel\GuildVoiceChannelBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\EditMessageBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\EditPermissionsBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\MessageBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\StartThreadFromMessageBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\StartThreadWithoutMessageBuilder;
+use Tempcord\Discord\Rest\Helpers\Emoji\EmojiBuilder;
+use Tests\Tempcord\Discord\Rest\HttpHelperTestCase;
 
 class ChannelTest extends HttpHelperTestCase
 {

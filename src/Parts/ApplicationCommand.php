@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace CyberWolf\Discord\Parts;
+namespace Tempcord\Discord\Parts;
 
-use CyberWolf\Discord\Enums\ApplicationCommandTypes;
-use CyberWolf\Discord\Enums\ApplicationIntegrationType;
-use CyberWolf\Discord\Enums\InteractionContextType;
-use CyberWolf\Discord\Mapping\ArrayMapping;
+use Tempcord\Discord\Enums\ApplicationCommandTypes;
+use Tempcord\Discord\Enums\ApplicationIntegrationType;
+use Tempcord\Discord\Enums\InteractionContextType;
+use Tempcord\Discord\Mapping\ArrayMapping;
 
 class ApplicationCommand
 {

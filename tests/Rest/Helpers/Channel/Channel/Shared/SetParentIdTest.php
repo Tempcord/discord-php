@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tests\CyberWolf\Discord\Rest\Helpers\Channel\Channel\Shared;
+namespace Tests\Tempcord\Discord\Rest\Helpers\Channel\Channel\Shared;
 
-use CyberWolf\Discord\Rest\Helpers\Channel\Channel\Shared\SetParentId;
+use Tempcord\Discord\Rest\Helpers\Channel\Channel\Shared\SetParentId;
 use PHPUnit\Framework\TestCase;
 
 class SetParentIdTest extends TestCase
