@@ -14,6 +14,7 @@ use Tempcord\Discord\Component\Button\SuccessButton;
 use Tempcord\Discord\Enums\ButtonStyle;
 use Tempcord\Discord\Parts\Emoji;
 use Tempcord\Discord\Rest\Helpers\Emoji\EmojiBuilder;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 class ButtonTest extends TestCase
 {
@@ -27,9 +28,7 @@ class ButtonTest extends TestCase
         return EmojiBuilder::fromPart($emoji);
     }
 
-    /**
-     * @dataProvider convertionExpectationProvider
-     */
+    #[DataProvider('convertionExpectationProvider')]
     public function testCorrectlyConverted(array $args, array $expected): void
     {
         $buttonTypes = [
@@ -111,9 +110,7 @@ class ButtonTest extends TestCase
         ];
     }
 
-    /**
-     * @dataProvider convertionExpectationProviderLinkButton
-     */
+    #[DataProvider('convertionExpectationProviderLinkButton')]
     public function testCorrectlyConvertedLinkButton(array $args, array $expected): void
     {
         $button = new LinkButton(...$args);
@@ -188,9 +185,7 @@ class ButtonTest extends TestCase
         ];
     }
 
-    /**
-     * @dataProvider convertionExpectationProviderPremiumButton
-     */
+    #[DataProvider('convertionExpectationProviderPremiumButton')]
     public function testCorrectlyConvertedPremiumButton(array $args, array $expected): void
     {
         $button = new PremiumButton(...$args);

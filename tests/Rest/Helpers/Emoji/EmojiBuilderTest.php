@@ -7,6 +7,7 @@ namespace Tests\Tempcord\Discord\Rest\Helpers\Emoji;
 use Tempcord\Discord\Parts\Emoji;
 use Tempcord\Discord\Rest\Helpers\Emoji\EmojiBuilder;
 use PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 class EmojiBuilderTest extends TestCase
 {
@@ -52,9 +53,7 @@ class EmojiBuilderTest extends TestCase
         $this->assertEquals('name:12345', (string) $emojiBuilder);
     }
 
-    /**
-     * @dataProvider getFromPartProvider
-     */
+    #[DataProvider('getFromPartProvider')]
     public function testGetFromPart(Emoji $emoji, array $result): void
     {
         $this->assertEquals(EmojiBuilder::fromPart($emoji)->get(), $result);

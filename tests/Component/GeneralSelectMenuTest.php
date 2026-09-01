@@ -9,12 +9,11 @@ use Tempcord\Discord\Component\SelectMenu\MentionableSelectMenu;
 use Tempcord\Discord\Component\SelectMenu\RoleSelectMenu;
 use Tempcord\Discord\Component\SelectMenu\UserSelectMenu;
 use Tempcord\Discord\Enums\SelectMenuType;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 class GeneralSelectMenuTest extends TestCase
 {
-    /**
-     * @dataProvider convertionExpectationProvider
-     */
+    #[DataProvider('convertionExpectationProvider')]
     public function testCorrectlyConverted(array $args, array $expected): void
     {
         $selectTypes = [

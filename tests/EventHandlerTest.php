@@ -10,6 +10,7 @@ use Fakes\Tempcord\Discord\DataMapperFake;
 use Tempcord\Discord\EventHandler;
 use Tempcord\Discord\Gateway\Objects\Payload;
 use PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 final class EventHandlerTest extends TestCase
 {
@@ -39,9 +40,7 @@ final class EventHandlerTest extends TestCase
         $this->assertFalse($hasRun, 'Unknown event should not be emitted.');
     }
 
-    /**
-     * @dataProvider eventProvider
-     */
+    #[DataProvider('eventProvider')]
     public function testEmitEvent($event, $class): void
     {
         $eventHandler = new EventHandler($this->dataMapper, false);

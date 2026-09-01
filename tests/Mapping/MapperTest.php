@@ -12,6 +12,7 @@ use Tempcord\Discord\Enums\MessageType;
 use Tempcord\Discord\Mapping\ArrayMapping;
 use Tempcord\Discord\Mapping\Mapper;
 use Tempcord\Discord\Parts\EmbedField;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 class MapperTest extends TestCase
 {
@@ -202,9 +203,7 @@ class MapperTest extends TestCase
         $this->assertEmpty($result->errors);
     }
 
-    /**
-     * @dataProvider incorrectAssignmentsProvider
-     */
+    #[DataProvider('incorrectAssignmentsProvider')]
     public function testItReturnsErrorsForIncorrectAssignments(string $definition, $source)
     {
         $result = $this->mapper->map($source, $definition);

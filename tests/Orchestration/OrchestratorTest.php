@@ -15,13 +15,14 @@ use Tempcord\Discord\Orchestration\Orchestrator;
 use Tempcord\Discord\Parts\GatewayBot;
 use Tempcord\Discord\Parts\SessionStartLimit;
 use Tempcord\Discord\Rest\Gateway as HttpGateway;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 class OrchestratorTest extends TestCase
 {
     private const EXPECT_SPAWN = 'expect_spawn';
     private const EXPECT_RUN_TIMERS = 'expect_run_timers';
 
-    /** @dataProvider orchestrationDataProvider */
+    #[DataProvider('orchestrationDataProvider')]
     public function testItSpawnsBasedOnGatewayBotInfo(array $gatewayBots, array $expectations): void
     {
         Carbon::setTestNow(Carbon::createFromTimestamp(1));

@@ -11,6 +11,7 @@ use Tempcord\Discord\Exceptions\Components\SelectMenu\StringSelectMenu\NoOptions
 use Tempcord\Discord\Exceptions\Components\SelectMenu\StringSelectMenu\TooManyOptionsException;
 use Tempcord\Discord\Parts\Emoji;
 use Tempcord\Discord\Rest\Helpers\Emoji\EmojiBuilder;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 class StringSelectMenuTest extends TestCase
 {
@@ -24,9 +25,7 @@ class StringSelectMenuTest extends TestCase
         return EmojiBuilder::fromPart($emoji);
     }
 
-    /**
-     * @dataProvider convertionExpectationProvider
-     */
+    #[DataProvider('convertionExpectationProvider')]
     public function testCorrectlyConverted(array $args, array $expected): void
     {
         $select = new StringSelectMenu(...$args);
@@ -171,9 +170,7 @@ class StringSelectMenuTest extends TestCase
         );
     }
 
-    /**
-     * @dataProvider optionConversionProvider
-     */
+    #[DataProvider('optionConversionProvider')]
     public function testOptionConversion($args, $expected): void
     {
         $select = new StringSelectMenu('::custom id::');

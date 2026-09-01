@@ -13,6 +13,7 @@ use Tempcord\Discord\DataMapper;
 use Tempcord\Discord\Gateway\ConnectionInterface;
 use Tempcord\Discord\Gateway\Handlers\InvalidSessionEvent;
 use Tempcord\Discord\Gateway\Objects\Payload;
+use PHPUnit\Framework\Attributes\DataProvider;
 
 class InvalidSessionEventTest extends MockeryTestCase
 {
@@ -27,9 +28,7 @@ class InvalidSessionEventTest extends MockeryTestCase
         $this->connectionInterface = Mockery::mock(ConnectionInterface::class);
     }
 
-    /**
-     * @dataProvider listenerDataProvider
-     */
+    #[DataProvider('listenerDataProvider')]
     public function testItListensToTheCorrectRequirements(object $payload, bool $expect): void
     {
         $event = new InvalidSessionEvent(
