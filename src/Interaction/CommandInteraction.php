@@ -7,13 +7,15 @@ namespace CyberWolf\Discord\Interaction;
 use CyberWolf\Discord\Discord;
 use CyberWolf\Discord\Enums\ApplicationCommandOptionType as OptionTypes;
 use CyberWolf\Discord\Gateway\Events\InteractionCreate;
-use CyberWolf\Discord\Interaction\Helpers\InteractionCallbackBuilder;
+use CyberWolf\Discord\Interaction\Concerns\OpensModal;
+use CyberWolf\Discord\Interaction\Concerns\RespondsToInteraction;
 use CyberWolf\Discord\Parts\ApplicationCommandInteractionDataOptionStructure as OptionStructure;
-use CyberWolf\Discord\Rest\Helpers\Webhook\EditWebhookBuilder;
-use React\Promise\PromiseInterface;
 
 class CommandInteraction
 {
+    use RespondsToInteraction;
+    use OpensModal;
+
     /** @var OptionStructure[] */
     private array $options = [];
 
@@ -24,41 +26,6 @@ class CommandInteraction
         foreach ($options as $option) {
             $this->options[$option->name] = $option;
         }
-    }
-
-    public function createInteractionResponse(
-        InteractionCallbackBuilder $interactionCallbackBuilder
-    ): PromiseInterface {
-        return $this->discord->rest->webhook->createInteractionResponse(
-            $this->interaction->id,
-            $this->interaction->token,
-            $interactionCallbackBuilder
-        );
-    }
-
-    public function getInteractionResponse(): PromiseInterface
-    {
-        return $this->discord->rest->webhook->getOriginalInteractionResponse(
-            $this->interaction->application_id,
-            $this->interaction->token
-        );
-    }
-
-    public function editInteractionResponse(EditWebhookBuilder $webhookBuilder): PromiseInterface
-    {
-        return $this->discord->rest->webhook->editOriginalInteractionResponse(
-            $this->interaction->application_id,
-            $this->interaction->token,
-            $webhookBuilder
-        );
-    }
-
-    public function deleteInteractionResponse(): PromiseInterface
-    {
-        return $this->discord->rest->webhook->deleteOriginalInteractionResponse(
-            $this->interaction->application_id,
-            $this->interaction->token
-        );
     }
 
     public function getOption(string $path): ?OptionStructure

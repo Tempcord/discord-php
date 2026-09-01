@@ -7,6 +7,7 @@ namespace CyberWolf\Discord\Gateway;
 use Exan\Eventer\Eventer;
 use CyberWolf\Discord\EventHandler;
 use CyberWolf\Discord\Gateway\Helpers\PresenceUpdateBuilder;
+use CyberWolf\Discord\Gateway\Helpers\RequestGuildMembersBuilder;
 use React\Promise\PromiseInterface;
 
 interface ConnectionInterface
@@ -40,4 +41,6 @@ interface ConnectionInterface
     public function meetsResumeRequirements(): bool;
 
     public function updatePresence(PresenceUpdateBuilder $presenceUpdate): void;
+
+    public function requestGuildMembers(RequestGuildMembersBuilder $request): void;
 }

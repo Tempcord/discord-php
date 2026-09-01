@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\CyberWolf\Discord\Rest;
 
+use CyberWolf\Discord\Parts\ArchivedThreads;
 use CyberWolf\Discord\Parts\Channel as PartsChannel;
 use CyberWolf\Discord\Parts\Invite;
 use CyberWolf\Discord\Parts\Message;
@@ -535,11 +536,11 @@ class ChannelTest extends HttpHelperTestCase
                 'args' => ['::channel id::'],
                 'mockOptions' => [
                     'method' => 'get',
-                    'return' => [(object) [], (object) [], (object) []],
+                    // Discord answers with an object, not a bare list.
+                    'return' => (object) ['threads' => [], 'members' => [], 'has_more' => false],
                 ],
                 'validationOptions' => [
-                    'returnType' => PartsChannel::class,
-                    'array' => true
+                    'returnType' => ArchivedThreads::class,
                 ],
             ],
             'List private archived threads' => [
@@ -547,11 +548,11 @@ class ChannelTest extends HttpHelperTestCase
                 'args' => ['::channel id::'],
                 'mockOptions' => [
                     'method' => 'get',
-                    'return' => [(object) [], (object) [], (object) []],
+                    // Discord answers with an object, not a bare list.
+                    'return' => (object) ['threads' => [], 'members' => [], 'has_more' => false],
                 ],
                 'validationOptions' => [
-                    'returnType' => PartsChannel::class,
-                    'array' => true
+                    'returnType' => ArchivedThreads::class,
                 ],
             ],
             'List joined private archived threads' => [
@@ -559,11 +560,11 @@ class ChannelTest extends HttpHelperTestCase
                 'args' => ['::channel id::'],
                 'mockOptions' => [
                     'method' => 'get',
-                    'return' => [(object) [], (object) [], (object) []],
+                    // Discord answers with an object, not a bare list.
+                    'return' => (object) ['threads' => [], 'members' => [], 'has_more' => false],
                 ],
                 'validationOptions' => [
-                    'returnType' => PartsChannel::class,
-                    'array' => true
+                    'returnType' => ArchivedThreads::class,
                 ],
             ],
         ];

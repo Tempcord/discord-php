@@ -58,6 +58,22 @@ class GuildTest extends HttpHelperTestCase
                     'returnType' => GuildOnboarding::class,
                 ],
             ],
+            /*
+             * Discord answers a channel creation with the new channel object,
+             * not with a list of one. Mapping it as a list threw before it
+             * could return, and there was no test to catch it.
+             */
+            'Create channel' => [
+                'method' => 'createChannel',
+                'args' => ['::guild id::', ['name' => '::channel name::', 'type' => 0]],
+                'mockOptions' => [
+                    'method' => 'post',
+                    'return' => (object) ['id' => '::channel id::', 'name' => '::channel name::'],
+                ],
+                'validationOptions' => [
+                    'returnType' => Channel::class,
+                ],
+            ],
             'Bulk ban' => [
                 'method' => 'bulkBan',
                 'args' => ['::guild id::', ['::user a::', '::user b::'], 3600],

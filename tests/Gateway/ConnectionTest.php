@@ -25,6 +25,7 @@ use CyberWolf\Discord\Gateway\Connection;
 use CyberWolf\Discord\Gateway\Handlers\IdentifyHelloEvent;
 use CyberWolf\Discord\Gateway\Handlers\IdentifyResumeEvent;
 use CyberWolf\Discord\Gateway\Helpers\PresenceUpdateBuilder;
+use CyberWolf\Discord\Gateway\Helpers\RequestGuildMembersBuilder;
 use CyberWolf\Discord\Gateway\Objects\Payload;
 use CyberWolf\Discord\Gateway\Shard;
 use CyberWolf\Discord\Websocket;
@@ -511,6 +512,36 @@ class ConnectionTest extends MockeryTestCase
             ->andReturn(['::presence update::']);
 
         $connection->updatePresence($presenceUpdate);
+    }
+
+    public function testItRequestsGuildMembers()
+    {
+        $connection = new Connection(
+            $this->getLoop(),
+            '::token::',
+            new Bitwise(123),
+            new DataMapper(new NullLogger()),
+            new WebsocketFake(),
+        );
+
+        /** @var MockInterface&Websocket */
+        $websocket = Mockery::mock(Websocket::class);
+        (new ReflectionProperty($connection, 'websocket'))->setValue($connection, $websocket);
+
+        $websocket->expects()
+            ->sendAsJson()
+            ->with(Mockery::on(function ($payload) {
+                $this->assertEquals(8, $payload['op']);
+                $this->assertEquals(
+                    ['guild_id' => '::guild id::', 'query' => '', 'limit' => 0],
+                    $payload['d']
+                );
+
+                return true;
+            }), true)
+            ->once();
+
+        $connection->requestGuildMembers(RequestGuildMembersBuilder::everyone('::guild id::'));
     }
 
     /**
