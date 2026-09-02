@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Tests\Tempcord\Discord\Rest;
 
 use Tempcord\Discord\Parts\ArchivedThreads;
+use Tempcord\Discord\Parts\ForumThread;
 use Tempcord\Discord\Parts\Channel as PartsChannel;
 use Tempcord\Discord\Parts\Invite;
 use Tempcord\Discord\Parts\Message;
@@ -202,6 +203,20 @@ class ChannelTest extends HttpHelperTestCase
                 ],
                 'validationOptions' => [
                     'returnType' => PartsChannel::class,
+                ]
+            ],
+            'Start thread in forum channel' => [
+                'method' => 'startThreadInForumChannel',
+                'args' => ['::channel id::', ['name' => '::post::', 'message' => ['content' => '::text::']]],
+                'mockOptions' => [
+                    'method' => 'post',
+                    'return' => (object) [
+                        'id' => '::thread id::',
+                        'message' => (object) ['id' => '::message id::'],
+                    ],
+                ],
+                'validationOptions' => [
+                    'returnType' => ForumThread::class,
                 ]
             ],
             'Delete channel' => [
