@@ -1,3 +1,9 @@
+## [1.3.4](https://github.com/Tempcord/discord-php/compare/v1.3.3...v1.3.4) (2026-09-02)
+
+### Bug Fixes
+
+* **rest:** return what the endpoints actually answer with ([#18](https://github.com/Tempcord/discord-php/issues/18)) ([77e56e0](https://github.com/Tempcord/discord-php/commit/77e56e0d9370ed904965ea0dd1fec406351d3d55))
+
 ## [1.3.3](https://github.com/Tempcord/discord-php/compare/v1.3.2...v1.3.3) (2026-09-02)
 
 ### Bug Fixes
