@@ -415,7 +415,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#get-guild-ban
      *
-     * @return PromiseInterface<\Tempcord\Discord\Parts\GuildBan[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\GuildBan>
      */
     public function getBan(string $guildId, string $userId): PromiseInterface
     {
@@ -659,7 +659,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#get-guild-voice-regions
      *
-     * @return PromiseInterface<\Tempcord\Discord\Parts\VoiceRegion>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\VoiceRegion[]>
      */
     public function getVoiceRegions(string $guildId): PromiseInterface
     {
@@ -714,7 +714,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#get-guild-invites
      *
-     * @return PromiseInterface<\Tempcord\Discord\Parts\Invite>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Invite[]>
      */
     public function getInvites(string $guildId): PromiseInterface
     {
@@ -732,7 +732,7 @@ class Guild extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/guild#get-guild-integrations
      *
-     * @return PromiseInterface<\Tempcord\Discord\Parts\Integration>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Integration[]>
      */
     public function getIntegrations(string $guildId): PromiseInterface
     {

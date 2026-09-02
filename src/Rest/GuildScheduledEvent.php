@@ -40,7 +40,7 @@ class GuildScheduledEvent extends HttpResource
         $endpoint = Endpoint::bind(Endpoint::GUILD_SCHEDULED_EVENT, $guildId, $scheduledEventId);
         $endpoint->addQuery('with_user_count', $withUserCount);
 
-        return $this->mapArrayPromise(
+        return $this->mapPromise(
             $this->http->get(
                 $endpoint
             ),
@@ -54,7 +54,7 @@ class GuildScheduledEvent extends HttpResource
      */
     public function create(string $guildId, array $params, ?string $reason = null): PromiseInterface
     {
-        return $this->mapArrayPromise(
+        return $this->mapPromise(
             $this->http->post(
                 Endpoint::bind(Endpoint::GUILD_SCHEDULED_EVENTS, $guildId),
                 $params,
@@ -70,7 +70,7 @@ class GuildScheduledEvent extends HttpResource
      */
     public function modify(string $guildId, string $scheduledEventId, array $params, ?string $reason = null): PromiseInterface
     {
-        return $this->mapArrayPromise(
+        return $this->mapPromise(
             $this->http->patch(
                 Endpoint::bind(Endpoint::GUILD_SCHEDULED_EVENT, $guildId, $scheduledEventId),
                 $params,

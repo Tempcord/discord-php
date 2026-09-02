@@ -389,7 +389,7 @@ class Channel extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/invite#invite-object
      *
-     * @return PromiseInterface<\Tempcord\Discord\Parts\Invite>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Invite[]>
      */
     public function getChannelInvites(string $channelId): PromiseInterface
     {
