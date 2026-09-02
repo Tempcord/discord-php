@@ -17,7 +17,7 @@ class GuildTemplate extends HttpResource
 {
     /**
      * @see https://discord.com/developers/docs/resources/guild-template#get-guild-templates
-     * @return PromiseInterface<\Tempcord\Discord\Parts\GuildTemplate>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\GuildTemplate[]>
      */
     public function list(string $guildId): PromiseInterface
     {

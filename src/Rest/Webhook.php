@@ -153,7 +153,7 @@ class Webhook extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/webhook#get-webhook
      *
-     * @return PromiseInterface<\Tempcord\Discord\Parts\Webhook[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Webhook>
      */
     public function get(string $webhookId)
     {
@@ -171,7 +171,7 @@ class Webhook extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/webhook#get-webhook-with-token
      *
-     * @return PromiseInterface<\Tempcord\Discord\Parts\Webhook[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Webhook>
      */
     public function getWithToken(string $webhookId, string $token)
     {
@@ -190,7 +190,7 @@ class Webhook extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/webhook#modify-webhook
      *
-     * @return PromiseInterface<\Tempcord\Discord\Parts\Webhook[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Webhook>
      */
     public function modify(string $webhookId, ModifyWebhookBuilder $builder, ?string $reason = null): PromiseInterface
     {
@@ -210,7 +210,7 @@ class Webhook extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/webhook#modify-webhook-with-token
      *
-     * @return PromiseInterface<\Tempcord\Discord\Parts\Webhook[]>
+     * @return PromiseInterface<\Tempcord\Discord\Parts\Webhook>
      */
     public function modifyWithToken(string $webhookId, string $token, ModifyWebhookBuilder $builder, ?string $reason = null): PromiseInterface
     {
