@@ -1,3 +1,9 @@
+## [1.3.5](https://github.com/Tempcord/discord-php/compare/v1.3.4...v1.3.5) (2026-09-02)
+
+### Bug Fixes
+
+* **mapping:** report an array's mapping problems once, not per element ([c6032d5](https://github.com/Tempcord/discord-php/commit/c6032d55760345f0206d5b122359f12bd3ec1ee9))
+
 ## [1.3.4](https://github.com/Tempcord/discord-php/compare/v1.3.3...v1.3.4) (2026-09-02)
 
 ### Bug Fixes
