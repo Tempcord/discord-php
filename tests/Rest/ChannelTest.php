@@ -141,7 +141,7 @@ class ChannelTest extends HttpHelperTestCase
                 'method' => 'modify',
                 'args' => ['::channel id::', new GuildTextChannelBuilder()],
                 'mockOptions' => [
-                    'method' => 'post',
+                    'method' => 'patch',
                     'return' => (object) [],
                 ],
                 'validationOptions' => [
@@ -152,7 +152,7 @@ class ChannelTest extends HttpHelperTestCase
                 'method' => 'modify',
                 'args' => ['::channel id::', new GuildAnnouncementChannelBuilder()],
                 'mockOptions' => [
-                    'method' => 'post',
+                    'method' => 'patch',
                     'return' => (object) [],
                 ],
                 'validationOptions' => [
@@ -163,7 +163,7 @@ class ChannelTest extends HttpHelperTestCase
                 'method' => 'modify',
                 'args' => ['::channel id::', new GuildStageVoiceChannelBuilder()],
                 'mockOptions' => [
-                    'method' => 'post',
+                    'method' => 'patch',
                     'return' => (object) [],
                 ],
                 'validationOptions' => [
@@ -174,7 +174,7 @@ class ChannelTest extends HttpHelperTestCase
                 'method' => 'modify',
                 'args' => ['::channel id::', new GuildForumChannelBuilder()],
                 'mockOptions' => [
-                    'method' => 'post',
+                    'method' => 'patch',
                     'return' => (object) [],
                 ],
                 'validationOptions' => [
@@ -185,7 +185,7 @@ class ChannelTest extends HttpHelperTestCase
                 'method' => 'modify',
                 'args' => ['::channel id::', new GuildVoiceChannelBuilder()],
                 'mockOptions' => [
-                    'method' => 'post',
+                    'method' => 'patch',
                     'return' => (object) [],
                 ],
                 'validationOptions' => [

@@ -60,7 +60,7 @@ class Channel extends HttpResource
     public function modify(string $channelId, ChannelBuilder $channel, ?string $reason = null): PromiseInterface
     {
         return $this->mapPromise(
-            $this->http->post(
+            $this->http->patch(
                 Endpoint::bind(
                     Endpoint::CHANNEL,
                     $channelId
