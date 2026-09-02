@@ -1,3 +1,9 @@
+## [1.3.0](https://github.com/Tempcord/discord-php/compare/v1.2.0...v1.3.0) (2026-09-02)
+
+### Features
+
+* **channel:** modify a thread, tags and all ([#13](https://github.com/Tempcord/discord-php/issues/13)) ([999e2ff](https://github.com/Tempcord/discord-php/commit/999e2ffa87f0f19f5714eab27b2aa3425bb852fc))
+
 ## [1.2.0](https://github.com/Tempcord/discord-php/compare/v1.1.0...v1.2.0) (2026-09-02)
 
 ### Features
