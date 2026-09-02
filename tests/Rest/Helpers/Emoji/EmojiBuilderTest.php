@@ -53,6 +53,38 @@ class EmojiBuilderTest extends TestCase
         $this->assertEquals('name:12345', (string) $emojiBuilder);
     }
 
+    /**
+     * A reaction event carries a standard emoji as its name with no id, which
+     * is what fromPart() copies across. Rendering that as "✅:" — with the id
+     * missing entirely — made every reaction on a standard emoji a malformed
+     * request, and warned about an undefined key on the way out.
+     */
+    public function testCreateEmojiFromNameAlone(): void
+    {
+        $emojiBuilder = new EmojiBuilder();
+        $emojiBuilder->setName('✅');
+
+        $this->assertEquals(rawurlencode('✅'), (string) $emojiBuilder);
+    }
+
+    public function testAStandardEmojiFromAReactionEventIsRenderedForTheEndpoint(): void
+    {
+        $emoji = new Emoji();
+        $emoji->name = '❌';
+        $emoji->id = null;
+
+        $this->assertEquals(rawurlencode('❌'), (string) EmojiBuilder::fromPart($emoji));
+    }
+
+    public function testACustomEmojiFromAReactionEventKeepsBothHalves(): void
+    {
+        $emoji = new Emoji();
+        $emoji->name = 'apex';
+        $emoji->id = '12345';
+
+        $this->assertEquals('apex:12345', (string) EmojiBuilder::fromPart($emoji));
+    }
+
     #[DataProvider('getFromPartProvider')]
     public function testGetFromPart(Emoji $emoji, array $result): void
     {

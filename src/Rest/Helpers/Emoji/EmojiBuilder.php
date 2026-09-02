@@ -73,10 +73,25 @@ class EmojiBuilder
         return $this->data;
     }
 
+    /**
+     * The emoji as a reaction endpoint takes it.
+     *
+     * A custom emoji is "name:id". A standard one is the character itself,
+     * percent encoded, and may be held under either key: fromPart() puts it in
+     * name, because that is where Discord sends it in a reaction event, while
+     * setId() has long been the documented way to write one by hand.
+     *
+     * @see https://discord.com/developers/docs/resources/channel#create-reaction
+     */
     public function __toString(): string
     {
-        return isset($this->data['name'])
-            ? $this->data['name'] . ':' . $this->data['id']
-            : urlencode($this->data['id']);
+        $id = $this->data['id'] ?? null;
+        $name = $this->data['name'] ?? null;
+
+        if ($id !== null && $name !== null) {
+            return $name . ':' . $id;
+        }
+
+        return rawurlencode((string) ($name ?? $id));
     }
 }
