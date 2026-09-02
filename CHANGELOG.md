@@ -1,3 +1,9 @@
+## [1.3.3](https://github.com/Tempcord/discord-php/compare/v1.3.2...v1.3.3) (2026-09-02)
+
+### Bug Fixes
+
+* **channel:** read reactions from the reactions endpoint ([#16](https://github.com/Tempcord/discord-php/issues/16)) ([dabcac0](https://github.com/Tempcord/discord-php/commit/dabcac013d1ad339b99ce79c385339ecc932e6b3))
+
 ## [1.3.2](https://github.com/Tempcord/discord-php/compare/v1.3.1...v1.3.2) (2026-09-02)
 
 ### Bug Fixes
