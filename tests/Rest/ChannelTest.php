@@ -22,6 +22,7 @@ use Tempcord\Discord\Rest\Helpers\Channel\Channel\GuildForumChannelBuilder;
 use Tempcord\Discord\Rest\Helpers\Channel\Channel\GuildStageVoiceChannelBuilder;
 use Tempcord\Discord\Rest\Helpers\Channel\Channel\GuildTextChannelBuilder;
 use Tempcord\Discord\Rest\Helpers\Channel\Channel\GuildVoiceChannelBuilder;
+use Tempcord\Discord\Rest\Helpers\Channel\Channel\ThreadChannelBuilder;
 use Tempcord\Discord\Rest\Helpers\Channel\EditMessageBuilder;
 use Tempcord\Discord\Rest\Helpers\Channel\EditPermissionsBuilder;
 use Tempcord\Discord\Rest\Helpers\Channel\MessageBuilder;
@@ -184,6 +185,17 @@ class ChannelTest extends HttpHelperTestCase
             'Modify channel with Guild Voice' => [
                 'method' => 'modify',
                 'args' => ['::channel id::', new GuildVoiceChannelBuilder()],
+                'mockOptions' => [
+                    'method' => 'patch',
+                    'return' => (object) [],
+                ],
+                'validationOptions' => [
+                    'returnType' => PartsChannel::class,
+                ]
+            ],
+            'Modify channel with Thread' => [
+                'method' => 'modify',
+                'args' => ['::channel id::', new ThreadChannelBuilder()],
                 'mockOptions' => [
                     'method' => 'patch',
                     'return' => (object) [],
