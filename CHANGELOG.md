@@ -1,3 +1,9 @@
+## [1.3.1](https://github.com/Tempcord/discord-php/compare/v1.3.0...v1.3.1) (2026-09-02)
+
+### Bug Fixes
+
+* **channel:** start a thread in a forum without throwing ([#14](https://github.com/Tempcord/discord-php/issues/14)) ([6bae9fc](https://github.com/Tempcord/discord-php/commit/6bae9fcadf50e8283760c2afba197226a9c43f7d))
+
 ## [1.3.0](https://github.com/Tempcord/discord-php/compare/v1.2.0...v1.3.0) (2026-09-02)
 
 ### Features
