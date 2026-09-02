@@ -8,6 +8,7 @@ use Discord\Http\Endpoint;
 use Discord\Http\Multipart\MultipartBody;
 use Tempcord\Discord\Parts\ArchivedThreads;
 use Tempcord\Discord\Parts\Channel as PartsChannel;
+use Tempcord\Discord\Parts\ForumThread;
 use Tempcord\Discord\Parts\Invite;
 use Tempcord\Discord\Parts\Message;
 use Tempcord\Discord\Parts\ThreadMember;
@@ -699,24 +700,21 @@ class Channel extends HttpResource
     /**
      * @see https://discord.com/developers/docs/resources/channel#start-thread-in-forum-or-media-channel
      *
-     * @return PromiseInterface<\Tempcord\Discord\Parts\Channel> includes $message property
+     * @return PromiseInterface<\Tempcord\Discord\Parts\ForumThread> the post, with
+     *         the opening message Discord answers with attached
      */
     public function startThreadInForumChannel(
         string $channelId,
         MultipartBody|array $params,
         ?string $reason = null
     ): PromiseInterface {
-        $forumChannelWithMessage = new class () extends Channel {
-            public Message $message;
-        };
-
         return $this->mapPromise(
             $this->http->post(
                 Endpoint::bind(Endpoint::CHANNEL_THREADS, $channelId),
                 $params,
                 $this->getAuditLogReasonHeader($reason),
             ),
-            $forumChannelWithMessage::class,
+            ForumThread::class,
         );
     }
 
