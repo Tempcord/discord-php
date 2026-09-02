@@ -47,15 +47,33 @@ abstract class HttpHelperTestCase extends TestCase
     #[DataProvider('httpBindingsProvider')]
     public function testFunctions(string $method, array $args, array $mockOptions, array $validationOptions): void
     {
-        $this->http->shouldReceive($mockOptions['method'])->andReturns(
-            new Promise(static function ($resolve) use ($mockOptions) {
-                $resolve($mockOptions['return']);
+        $requestedUrl = null;
+
+        $this->http->shouldReceive($mockOptions['method'])
+            ->withArgs(static function ($url, ...$rest) use (&$requestedUrl) {
+                $requestedUrl = (string) $url;
+
+                return true;
             })
-        )->once();
+            ->andReturns(
+                new Promise(static function ($resolve) use ($mockOptions) {
+                    $resolve($mockOptions['return']);
+                })
+            )->once();
 
         $response = await(call_user_func_array([$this->httpItem, $method], $args));
 
         $this->http->shouldHaveReceived($mockOptions['method']);
+
+        /*
+         * Optional, and worth filling in: nothing here checked which endpoint a
+         * method actually called, so a method binding the wrong Endpoint
+         * constant passed its test while never once reaching the route it was
+         * named after.
+         */
+        if (isset($validationOptions['url'])) {
+            $this->assertSame($validationOptions['url'], $requestedUrl);
+        }
 
         if (!isset($validationOptions['returnType'])) {
             return;

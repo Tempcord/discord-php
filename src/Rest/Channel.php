@@ -253,7 +253,7 @@ class Channel extends HttpResource
         return $this->mapArrayPromise(
             $this->http->get(
                 Endpoint::bind(
-                    Endpoint::CHANNEL_MESSAGES,
+                    Endpoint::MESSAGE_REACTION_EMOJI,
                     $channelId,
                     $messageId,
                     (string) $emoji

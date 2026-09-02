@@ -323,6 +323,7 @@ class ChannelTest extends HttpHelperTestCase
                 'validationOptions' => [
                     'returnType' => User::class,
                     'array' => true,
+                    'url' => 'channels/::channel id::/messages/::message id::/reactions/%3A%3Aid%3A%3A',
                 ]
             ],
             'Delete all reactions' => [
