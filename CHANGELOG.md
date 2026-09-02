@@ -1,3 +1,9 @@
+## [1.3.2](https://github.com/Tempcord/discord-php/compare/v1.3.1...v1.3.2) (2026-09-02)
+
+### Bug Fixes
+
+* **emoji:** render a standard emoji for the reaction endpoints ([#15](https://github.com/Tempcord/discord-php/issues/15)) ([c57b1d5](https://github.com/Tempcord/discord-php/commit/c57b1d598ea1a9d5d518189f09196a0fe1e3fda8))
+
 ## [1.3.1](https://github.com/Tempcord/discord-php/compare/v1.3.0...v1.3.1) (2026-09-02)
 
 ### Bug Fixes
