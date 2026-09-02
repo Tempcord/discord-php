@@ -229,10 +229,34 @@ class Mapper
     {
         $new = [];
 
+        $seen = [];
+
         foreach ($values as $key => $value) {
             $completedMapping = $this->map($value, $arrayMapping->definition);
 
-            $errors = [...$errors, ...$completedMapping->errors];
+            /*
+             * One of each distinct problem rather than one per element. Every
+             * item in a gateway array has the same shape, so a field the
+             * definition does not carry is reported by all of them: a guild of
+             * three thousand members arrives with a dozen fields this library
+             * does not model and produced an exception, and the stack trace
+             * behind it, for each one of them — hundreds of megabytes held
+             * until the mapping finished, to be reduced to a dozen debug lines.
+             *
+             * The consumer already deduplicates on exactly this key before
+             * logging, so nothing that would have been reported is lost.
+             */
+            foreach ($completedMapping->errors as $error) {
+                $signature = $error->className . '::' . $error->propertyName . '::' . $error->getMessage();
+
+                if (isset($seen[$signature])) {
+                    continue;
+                }
+
+                $seen[$signature] = true;
+                $errors[] = $error;
+            }
+
             $new[$key] = $completedMapping->result;
         }
 

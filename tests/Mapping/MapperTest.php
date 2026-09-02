@@ -281,4 +281,54 @@ class MapperTest extends TestCase
             MessageType::RECIPIENT_REMOVE,
         ], $result->result->test);
     }
+
+    /**
+     * Discord adds fields to its objects faster than any library models them,
+     * and every element of an array carries the same unmodelled field. Reported
+     * once each, a guild's worth of members turns a dozen unknown fields into
+     * tens of thousands of exceptions held at once.
+     */
+    public function testItReportsEachProblemInAnArrayOnceRatherThanPerElement(): void
+    {
+        $definition = new class () {
+            #[ArrayMapping(EmbedField::class)]
+            public array $test;
+        };
+
+        $element = ['name' => 'a', 'value' => 'b', 'unmodelled' => 1, 'alsoUnmodelled' => 2];
+
+        $result = $this->mapper->map((object) [
+            'test' => array_fill(0, 50, (object) $element),
+        ], $definition::class);
+
+        $this->assertCount(50, $result->result->test);
+        $this->assertCount(2, $result->errors);
+
+        $this->assertEqualsCanonicalizing(
+            ['unmodelled', 'alsoUnmodelled'],
+            array_map(static fn ($error) => $error->propertyName, $result->errors),
+        );
+    }
+
+    /**
+     * Deduplicating must not swallow a problem that only some elements have.
+     */
+    public function testItStillReportsAProblemOnlyOneElementHas(): void
+    {
+        $definition = new class () {
+            #[ArrayMapping(EmbedField::class)]
+            public array $test;
+        };
+
+        $result = $this->mapper->map((object) [
+            'test' => [
+                (object) ['name' => 'a', 'value' => 'b'],
+                (object) ['name' => 'c', 'value' => 'd', 'onlyHere' => 1],
+            ],
+        ], $definition::class);
+
+        $this->assertCount(2, $result->result->test);
+        $this->assertCount(1, $result->errors);
+        $this->assertEquals('onlyHere', $result->errors[0]->propertyName);
+    }
 }
