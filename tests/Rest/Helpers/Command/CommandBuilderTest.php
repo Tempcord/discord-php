@@ -12,6 +12,7 @@ use Tempcord\Discord\Enums\ApplicationIntegrationType;
 use Tempcord\Discord\Enums\InteractionContextType;
 use Tempcord\Discord\Exceptions\Rest\Helpers\Command\InvalidCommandNameException;
 use Tempcord\Discord\Rest\Helpers\Command\CommandBuilder;
+use PHPUnit\Framework\Attributes\DataProvider;
 use Tempcord\Discord\Rest\Helpers\Command\CommandOptionBuilder;
 
 class CommandBuilderTest extends TestCase
@@ -49,6 +50,41 @@ class CommandBuilderTest extends TestCase
         $this->expectException(InvalidCommandNameException::class);
 
         $commandBuilder->setNameLocalizations(['en' => '::colons arent allowed woo::']);
+    }
+
+    /**
+     * Discord allows a command to be named in any script, and a bot serving a
+     * community that does not write in English will be. The names below are all
+     * legal; each character of them is two or three bytes.
+     */
+    #[DataProvider('nonAsciiNames')]
+    public function testItAllowsNamesOutsideAscii(string $name): void
+    {
+        $commandBuilder = new CommandBuilder();
+        $commandBuilder->setName($name);
+
+        $this->assertEquals($name, $commandBuilder->getName());
+    }
+
+    public static function nonAsciiNames(): array
+    {
+        return [
+            'cyrillic' => ['Нікнейм'],
+            'greek' => ['λέξη'],
+            'japanese' => ['名前'],
+            'devanagari' => ['नाम'],
+            'thai' => ['ชื่อ'],
+        ];
+    }
+
+    public function testItStillRejectsNamesOutsideAsciiThatBreakTheRule(): void
+    {
+        $commandBuilder = new CommandBuilder();
+
+        $this->expectException(InvalidCommandNameException::class);
+
+        // A legal script, but a space is not allowed in a name.
+        $commandBuilder->setName('Нік нейм');
     }
 
     public function testSetDescription(): void
