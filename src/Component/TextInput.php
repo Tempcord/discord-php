@@ -14,8 +14,17 @@ class TextInput extends Component
             'type' => 4,
             'custom_id' => $this->customId,
             'style' => $this->style,
-            'label' => $this->label,
         ];
+
+        /*
+         * Discord moved the text above an input onto the Label that wraps it,
+         * and refuses a modal whose input carries one of its own. Kept optional
+         * rather than removed, because an input is only ever rejected for it
+         * inside a Label, and Label takes it off anyway.
+         */
+        if (!is_null($this->label)) {
+            $data['label'] = $this->label;
+        }
 
         if (!is_null($this->minLength)) {
             $data['min_length'] = $this->minLength;
@@ -43,7 +52,7 @@ class TextInput extends Component
     public function __construct(
         protected string $customId,
         protected TextInputStyle $style,
-        protected string $label,
+        protected ?string $label = null,
         protected ?int $minLength = null,
         protected ?int $maxLength = null,
         protected ?bool $required = null,

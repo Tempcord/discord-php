@@ -25,10 +25,21 @@ class Label extends Component
 
     public function get(): array
     {
+        $component = $this->component->get();
+
+        /*
+         * Discord rejects the whole modal when the wrapped input carries a
+         * label of its own — TEXT_INPUT_COMPONENT_LABEL_IN_LABEL_COMPONENT —
+         * and until recently an input could not be built without one. Dropping
+         * it here means code written against either shape keeps working, and
+         * there is one place the text can come from.
+         */
+        unset($component['label']);
+
         $data = [
             'type' => MessageComponentType::LABEL->value,
             'label' => $this->label,
-            'component' => $this->component->get(),
+            'component' => $component,
         ];
 
         if (!is_null($this->description)) {

@@ -34,6 +34,31 @@ class ModalComponentsTest extends TestCase
         $this->assertEquals('name', $built['component']['custom_id']);
     }
 
+    /**
+     * Discord refuses the whole modal when the input inside a Label carries a
+     * label of its own — TEXT_INPUT_COMPONENT_LABEL_IN_LABEL_COMPONENT — and
+     * an input could not be built without one until it became optional. Every
+     * modal written before that would fail on the first use.
+     */
+    public function testALabelTakesTheLabelOffTheInputItWraps(): void
+    {
+        $built = new Label(
+            'Your name',
+            new TextInput('name', TextInputStyle::Short, 'Name'),
+        )->get();
+
+        $this->assertArrayNotHasKey('label', $built['component']);
+        $this->assertEquals('Your name', $built['label']);
+    }
+
+    public function testAnInputWithoutALabelOmitsTheField(): void
+    {
+        $built = new TextInput('name', TextInputStyle::Short)->get();
+
+        $this->assertArrayNotHasKey('label', $built);
+        $this->assertEquals('name', $built['custom_id']);
+    }
+
     public function testCheckbox(): void
     {
         $this->assertEquals(
