@@ -1,3 +1,9 @@
+## [1.4.1](https://github.com/Tempcord/discord-php/compare/v1.4.0...v1.4.1) (2026-09-03)
+
+### Bug Fixes
+
+* **messages:** refuse an eleventh embed rather than the whole message ([704ff02](https://github.com/Tempcord/discord-php/commit/704ff02ee68cbd8e6a737e8dddfca4934d6d43cd))
+
 ## [1.4.0](https://github.com/Tempcord/discord-php/compare/v1.3.8...v1.4.0) (2026-09-03)
 
 ### Features
