@@ -1,3 +1,9 @@
+## [1.4.0](https://github.com/Tempcord/discord-php/compare/v1.3.8...v1.4.0) (2026-09-03)
+
+### Features
+
+* **activities:** describe entry point commands and launch an activity ([1032458](https://github.com/Tempcord/discord-php/commit/10324580e99ff83303db8520349384f92a9eb938))
+
 ## [1.3.8](https://github.com/Tempcord/discord-php/compare/v1.3.7...v1.3.8) (2026-09-03)
 
 ### Bug Fixes
