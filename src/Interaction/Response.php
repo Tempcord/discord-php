@@ -45,6 +45,18 @@ final class Response
         return self::build(InteractionCallbackType::UPDATE_MESSAGE, $content);
     }
 
+    /**
+     * Opens the app's activity.
+     *
+     * Carries no data of its own: what opens is the activity the application
+     * is configured with, so the response is the bare callback type. The app
+     * must have Activities enabled or Discord refuses it.
+     */
+    public static function launchActivity(): InteractionCallbackBuilder
+    {
+        return self::build(InteractionCallbackType::LAUNCH_ACTIVITY);
+    }
+
     public static function modal(ModalBuilder $modal): InteractionCallbackBuilder
     {
         return InteractionCallbackBuilder::new()->setModal($modal);

@@ -11,6 +11,7 @@ use Tempcord\Discord\Enums\ApplicationCommandTypes;
 use Tempcord\Discord\Enums\ApplicationIntegrationType;
 use Tempcord\Discord\Enums\InteractionContextType;
 use Tempcord\Discord\Exceptions\Rest\Helpers\Command\InvalidCommandNameException;
+use Tempcord\Discord\Enums\EntryPointCommandHandlerType;
 use Tempcord\Discord\Rest\Helpers\Command\CommandBuilder;
 use PHPUnit\Framework\Attributes\DataProvider;
 use Tempcord\Discord\Rest\Helpers\Command\CommandOptionBuilder;
@@ -179,5 +180,30 @@ class CommandBuilderTest extends TestCase
         $commandBuilder->setContexts(...$types);
         $this->assertEquals($types, $commandBuilder->getContexts());
         $this->assertEquals([0, 2], $commandBuilder->get()['contexts']);
+    }
+
+    /**
+     * An app with Activities has an entry point command in the launcher, which
+     * Discord creates itself. An app that overwrites its command set has to
+     * send it back with the rest, and could not describe it at all before.
+     */
+    public function testAnEntryPointCommandCarriesItsHandler(): void
+    {
+        $built = CommandBuilder::new()
+            ->setName('launch')
+            ->setDescription('Launch the app')
+            ->setType(ApplicationCommandTypes::PRIMARY_ENTRY_POINT)
+            ->setHandler(EntryPointCommandHandlerType::DISCORD_LAUNCH_ACTIVITY)
+            ->get();
+
+        $this->assertEquals(4, $built['type']);
+        $this->assertEquals(2, $built['handler']);
+    }
+
+    public function testACommandWithoutAHandlerDoesNotSendOne(): void
+    {
+        $built = CommandBuilder::new()->setName('ping')->setDescription('Pong')->get();
+
+        $this->assertArrayNotHasKey('handler', $built);
     }
 }

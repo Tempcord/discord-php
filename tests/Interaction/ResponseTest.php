@@ -105,4 +105,16 @@ class ResponseTest extends TestCase
         $this->assertEquals([$embed], $response->getEmbeds());
         $this->assertEquals(MessageFlag::EPHEMERAL->value, $response->getFlags());
     }
+
+    /**
+     * Discord takes this one bare: what opens is the activity the application
+     * is configured with, and a data object sent with it is a Bad Request.
+     */
+    public function testLaunchingAnActivitySendsNothingButTheType(): void
+    {
+        $response = Response::launchActivity();
+
+        $this->assertEquals(InteractionCallbackType::LAUNCH_ACTIVITY, $response->getType());
+        $this->assertEquals(['type' => 12], $response->get());
+    }
 }

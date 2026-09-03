@@ -7,6 +7,7 @@ namespace Tempcord\Discord\Rest\Helpers\Command;
 use Tempcord\Discord\Bitwise\Bitwise;
 use Tempcord\Discord\Constants\Validation\Command;
 use Tempcord\Discord\Enums\ApplicationCommandTypes;
+use Tempcord\Discord\Enums\EntryPointCommandHandlerType;
 use Tempcord\Discord\Enums\ApplicationIntegrationType;
 use Tempcord\Discord\Enums\InteractionContextType;
 use Tempcord\Discord\Exceptions\Rest\Helpers\Command\InvalidCommandNameException;
@@ -172,6 +173,24 @@ class CommandBuilder
     {
         return isset($this->data['type'])
             ? ApplicationCommandTypes::from($this->data['type'])
+            : null;
+    }
+
+    /**
+     * Only an entry point command carries this, and it must: Discord rejects
+     * one without a handler and ignores it on anything else.
+     */
+    public function setHandler(EntryPointCommandHandlerType $handler): self
+    {
+        $this->data['handler'] = $handler->value;
+
+        return $this;
+    }
+
+    public function getHandler(): ?EntryPointCommandHandlerType
+    {
+        return isset($this->data['handler'])
+            ? EntryPointCommandHandlerType::from($this->data['handler'])
             : null;
     }
 
