@@ -1,3 +1,9 @@
+## [1.3.8](https://github.com/Tempcord/discord-php/compare/v1.3.7...v1.3.8) (2026-09-03)
+
+### Bug Fixes
+
+* **parts:** default every optional field to null instead of leaving it unset ([4ba6536](https://github.com/Tempcord/discord-php/commit/4ba653631e4c376b67a8b4abc6cdd4fdc43ead59))
+
 ## [1.3.7](https://github.com/Tempcord/discord-php/compare/v1.3.6...v1.3.7) (2026-09-03)
 
 ### Bug Fixes
