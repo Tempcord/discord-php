@@ -1,3 +1,9 @@
+## [1.3.7](https://github.com/Tempcord/discord-php/compare/v1.3.6...v1.3.7) (2026-09-03)
+
+### Bug Fixes
+
+* **components:** stop sending a label Discord refuses inside a Label ([9e95c3e](https://github.com/Tempcord/discord-php/commit/9e95c3e149a05928770dab0ec5e1192efff82d0b))
+
 ## [1.3.6](https://github.com/Tempcord/discord-php/compare/v1.3.5...v1.3.6) (2026-09-03)
 
 ### Bug Fixes
