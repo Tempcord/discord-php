@@ -1,3 +1,9 @@
+## [1.3.6](https://github.com/Tempcord/discord-php/compare/v1.3.5...v1.3.6) (2026-09-03)
+
+### Bug Fixes
+
+* **commands:** allow command names written outside ASCII ([40ed278](https://github.com/Tempcord/discord-php/commit/40ed278126d9f91fcce05f4cb3a79eb4b0d4e375))
+
 ## [1.3.5](https://github.com/Tempcord/discord-php/compare/v1.3.4...v1.3.5) (2026-09-02)
 
 ### Bug Fixes
