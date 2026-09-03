@@ -20,13 +20,13 @@ class InviteCreate
     public string $channel_id;
     public string $code;
     public Carbon $created_at;
-    public ?string $guild_id;
-    public ?User $inviter;
+    public ?string $guild_id = null;
+    public ?User $inviter = null;
     public int $max_age;
     public int $max_uses;
     public TargetType $target_type;
-    public ?User $target_user;
-    public ?Application $target_application;
+    public ?User $target_user = null;
+    public ?Application $target_application = null;
     public bool $temporary;
     public bool $uses;
 }

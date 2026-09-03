@@ -23,7 +23,6 @@ class InviteTest extends HttpHelperTestCase
                 ],
                 'validationOptions' => [
                     'returnType' => Invite::class,
-                    'array' => true,
                 ]
             ],
             'Delete invite' => [

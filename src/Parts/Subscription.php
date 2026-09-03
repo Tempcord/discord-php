@@ -19,10 +19,10 @@ class Subscription
     /** @var string[] */
     public array $entitlement_ids;
     /** @var ?string[] */
-    public ?array $renewal_sku_ids;
+    public ?array $renewal_sku_ids = null;
     public Carbon $current_period_start;
     public Carbon $current_period_end;
     public SubscriptionStatus $status;
-    public ?Carbon $canceled_at;
-    public ?string $country;
+    public ?Carbon $canceled_at = null;
+    public ?string $country = null;
 }

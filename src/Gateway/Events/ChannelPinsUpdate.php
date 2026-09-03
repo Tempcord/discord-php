@@ -14,7 +14,7 @@ use Tempcord\Discord\Enums\Intent;
 #[RequiresIntent(Intent::GUILDS)]
 class ChannelPinsUpdate
 {
-    public ?string $guild_id;
+    public ?string $guild_id = null;
     public string $channel_id;
-    public ?Carbon $last_pin_timestamp;
+    public ?Carbon $last_pin_timestamp = null;
 }

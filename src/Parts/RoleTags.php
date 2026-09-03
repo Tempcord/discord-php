@@ -6,13 +6,13 @@ namespace Tempcord\Discord\Parts;
 
 class RoleTags
 {
-    public ?string $bot_id;
-    public ?string $integration_id;
+    public ?string $bot_id = null;
+    public ?string $integration_id = null;
     /**
      * @var ?null Use isset() to check whether this property is set and use that, Discord weirdness
      */
     public mixed $premium_subscriber;
-    public ?string $subscription_listing_id;
+    public ?string $subscription_listing_id = null;
     /**
      * @var ?null Use isset() to check whether this property is set and use that, Discord weirdness
      */

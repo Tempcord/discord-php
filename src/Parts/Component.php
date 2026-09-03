@@ -16,13 +16,13 @@ class Component
      * @var Component[]
      */
     #[ArrayMapping(Component::class)]
-    public ?array $components;
-    public ?ButtonStyle $style;
-    public ?string $label;
-    public ?Emoji $emoji;
-    public ?string $custom_id;
-    public ?string $url;
-    public ?bool $disabled;
+    public ?array $components = null;
+    public ?ButtonStyle $style = null;
+    public ?string $label = null;
+    public ?Emoji $emoji = null;
+    public ?string $custom_id = null;
+    public ?string $url = null;
+    public ?bool $disabled = null;
     /**
      * @var ComponentSelectOptions[]
      */
@@ -32,10 +32,10 @@ class Component
      * @var ChannelType[]
      */
     #[ArrayMapping(ChannelType::class)]
-    public ?array $channel_types;
-    public ?string $placeholder;
-    public ?int $min_values;
-    public ?int $max_values;
-    public ?bool $required;
-    public ?string $value;
+    public ?array $channel_types = null;
+    public ?string $placeholder = null;
+    public ?int $min_values = null;
+    public ?int $max_values = null;
+    public ?bool $required = null;
+    public ?string $value = null;
 }

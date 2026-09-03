@@ -14,6 +14,6 @@ use Tempcord\Discord\Enums\Intent;
 class InviteDelete
 {
     public string $channel_id;
-    public ?string $guild_id;
+    public ?string $guild_id = null;
     public string $code;
 }

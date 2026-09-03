@@ -6,8 +6,8 @@ namespace Tempcord\Discord\Parts;
 
 class ActivityAssets
 {
-    public ?string $large_image;
-    public ?string $large_text;
-    public ?string $small_image;
-    public ?string $small_text;
+    public ?string $large_image = null;
+    public ?string $large_text = null;
+    public ?string $small_image = null;
+    public ?string $small_text = null;
 }

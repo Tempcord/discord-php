@@ -20,7 +20,7 @@ class ThreadListSync
     /**
      * @var string[]
      */
-    public ?array $channel_ids;
+    public ?array $channel_ids = null;
 
     /**
      * @var Channel[]

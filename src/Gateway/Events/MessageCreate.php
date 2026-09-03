@@ -24,6 +24,6 @@ class MessageCreate extends Message
      */
     #[ArrayMapping(User::class)]
     public array $mentions;
-    public ?string $guild_id;
-    public ?GuildMember $member;
+    public ?string $guild_id = null;
+    public ?GuildMember $member = null;
 }

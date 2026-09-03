@@ -10,21 +10,21 @@ use Tempcord\Discord\Mapping\ArrayMapping;
 
 class Embed
 {
-    public ?string $title;
-    public ?EmbedType $type;
-    public ?string $description;
-    public ?string $url;
-    public ?Carbon $timestamp;
-    public ?int $color;
-    public ?EmbedFooter $footer;
-    public ?EmbedImage $image;
-    public ?EmbedThumbnail $thumbnail;
-    public ?EmbedVideo $video;
-    public ?EmbedProvider $provider;
-    public ?EmbedAuthor $author;
+    public ?string $title = null;
+    public ?EmbedType $type = null;
+    public ?string $description = null;
+    public ?string $url = null;
+    public ?Carbon $timestamp = null;
+    public ?int $color = null;
+    public ?EmbedFooter $footer = null;
+    public ?EmbedImage $image = null;
+    public ?EmbedThumbnail $thumbnail = null;
+    public ?EmbedVideo $video = null;
+    public ?EmbedProvider $provider = null;
+    public ?EmbedAuthor $author = null;
     /**
      * @var EmbedField[]
      */
     #[ArrayMapping(EmbedField::class)]
-    public ?array $fields;
+    public ?array $fields = null;
 }

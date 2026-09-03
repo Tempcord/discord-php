@@ -10,7 +10,7 @@ class Widget
 {
     public string $id;
     public string $name;
-    public ?string $instant_invite;
+    public ?string $instant_invite = null;
 
     /**
      * @var Channel[]

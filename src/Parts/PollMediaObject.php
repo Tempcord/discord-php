@@ -9,6 +9,6 @@ namespace Tempcord\Discord\Parts;
  */
 class PollMediaObject
 {
-    public ?string $text;
-    public ?Emoji $emoji;
+    public ?string $text = null;
+    public ?Emoji $emoji = null;
 }

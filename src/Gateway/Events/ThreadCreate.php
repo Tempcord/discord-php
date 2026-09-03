@@ -15,6 +15,6 @@ use Tempcord\Discord\Parts\ThreadMember;
 #[RequiresIntent(Intent::GUILDS)]
 class ThreadCreate extends Channel
 {
-    public ?bool $newly_created;
-    public ?ThreadMember $member;
+    public ?bool $newly_created = null;
+    public ?ThreadMember $member = null;
 }

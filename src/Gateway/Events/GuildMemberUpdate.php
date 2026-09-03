@@ -23,12 +23,12 @@ class GuildMemberUpdate
     public array $roles;
 
     public User $user;
-    public ?string $nick;
-    public ?string $avatar;
-    public ?Carbon $joined_at;
-    public ?Carbon $premium_since;
-    public ?bool $deaf;
-    public ?bool $mute;
-    public ?bool $pending;
-    public ?Carbon $communication_disabled_until;
+    public ?string $nick = null;
+    public ?string $avatar = null;
+    public ?Carbon $joined_at = null;
+    public ?Carbon $premium_since = null;
+    public ?bool $deaf = null;
+    public ?bool $mute = null;
+    public ?bool $pending = null;
+    public ?Carbon $communication_disabled_until = null;
 }

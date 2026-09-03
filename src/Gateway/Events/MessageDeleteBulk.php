@@ -19,5 +19,5 @@ class MessageDeleteBulk
     public array $ids;
 
     public string $channel_id;
-    public ?string $guild_id;
+    public ?string $guild_id = null;
 }

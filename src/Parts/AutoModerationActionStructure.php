@@ -9,5 +9,5 @@ use Tempcord\Discord\Enums\ActionType;
 class AutoModerationActionStructure
 {
     public ActionType $type;
-    public ?AutoModerationActionMetadata $metadata;
+    public ?AutoModerationActionMetadata $metadata = null;
 }

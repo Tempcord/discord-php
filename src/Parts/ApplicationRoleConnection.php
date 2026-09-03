@@ -6,7 +6,7 @@ namespace Tempcord\Discord\Parts;
 
 class ApplicationRoleConnection
 {
-    public ?string $platform_name;
-    public ?string $platform_username;
-    public ?object $metadata;
+    public ?string $platform_name = null;
+    public ?string $platform_username = null;
+    public ?object $metadata = null;
 }

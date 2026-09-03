@@ -8,16 +8,16 @@ use Tempcord\Discord\Mapping\ArrayMapping;
 
 class Emoji
 {
-    public ?string $id;
-    public ?string $name;
+    public ?string $id = null;
+    public ?string $name = null;
     /**
      * @var Role[]
      */
     #[ArrayMapping(Role::class)]
-    public ?array $roles;
-    public ?User $user;
-    public ?bool $require_colons;
-    public ?bool $managed;
-    public ?bool $animated;
-    public ?bool $available;
+    public ?array $roles = null;
+    public ?User $user = null;
+    public ?bool $require_colons = null;
+    public ?bool $managed = null;
+    public ?bool $animated = null;
+    public ?bool $available = null;
 }

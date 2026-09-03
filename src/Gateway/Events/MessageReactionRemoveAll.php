@@ -16,5 +16,5 @@ class MessageReactionRemoveAll
 {
     public string $channel_id;
     public string $message_id;
-    public ?string $guild_id;
+    public ?string $guild_id = null;
 }

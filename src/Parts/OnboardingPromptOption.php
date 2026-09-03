@@ -11,7 +11,7 @@ class OnboardingPromptOption
 {
     public string $id;
     public string $title;
-    public ?string $description;
+    public ?string $description = null;
     public Emoji $emoji;
     /** @var string[] */
     public array $role_ids;

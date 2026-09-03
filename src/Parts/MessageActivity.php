@@ -9,5 +9,5 @@ use Tempcord\Discord\Enums\MessageActivityType;
 class MessageActivity
 {
     public MessageActivityType $type;
-    public ?string $party_id;
+    public ?string $party_id = null;
 }

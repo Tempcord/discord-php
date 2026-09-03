@@ -16,32 +16,32 @@ class ApplicationCommandOptionStructure
      * Array of string => string
      * @var string[]
      */
-    public ?array $name_localizations;
+    public ?array $name_localizations = null;
     public string $description;
     /**
      * Array of string => string
      * @var string[]
      */
-    public ?array $description_localizations;
-    public ?bool $required;
+    public ?array $description_localizations = null;
+    public ?bool $required = null;
     /**
      * @var ApplicationCommandOptionChoice[]
      */
     #[ArrayMapping(ApplicationCommandOptionChoice::class)]
-    public ?array $choices;
+    public ?array $choices = null;
     /**
      * @var ApplicationCommandOptionStructure[]
      */
     #[ArrayMapping(ApplicationCommandOptionStructure::class)]
-    public ?array $options;
+    public ?array $options = null;
     /**
      * @var ChannelType[]
      */
     #[ArrayMapping(ChannelType::class)]
-    public ?array $channel_types;
+    public ?array $channel_types = null;
     public int|float|null $min_value;
     public int|float|null $max_value;
-    public ?int $min_length;
-    public ?int $max_length;
-    public ?bool $autocomplete;
+    public ?int $min_length = null;
+    public ?int $max_length = null;
+    public ?bool $autocomplete = null;
 }

@@ -6,5 +6,5 @@ namespace Tempcord\Discord\Parts;
 
 class GuildScheduledEventEntityMetadata
 {
-    public ?string $location;
+    public ?string $location = null;
 }

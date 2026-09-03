@@ -11,6 +11,6 @@ class ApplicationCommandOptionChoice
      * Array of string => string
      * @var string[]
      */
-    public ?array $name_localizations;
+    public ?array $name_localizations = null;
     public string|int|float $value;
 }

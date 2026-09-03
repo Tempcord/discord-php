@@ -38,7 +38,6 @@ class GuildStickerTest extends HttpHelperTestCase
                 ],
                 'validationOptions' => [
                     'returnType' => Sticker::class,
-                    'array' => true,
                 ]
             ],
             'Create sticker' => [
@@ -53,7 +52,6 @@ class GuildStickerTest extends HttpHelperTestCase
                 ],
                 'validationOptions' => [
                     'returnType' => Sticker::class,
-                    'array' => true,
                 ]
             ],
             'Modify sticker' => [
@@ -65,7 +63,6 @@ class GuildStickerTest extends HttpHelperTestCase
                 ],
                 'validationOptions' => [
                     'returnType' => Sticker::class,
-                    'array' => true,
                 ]
             ],
             'Delete sticker' => [

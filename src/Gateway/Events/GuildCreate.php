@@ -24,7 +24,7 @@ class GuildCreate extends Guild
 {
     public Carbon $joined_at;
     public bool $large;
-    public ?bool $unavailable;
+    public ?bool $unavailable = null;
     public int $member_count;
 
     /** @var VoiceState[] */

@@ -7,6 +7,6 @@ namespace Tempcord\Discord\Parts;
 class EmbedFooter
 {
     public string $text;
-    public ?string $icon_url;
-    public ?string $proxy_icon_url;
+    public ?string $icon_url = null;
+    public ?string $proxy_icon_url = null;
 }

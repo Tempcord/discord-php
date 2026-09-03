@@ -12,8 +12,8 @@ class SoundboardSound
     public string $name;
     public string $sound_id;
     public float $volume;
-    public ?string $emoji_id;
-    public ?string $emoji_name;
+    public ?string $emoji_id = null;
+    public ?string $emoji_name = null;
     public string $guild_id;
     public bool $available;
     public User $user;

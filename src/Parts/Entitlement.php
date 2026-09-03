@@ -15,11 +15,11 @@ class Entitlement
     public string $id;
     public string $sku_id;
     public string $application_id;
-    public ?string $user_id;
+    public ?string $user_id = null;
     public EntitlementType $type;
     public bool $deleted;
-    public ?Carbon $starts_at;
-    public ?Carbon $ends_at;
-    public ?string $guild_id;
+    public ?Carbon $starts_at = null;
+    public ?Carbon $ends_at = null;
+    public ?string $guild_id = null;
     public bool $consumed;
 }

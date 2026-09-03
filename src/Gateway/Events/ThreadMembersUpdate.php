@@ -14,5 +14,5 @@ use Tempcord\Discord\Parts\ThreadMember;
 #[RequiresIntent(Intent::GUILDS)]
 class ThreadMembersUpdate extends ThreadMember
 {
-    public ?string $guild_id;
+    public ?string $guild_id = null;
 }

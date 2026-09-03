@@ -11,21 +11,21 @@ class GuildPreview
 {
     public string $id;
     public string $name;
-    public ?string $icon;
-    public ?string $splash;
-    public ?string $discovery_splash;
+    public ?string $icon = null;
+    public ?string $splash = null;
+    public ?string $discovery_splash = null;
     public array $emojis;
     /**
      * @var GuildFeature[]
      */
     #[ArrayMapping(GuildFeature::class)]
     public array $features;
-    public ?int $approximate_member_count;
-    public ?int $approximate_presence_count;
-    public ?string $description;
+    public ?int $approximate_member_count = null;
+    public ?int $approximate_presence_count = null;
+    public ?string $description = null;
     /**
      * @var Sticker[]
      */
     #[ArrayMapping(Sticker::class)]
-    public ?array $stickers;
+    public ?array $stickers = null;
 }

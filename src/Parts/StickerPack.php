@@ -16,7 +16,7 @@ class StickerPack
     public array $stickers;
     public string $name;
     public string $sku_id;
-    public ?string $cover_sticker_id;
+    public ?string $cover_sticker_id = null;
     public string $description;
-    public ?string $banner_asset_id;
+    public ?string $banner_asset_id = null;
 }

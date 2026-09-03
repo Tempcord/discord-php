@@ -6,6 +6,6 @@ namespace Tempcord\Discord\Parts;
 
 class DefaultReaction
 {
-    public ?string $emoji_id;
-    public ?string $emoji_name;
+    public ?string $emoji_id = null;
+    public ?string $emoji_name = null;
 }

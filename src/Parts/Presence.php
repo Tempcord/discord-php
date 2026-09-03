@@ -15,6 +15,6 @@ class Presence
      * @var Activity[]
      */
     #[ArrayMapping(Activity::class)]
-    public ?array $activities;
+    public ?array $activities = null;
     public ClientStatus $client_status;
 }

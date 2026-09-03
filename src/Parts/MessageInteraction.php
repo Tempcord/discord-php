@@ -19,7 +19,7 @@ class MessageInteraction
      * @see https://discord.com/developers/docs/interactions/receiving-and-responding#interaction-object-authorizing-integration-owners-object
      */
     public array $authorizing_integration_owners;
-    public ?string $original_response_message_id;
-    public ?string $interacted_message_id;
-    public ?self $triggering_interaction_metadata;
+    public ?string $original_response_message_id = null;
+    public ?string $interacted_message_id = null;
+    public ?self $triggering_interaction_metadata = null;
 }

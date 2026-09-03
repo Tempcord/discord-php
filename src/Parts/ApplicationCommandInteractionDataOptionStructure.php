@@ -16,6 +16,6 @@ class ApplicationCommandInteractionDataOptionStructure
      * @var ApplicationCommandInteractionDataOptionStructure[]
      */
     #[ArrayMapping(ApplicationCommandInteractionDataOptionStructure::class)]
-    public ?array $options;
+    public ?array $options = null;
     public bool $focused;
 }

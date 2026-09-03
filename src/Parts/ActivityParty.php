@@ -6,9 +6,9 @@ namespace Tempcord\Discord\Parts;
 
 class ActivityParty
 {
-    public ?string $id;
+    public ?string $id = null;
     /**
      * @var int[]
      */
-    public ?array $size;
+    public ?array $size = null;
 }

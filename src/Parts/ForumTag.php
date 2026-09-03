@@ -9,6 +9,6 @@ class ForumTag
     public string $id;
     public string $name;
     public bool $moderated;
-    public ?string $emoji_id;
-    public ?string $emoji_name;
+    public ?string $emoji_id = null;
+    public ?string $emoji_name = null;
 }

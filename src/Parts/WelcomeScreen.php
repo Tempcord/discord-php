@@ -8,7 +8,7 @@ use Tempcord\Discord\Mapping\ArrayMapping;
 
 class WelcomeScreen
 {
-    public ?string $description;
+    public ?string $description = null;
     /**
      * @var WelcomeScreenChannel[]
      */

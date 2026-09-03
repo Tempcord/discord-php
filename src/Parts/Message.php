@@ -16,7 +16,7 @@ class Message
     public User $author;
     public string $content;
     public Carbon $timestamp;
-    public ?Carbon $edited_timestamp;
+    public ?Carbon $edited_timestamp = null;
     public bool $tts;
     public bool $mention_everyone;
     /**
@@ -32,7 +32,7 @@ class Message
      * @var ChannelMention[]
      */
     #[ArrayMapping(ChannelMention::class)]
-    public ?array $mention_channels;
+    public ?array $mention_channels = null;
     /**
      * @var Attachment[]
      */
@@ -47,28 +47,28 @@ class Message
      * @var Reaction[]
      */
     #[ArrayMapping(Reaction::class)]
-    public ?array $reactions;
-    public ?string $nonce;
+    public ?array $reactions = null;
+    public ?string $nonce = null;
     public bool $pinned;
-    public ?string $webhook_id;
-    public ?MessageType $type;
-    public ?MessageActivity $activity;
-    public ?Application $application;
-    public ?string $application_id;
-    public ?Bitwise $flags;
-    public ?MessageReference $message_reference;
+    public ?string $webhook_id = null;
+    public ?MessageType $type = null;
+    public ?MessageActivity $activity = null;
+    public ?Application $application = null;
+    public ?string $application_id = null;
+    public ?Bitwise $flags = null;
+    public ?MessageReference $message_reference = null;
     /**
      * @var MessageSnapshot[]
      */
     #[ArrayMapping(MessageSnapshot::class)]
     public array $message_snapshots;
-    public ?Message $referenced_message;
-    public ?MessageInteractionMetadata $interaction_metadata;
+    public ?Message $referenced_message = null;
+    public ?MessageInteractionMetadata $interaction_metadata = null;
     /**
      * @deprecated use $this->interaction_metadata instead
      */
-    public ?MessageInteraction $interaction;
-    public ?Channel $thread;
+    public ?MessageInteraction $interaction = null;
+    public ?Channel $thread = null;
     /**
      * @var Component[]
      */
@@ -78,15 +78,15 @@ class Message
      * @var MessageStickerItem[]
      */
     #[ArrayMapping(MessageStickerItem::class)]
-    public ?array $sticker_items;
+    public ?array $sticker_items = null;
     /**
      * @var Sticker[]
      */
     #[ArrayMapping(Sticker::class)]
-    public ?array $stickers;
-    public ?int $position;
-    public ?RoleSubscriptionData $role_subscription_data;
-    public ?MessageResolved $resolved;
-    public ?Poll $poll;
+    public ?array $stickers = null;
+    public ?int $position = null;
+    public ?RoleSubscriptionData $role_subscription_data = null;
+    public ?MessageResolved $resolved = null;
+    public ?Poll $poll = null;
     public MessageCall $call;
 }

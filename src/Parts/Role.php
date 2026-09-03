@@ -10,12 +10,12 @@ class Role
     public string $name;
     public int $color;
     public bool $hoist;
-    public ?string $icon;
-    public ?string $unicode_emoji;
+    public ?string $icon = null;
+    public ?string $unicode_emoji = null;
     public int $position;
     public string $permissions;
     public bool $managed;
     public bool $mentionable;
-    public ?RoleTags $tags;
+    public ?RoleTags $tags = null;
     public int $flags;
 }

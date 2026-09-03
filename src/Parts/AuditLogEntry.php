@@ -9,15 +9,15 @@ use Tempcord\Discord\Mapping\ArrayMapping;
 
 class AuditLogEntry
 {
-    public ?string $target_id;
+    public ?string $target_id = null;
     /**
      * @var AuditLogChange[]
      */
     #[ArrayMapping(AuditLogChange::class)]
-    public ?array $changes;
-    public ?string $user_id;
+    public ?array $changes = null;
+    public ?string $user_id = null;
     public string $id;
     public AuditLogEvents $action_type;
-    public ?OptionalAuditEntryInfo $options;
-    public ?string $reason;
+    public ?OptionalAuditEntryInfo $options = null;
+    public ?string $reason = null;
 }

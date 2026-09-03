@@ -12,5 +12,5 @@ class MessageInteractionMetadata
     public InteractionType $type;
     public string $name;
     public User $user;
-    public ?GuildMember $member;
+    public ?GuildMember $member = null;
 }

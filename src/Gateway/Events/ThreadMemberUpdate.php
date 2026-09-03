@@ -16,17 +16,17 @@ use Tempcord\Discord\Parts\ThreadMember;
 class ThreadMemberUpdate
 {
     public string $id;
-    public ?string $guild_id;
+    public ?string $guild_id = null;
     public int $member_count;
 
     /**
      * @var ThreadMember[]
      */
     #[ArrayMapping(ThreadMember::class)]
-    public ?array $added_members;
+    public ?array $added_members = null;
 
     /**
      * @var string[]
      */
-    public ?array $removed_member_ids;
+    public ?array $removed_member_ids = null;
 }

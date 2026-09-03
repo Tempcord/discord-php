@@ -8,6 +8,6 @@ use Carbon\Carbon;
 
 class ActivityTimestamps
 {
-    public ?Carbon $start;
-    public ?Carbon $end;
+    public ?Carbon $start = null;
+    public ?Carbon $end = null;
 }

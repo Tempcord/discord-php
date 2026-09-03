@@ -6,6 +6,6 @@ namespace Tempcord\Discord\Parts;
 
 class EmbedProvider
 {
-    public ?string $name;
-    public ?string $url;
+    public ?string $name = null;
+    public ?string $url = null;
 }

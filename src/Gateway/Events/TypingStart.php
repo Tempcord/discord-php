@@ -20,8 +20,8 @@ use Tempcord\Discord\Parts\GuildMember;
 class TypingStart
 {
     public string $channel_id;
-    public ?string $guild_id;
+    public ?string $guild_id = null;
     public string $user_id;
     public Carbon $timestamp;
-    public ?GuildMember $member;
+    public ?GuildMember $member = null;
 }

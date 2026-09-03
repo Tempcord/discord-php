@@ -15,5 +15,5 @@ class IntegrationDelete
 {
     public string $id;
     public string $guild_id;
-    public ?string $application_id;
+    public ?string $application_id = null;
 }

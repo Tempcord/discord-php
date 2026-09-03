@@ -8,8 +8,8 @@ use JsonSerializable;
 
 class Payload implements JsonSerializable
 {
-    public ?string $t;
-    public ?int $s;
+    public ?string $t = null;
+    public ?int $s = null;
     public int $op;
 
     public $d;

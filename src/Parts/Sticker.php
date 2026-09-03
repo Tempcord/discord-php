@@ -10,15 +10,15 @@ use Tempcord\Discord\Enums\StickerType;
 class Sticker
 {
     public string $id;
-    public ?string $pack_id;
+    public ?string $pack_id = null;
     public string $name;
-    public ?string $description;
-    public ?string $tags;
-    public ?string $asset;
+    public ?string $description = null;
+    public ?string $tags = null;
+    public ?string $asset = null;
     public StickerType $type;
     public StickerFormatType $format_type;
     public bool $available;
-    public ?string $guild_id;
-    public ?User $user;
-    public ?int $sort_value;
+    public ?string $guild_id = null;
+    public ?User $user = null;
+    public ?int $sort_value = null;
 }

@@ -8,5 +8,5 @@ class EmbedField
 {
     public string $name;
     public string $value;
-    public ?bool $inline;
+    public ?bool $inline = null;
 }

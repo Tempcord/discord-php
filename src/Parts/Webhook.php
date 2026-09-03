@@ -8,14 +8,14 @@ class Webhook
 {
     public string $id;
     public int $type;
-    public ?string $guild_id;
-    public ?string $channel_id;
-    public ?User $user;
-    public ?string $name;
-    public ?string $avatar;
-    public ?string $token;
-    public ?string $application_id;
-    public ?Guild $source_guild;
-    public ?Channel $source_channel;
-    public ?string $url;
+    public ?string $guild_id = null;
+    public ?string $channel_id = null;
+    public ?User $user = null;
+    public ?string $name = null;
+    public ?string $avatar = null;
+    public ?string $token = null;
+    public ?string $application_id = null;
+    public ?Guild $source_guild = null;
+    public ?Channel $source_channel = null;
+    public ?string $url = null;
 }

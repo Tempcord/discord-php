@@ -20,10 +20,10 @@ class AutoModerationActionExecution
     public string $rule_id;
     public AutoModerationRuleTriggerType $rule_trigger_types;
     public string $user_id;
-    public ?string $channel_id;
-    public ?string $message_id;
-    public ?string $alert_system_message_id;
-    public ?string $content;
-    public ?string $matched_keyword;
-    public ?string $matched_content;
+    public ?string $channel_id = null;
+    public ?string $message_id = null;
+    public ?string $alert_system_message_id = null;
+    public ?string $content = null;
+    public ?string $matched_keyword = null;
+    public ?string $matched_content = null;
 }

@@ -8,7 +8,7 @@ use Tempcord\Discord\Mapping\ArrayMapping;
 
 class Team
 {
-    public ?string $icon;
+    public ?string $icon = null;
     public string $id;
     /**
      * @var TeamMember[]

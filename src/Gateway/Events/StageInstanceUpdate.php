@@ -15,5 +15,5 @@ class StageInstanceUpdate
 {
     public string $token;
     public string $guild_id;
-    public ?string $endpoint;
+    public ?string $endpoint = null;
 }

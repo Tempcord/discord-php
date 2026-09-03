@@ -18,6 +18,6 @@ class MessageReactionRemove
     public string $user_id;
     public string $channel_id;
     public string $message_id;
-    public ?string $guild_id;
+    public ?string $guild_id = null;
     public Emoji $emoji;
 }

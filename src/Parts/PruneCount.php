@@ -6,5 +6,5 @@ namespace Tempcord\Discord\Parts;
 
 class PruneCount
 {
-    public ?int $pruned;
+    public ?int $pruned = null;
 }

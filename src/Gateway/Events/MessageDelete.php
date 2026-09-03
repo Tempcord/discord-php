@@ -16,5 +16,5 @@ class MessageDelete
 {
     public string $id;
     public string $channel_id;
-    public ?string $guild_id;
+    public ?string $guild_id = null;
 }

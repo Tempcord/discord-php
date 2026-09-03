@@ -16,7 +16,7 @@ use Tempcord\Discord\Parts\Emoji;
 class MessageReactionRemoveEmoji
 {
     public string $channel_id;
-    public ?string $guild_id;
+    public ?string $guild_id = null;
     public string $message_id;
     public Emoji $emoji;
 }

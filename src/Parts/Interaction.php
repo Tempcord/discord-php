@@ -12,17 +12,17 @@ class Interaction
     public string $id;
     public string $application_id;
     public InteractionType $type;
-    public ?InteractionData $data;
-    public ?string $guild_id;
+    public ?InteractionData $data = null;
+    public ?string $guild_id = null;
     /** @deprecated */
-    public ?string $channel_id;
-    public ?GuildMember $member;
+    public ?string $channel_id = null;
+    public ?GuildMember $member = null;
     public User $user;
     public string $token;
     public int $version;
-    public ?Message $message;
-    public ?string $app_permissions;
-    public ?string $locale;
+    public ?Message $message = null;
+    public ?string $app_permissions = null;
+    public ?string $locale = null;
     public string $guild_locale;
     public Channel $channel;
     public InteractionContextType $context;

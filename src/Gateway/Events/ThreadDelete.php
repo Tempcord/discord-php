@@ -14,7 +14,7 @@ use Tempcord\Discord\Enums\Intent;
 class ThreadDelete
 {
     public string $id;
-    public ?string $guild_id;
-    public ?string $parent_id;
+    public ?string $guild_id = null;
+    public ?string $parent_id = null;
     public int $type;
 }

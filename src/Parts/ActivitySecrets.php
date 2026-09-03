@@ -6,7 +6,7 @@ namespace Tempcord\Discord\Parts;
 
 class ActivitySecrets
 {
-    public ?string $join;
-    public ?string $spectate;
-    public ?string $match;
+    public ?string $join = null;
+    public ?string $spectate = null;
+    public ?string $match = null;
 }

@@ -12,16 +12,16 @@ class InteractionData
     public string $id;
     public string $name;
     public int $type; // @todo enum
-    public ?InteractionDataResolved $resolved;
+    public ?InteractionDataResolved $resolved = null;
     /**
      * @var ApplicationCommandInteractionDataOptionStructure[]
      */
     #[ArrayMapping(ApplicationCommandInteractionDataOptionStructure::class)]
-    public ?array $options;
-    public ?string $guild_id;
-    public ?string $target_id;
-    public ?string $custom_id;
-    public ?MessageComponentType $component_type;
+    public ?array $options = null;
+    public ?string $guild_id = null;
+    public ?string $target_id = null;
+    public ?string $custom_id = null;
+    public ?MessageComponentType $component_type = null;
     /**
      * The values a user picked in a select menu. Discord sends these as plain
      * strings: the option values for a string select, and ids for the user,
@@ -29,11 +29,11 @@ class InteractionData
      *
      * @var ?string[]
      */
-    public ?array $values;
+    public ?array $values = null;
     /**
      * What a user submitted in a modal. The shape is nested and differs between
      * classic action row modals and label based ones, so it is left as the raw
      * payload; ModalSubmitInteraction reads it.
      */
-    public ?array $components;
+    public ?array $components = null;
 }

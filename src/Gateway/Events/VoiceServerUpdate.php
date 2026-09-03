@@ -10,6 +10,6 @@ namespace Tempcord\Discord\Gateway\Events;
 class VoiceServerUpdate
 {
     public string $token;
-    public ?string $guild_id;
-    public ?string $endpoint;
+    public ?string $guild_id = null;
+    public ?string $endpoint = null;
 }

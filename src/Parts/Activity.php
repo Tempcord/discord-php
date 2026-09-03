@@ -13,21 +13,21 @@ class Activity
 {
     public string $name;
     public ActivityType $type;
-    public ?string $url;
+    public ?string $url = null;
     public Carbon $created_at;
-    public ?ActivityTimestamps $timestamps;
-    public ?string $application_id;
-    public ?string $details;
-    public ?string $state;
-    public ?ActivityEmoji $emoji;
-    public ?ActivityParty $party;
-    public ?ActivityAssets $assets;
-    public ?ActivitySecrets $secrets;
+    public ?ActivityTimestamps $timestamps = null;
+    public ?string $application_id = null;
+    public ?string $details = null;
+    public ?string $state = null;
+    public ?ActivityEmoji $emoji = null;
+    public ?ActivityParty $party = null;
+    public ?ActivityAssets $assets = null;
+    public ?ActivitySecrets $secrets = null;
     public bool $instance;
-    public ?Bitwise $flags;
+    public ?Bitwise $flags = null;
     /**
      * @var ActivityButton[]
      */
     #[ArrayMapping(ActivityButton::class)]
-    public ?array $buttons;
+    public ?array $buttons = null;
 }

@@ -12,5 +12,5 @@ use Tempcord\Discord\Enums\ActionType;
 class AutoModerationAction
 {
     public ActionType $type;
-    public ?AutoModerationActionMetadata $metadata;
+    public ?AutoModerationActionMetadata $metadata = null;
 }

@@ -6,6 +6,6 @@ namespace Tempcord\Discord\Parts;
 
 class GuildBan
 {
-    public ?string $reason;
+    public ?string $reason = null;
     public User $user;
 }
