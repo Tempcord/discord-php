@@ -6,6 +6,7 @@ namespace Tempcord\Discord\Gateway\Events;
 
 use Tempcord\Discord\Attributes\RequiresIntent;
 use Tempcord\Discord\Enums\Intent;
+use Tempcord\Discord\Parts\Message;
 
 /**
  * @see https://discord.com/developers/docs/topics/gateway-events#message-delete-bulk
@@ -20,4 +21,7 @@ class MessageDeleteBulk
 
     public string $channel_id;
     public ?string $guild_id = null;
+
+    /** @var list<Message> Cached messages that were present before deletion. */
+    public array $oldMessages = [];
 }

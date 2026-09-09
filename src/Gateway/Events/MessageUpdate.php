@@ -15,4 +15,11 @@ use Tempcord\Discord\Parts\Message;
 #[RequiresIntent(Intent::DIRECT_MESSAGES)]
 class MessageUpdate extends Message
 {
+    public ?string $guild_id = null;
+
+    /** The cached message immediately before Discord applied this edit. */
+    public ?Message $oldMessage = null;
+
+    /** The cached message after this edit was merged into it. */
+    public ?Message $newMessage = null;
 }
