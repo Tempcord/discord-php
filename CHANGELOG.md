@@ -1,3 +1,9 @@
+## [1.5.0](https://github.com/Tempcord/discord-php/compare/v1.4.1...v1.5.0) (2026-09-09)
+
+### Features
+
+* **gateway:** expose cached event state ([cd206f9](https://github.com/Tempcord/discord-php/commit/cd206f92d7e31a1b1d930c69695d9e87fcb25e68))
+
 ## [1.4.1](https://github.com/Tempcord/discord-php/compare/v1.4.0...v1.4.1) (2026-09-03)
 
 ### Bug Fixes
