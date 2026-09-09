@@ -149,6 +149,19 @@ class GuildTest extends HttpHelperTestCase
                     'array' => true,
                 ]
             ],
+            'Get invites' => [
+                'method' => 'getInvites',
+                'args' => ['::guild id::'],
+                'mockOptions' => [
+                    'method' => 'get',
+                    'return' => [(object) ['code' => '::invite code::', 'uses' => 2, 'max_uses' => 5]],
+                ],
+                'validationOptions' => [
+                    'returnType' => \Tempcord\Discord\Parts\Invite::class,
+                    'array' => true,
+                    'url' => 'guilds/::guild id::/invites',
+                ],
+            ],
             'Modify channel position' => [
                 'method' => 'modifyChannelPositions',
                 'args' => [

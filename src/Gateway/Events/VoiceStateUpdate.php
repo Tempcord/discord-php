@@ -14,4 +14,11 @@ use Tempcord\Discord\Parts\VoiceState;
 #[RequiresIntent(Intent::GUILD_VOICE_STATES)]
 class VoiceStateUpdate extends VoiceState
 {
+    /**
+     * The state that preceded this event, supplied by Tempcord's cache
+     * subscriber. The event object itself remains the new state, matching the
+     * Discord gateway payload. Null means Discord had not previously reported
+     * this member's voice state during the current connection.
+     */
+    public ?VoiceState $oldState = null;
 }

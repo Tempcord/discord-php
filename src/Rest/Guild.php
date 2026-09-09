@@ -721,7 +721,7 @@ class Guild extends HttpResource
         return $this->mapArrayPromise(
             $this->http->get(
                 Endpoint::bind(
-                    Endpoint::GUILD_REGIONS,
+                    Endpoint::GUILD_INVITES,
                     $guildId,
                 ),
             ),
