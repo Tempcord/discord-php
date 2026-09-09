@@ -1,3 +1,9 @@
+## [1.6.0](https://github.com/Tempcord/discord-php/compare/v1.5.0...v1.6.0) (2026-09-09)
+
+### Features
+
+* **messages:** expose cached message state ([da41419](https://github.com/Tempcord/discord-php/commit/da41419397d29c9be06ed553de395682589bde53))
+
 ## [1.5.0](https://github.com/Tempcord/discord-php/compare/v1.4.1...v1.5.0) (2026-09-09)
 
 ### Features
